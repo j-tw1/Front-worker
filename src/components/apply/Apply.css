@@ -1,0 +1,258 @@
+
+/* Job Section CSS Start */
+.job-card {
+    border: 1px dashed #d9dbdf;
+    padding: 30px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    margin-bottom: 30px;
+    background: #fde7e7;
+  }
+  
+  .job-card .thumb-img {
+    border: 1px dashed #d9dbdf;
+    max-width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 80px;
+    background: #ffffff;
+  }
+  
+  .job-card .thumb-img img {
+    max-width: 40px;
+  }
+  
+  .job-card .job-info h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  
+  .job-card .job-info h3 a {
+    color: #001935;
+  }
+  
+  .job-card .job-info h3 a:hover {
+    color: #fd1616;
+  }
+  
+  .job-card .job-info ul {
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+  
+  .job-card .job-info ul li {
+    display: block;
+    font-size: 15px;
+    padding-right: 10px;
+    margin-bottom: 5px;
+  }
+  
+  .job-card .job-info ul li:last-child {
+    margin-bottom: 0;
+  }
+  
+  .job-card .job-info ul li a {
+    color: #fd1616;
+    font-weight: 500;
+  }
+  
+  .job-card .job-info ul li i {
+    top: 2px;
+    position: relative;
+    font-size: 18px;
+  }
+  
+  .job-card .job-save {
+    text-align: center;
+  }
+  
+  .job-card .job-save span {
+    background: #ffffff;
+    display: block;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: #fd1616;
+    -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+    margin-bottom: 15px;
+    font-size: 15px;
+  }
+  
+  .job-card .job-save a i {
+    color: #afafaf;
+    font-size: 20px;
+    background: #ffffff;
+    border-radius: 20px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border: 1px dashed #afafaf;
+    display: inline-block;
+    margin-bottom: 10px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  
+  .job-card .job-save a i:hover {
+    background: #fd1616;
+    color: #ffffff;
+  }
+  
+  .job-card .job-save p {
+    margin-bottom: 0;
+    font-size: 14px;
+  }
+  
+  .job-card .job-save p i {
+    border: 0;
+    width: inherit;
+    height: inherit;
+    top: 3px;
+    position: relative;
+    line-height: 1;
+    font-size: 18px;
+  }
+  
+  .job-card:hover {
+    -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+    border: 1px dashed #fd1616;
+  }
+  
+  /* Job Section CSS End */
+
+
+  
+/* Job Info CSS Start */
+.looking-job {
+    background: #fd1616;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 30px;
+    position: relative;
+  }
+  
+  .looking-job .media {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  
+  .looking-job .media i {
+    background: #fbd3d3;
+    color: #fd1616;
+    width: 55px;
+    height: 55px;
+    border-radius: 50px;
+    line-height: 55px;
+    text-align: center;
+    font-size: 30px;
+    display: inline-block;
+  }
+  
+  .looking-job .media .media-body {
+    padding-left: 15px;
+  }
+  
+  .looking-job .media .media-body h5 {
+    font-size: 25px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 10px;
+  }
+  
+  .looking-job .media .media-body p {
+    color: #ffffff;
+    margin-bottom: 5px;
+  }
+  
+  .looking-job .media .media-body a {
+    color: #ffffff;
+    font-size: 15px;
+  }
+  
+  .looking-job .media .media-body a:hover, .looking-job .media .media-body a:hover i {
+    color: #001935;
+    letter-spacing: 1px;
+  }
+  
+  .looking-job .media .media-body a i {
+    background: none;
+    width: unset;
+    height: unset;
+    color: #ffffff;
+    line-height: 1;
+    font-size: 18px;
+    top: 4px;
+    position: relative;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  
+  .recruiting-card {
+    background: #010c29;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 30px;
+    position: relative;
+  }
+  
+  .recruiting-card .media {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  
+  .recruiting-card .media i {
+    background: #9a9ca2;
+    color: #001935;
+    width: 55px;
+    height: 55px;
+    border-radius: 50px;
+    line-height: 55px;
+    text-align: center;
+    font-size: 30px;
+    display: inline-block;
+  }
+  
+  .recruiting-card .media .media-body {
+    padding-left: 15px;
+  }
+  
+  .recruiting-card .media .media-body h5 {
+    font-size: 25px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 10px;
+  }
+  
+  .recruiting-card .media .media-body p {
+    color: #ffffff;
+    margin-bottom: 5px;
+  }
+  
+  .recruiting-card .media .media-body a {
+    color: #ffffff;
+    font-size: 15px;
+  }
+  
+  .recruiting-card .media .media-body a:hover, .recruiting-card .media .media-body a:hover i {
+    color: #fd1616;
+    letter-spacing: 1px;
+  }
+  
+  .recruiting-card .media .media-body a i {
+    background: none;
+    width: unset;
+    height: unset;
+    color: #ffffff;
+    line-height: 1;
+    font-size: 18px;
+    top: 4px;
+    position: relative;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  
+  /* Job Info CSS End */

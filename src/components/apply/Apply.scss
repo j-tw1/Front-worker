@@ -1,0 +1,137 @@
+/* Font Variables */
+$body-font: 'IBM Plex Sans', sans-serif;
+$navbar-font: 'Catamaran', sans-serif;
+
+/* Color Variables */
+$body-color: #707070;
+$heading-color: #001935;
+$red-color: #fd1616;
+$white-color: #ffffff;
+
+/* Others Variables */
+$transition: .5s;
+$font-size: 17px;
+$box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+/* Job Section CSS Start */
+.job-card {
+    border: 1px dashed #d9dbdf;
+    padding: 30px;
+    transition: $transition;
+    margin-bottom: 30px;
+    background: #fde7e7;
+
+    .thumb-img {
+        border: 1px dashed #d9dbdf;
+        max-width: 100%;
+        height: 100%;
+        text-align: center;
+        line-height: 80px;
+        background: $white-color;
+
+        img {
+            max-width: 40px;
+        }
+    }
+
+    .job-info {
+
+        h3 {
+            margin-bottom: 10px;
+            font-size: 20px;
+
+            a {
+                color: $heading-color;
+
+                &:hover {
+                    color: $red-color;
+                }
+            }
+        }
+
+        ul {
+            padding-left: 0;
+            margin-bottom: 0;
+
+            li {
+                display: block;
+                font-size: 15px;
+                padding-right: 10px;
+                margin-bottom: 5px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                a { 
+                    color: $red-color;
+                    font-weight: 500;
+                }
+
+                i {
+                    top: 2px;
+                    position: relative;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    .job-save {
+        text-align: center;
+
+        span {
+            background: $white-color;
+            display: block;
+            padding: 5px 10px;
+            border-radius: 10px;
+            color: $red-color;
+            box-shadow: $box-shadow;
+            margin-bottom: 15px;
+            font-size: 15px;
+        }
+
+        a {
+            i {
+                color: #afafaf;
+                font-size: 20px;
+                background: $white-color;
+                border-radius: 20px;
+                width: 30px;
+                height: 30px;
+                text-align: center;
+                line-height: 30px;
+                border: 1px dashed #afafaf;
+                display: inline-block;
+                margin-bottom: 10px;
+                transition: $transition;
+
+                &:hover {
+                    background: $red-color;
+                    color: $white-color;
+                }
+            }
+        }
+
+        p {
+            margin-bottom: 0;
+            font-size: 14px;
+
+            i {
+                border: 0;
+                width: inherit;
+                height: inherit;
+                top: 3px;
+                position: relative;
+                line-height: 1;
+                font-size: 18px;
+            }
+        }
+    }
+
+    &:hover {
+        box-shadow:$box-shadow;
+        border: 1px dashed $red-color;
+    }
+}
+/* Job Section CSS End */
+

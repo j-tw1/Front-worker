@@ -1,4 +1,7 @@
 import React from "react";
+import "./Apply.scss"
+import "./Apply.css"
+import "./Apply-responsive.scss"
 
 
 function Apply() {

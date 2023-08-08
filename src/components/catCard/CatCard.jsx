@@ -1,4 +1,6 @@
 import React from "react";
+import "./CatCard.scss"
+import "./CatCard.css"
 
 function CatCard({card}) {
   return (
@@ -16,7 +18,7 @@ function CatCard({card}) {
                 {card.desc}
               </p>
               <a href="job-grid.html" className="company-btn">
-                25 Open Position
+                25 ouvrier
               </a>
             </div>
           </div>

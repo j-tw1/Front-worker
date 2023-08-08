@@ -25,33 +25,7 @@
     line-height: 1.4;
   }
   /*----- Home Page One CSS Start -----*/
-  /* Navbar CSS */
-  .navbar-area .mobile-nav {
-    display: block;
-    position: relative;
-  }
-  .navbar-area .mean-container .mean-bar {
-    background-color: #010c29;
-    padding: 0;
-  }
-  .navbar-area .mean-container .mean-bar nav .navbar-nav {
-    height: 300px;
-    overflow: auto;
-  }
-  .navbar-area .mean-container a.meanmenu-reveal {
-    padding: 15px 15px 0 0;
-  }
-  .navbar-area .mean-container a.meanmenu-reveal span {
-    position: relative;
-    top: 8px;
-    margin-top: -5px;
-  }
-  .navbar-area .main-nav {
-    display: none !important;
-  }
-  .navbar-area .other-option {
-    display: none;
-  }
+  
   /* Banner CSS */
   .banner-section {
     height: 100%;
@@ -761,47 +735,7 @@
     line-height: 1.4;
   }
   /*----- Home Page One CSS Start -----*/
-  /* Navbar CSS */
-  .navbar-area .mobile-nav {
-    display: block;
-    position: relative;
-  }
-  .navbar-area .mobile-nav .logo {
-    text-decoration: none;
-    position: absolute;
-    top: 11px;
-    z-index: 999;
-    left: 15px;
-    color: #fff;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 20px;
-  }
-  .navbar-area .mean-container .mean-bar {
-    background-color: #010c29;
-    padding: 0;
-  }
-  .navbar-area .mean-container a.meanmenu-reveal {
-    padding: 15px 15px 0 0;
-  }
-  .navbar-area .mean-container a.meanmenu-reveal span {
-    position: relative;
-    top: 8px;
-    margin-top: -5px;
-  }
-  .navbar-area .mobile-nav nav .navbar-nav {
-    height: 300px;
-    overflow: auto;
-  }
-  .navbar-area .mobile-nav nav .navbar-nav .nav-item a i {
-    display: none;
-  }
-  .navbar-area .main-nav {
-    display: none !important;
-  }
-  .navbar-area .other-option {
-    display: none;
-  }
+  
   /* Banner CSS */
   .banner-section {
     height: 100%;
@@ -1135,17 +1069,7 @@
 
 @media (min-width: 992px) and (max-width: 1199px) {
   /*----- Home Page One CSS Start -----*/
-  /* Navbar CSS */
-  .navbar-area .main-nav .navbar .navbar-nav .nav-item .nav-link {
-    font-size: 15px;
-  }
-  .navbar-area .main-nav .navbar .other-option {
-    top: -2px;
-    position: relative;
-  }
-  .navbar-area .main-nav .navbar .other-option .signup-btn, .navbar-area .main-nav .navbar .other-option .signin-btn {
-    font-size: 15px;
-  }
+  
   /* Banner CSS */
   .banner-section {
     height: 100%;

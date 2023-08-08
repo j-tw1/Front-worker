@@ -1,0 +1,134 @@
+// Small devices (landscape phones, 576px and up)
+@media (max-width:767px) {
+    /* Navbar CSS */
+    .navbar-area {
+
+        .mobile-nav {
+            display: block;
+            position: relative;
+        }
+
+        .mean-container {
+            .mean-bar {
+                background-color: #010c29;
+                padding: 0;
+
+                nav {
+                    .navbar-nav {
+                        height: 300px;
+                        overflow: auto;
+                    }
+                }
+            }
+
+            a.meanmenu-reveal {
+                padding: 15px 15px 0 0;
+
+                span {
+                    position: relative;
+                    top: 8px;
+                    margin-top: -5px;
+                }
+            }
+        }
+
+        .main-nav {
+            display: none !important;
+        }
+
+        .other-option {
+            display: none;
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width:768px) and (max-width:991px) {
+    /* Navbar CSS */
+    .navbar-area {
+        .mobile-nav {
+            display: block;
+            position: relative;
+
+            .logo {
+                text-decoration: none;
+                position: absolute;
+                top: 11px;
+                z-index: 999;
+                left: 15px;
+                color: #fff;
+                font-weight: bold;
+                text-transform: uppercase;
+                font-size: 20px;
+            }
+        }
+
+        .mean-container {
+            .mean-bar {
+                background-color: #010c29;
+                padding: 0;
+            }
+
+            a.meanmenu-reveal {
+                padding: 15px 15px 0 0;
+
+                span {
+                    position: relative;
+                    top: 8px;
+                    margin-top: -5px;
+                }
+            }
+        }
+
+        .mobile-nav {
+            nav {
+                .navbar-nav {
+                    height: 300px;
+                    overflow: auto;
+                    .nav-item {
+                        a {
+                            i {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .main-nav {
+            display: none !important;
+        }
+
+        .other-option {
+            display: none;
+        }
+    }
+}
+
+//Large devices (landscape ipad, desktops, 992px and up)
+@media (min-width:992px) and (max-width:1199px) {
+    /* Navbar CSS */
+    .navbar-area {
+        .main-nav {
+            .navbar {
+                .navbar-nav {
+                    .nav-item {
+                        .nav-link {
+                            font-size: 15px;
+                        }
+                    }
+                }
+
+                .other-option {
+                    top: -2px;
+                    position: relative;
+
+                    .signup-btn, .signin-btn {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,81 @@
+// Small devices (landscape phones, 576px and up)
+@media (max-width:767px) {
+    /* Why Choose CSS */
+    .why-choose {
+        &::before {
+            width: 250px;
+        }
+        
+        .section-title {
+            margin-bottom: 30px;
+        }
+
+        .why-choose-text {
+            .media {
+                display: block;
+                text-align: center;
+
+                i {
+                    width: 50px;
+                    height: 50px;
+                    line-height: 50px;
+                    font-size: 25px;
+                }
+
+                .media-body {
+                    padding-left: 0;
+
+                    h5 {
+                        font-size: 18px;
+                    }
+
+                    p {
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+
+        .counter-area {
+            margin-top: 30px;
+        }
+
+        .why-choose-img {
+            height: 300px;
+        }
+    }
+
+    .counter-area {
+        .counter-text {
+            margin-bottom: 30px;
+
+            h2 {
+                font-size: 30px;
+            }
+        }
+    }
+
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width:768px) and (max-width:991px) {
+ 
+    /* Why Choose CSS */
+    .why-choose-img {
+        height: 500px;
+    }
+}
+
+//Extra large devices (large desktops, 1200px and up)
+@media (min-width:1800px) {
+    /* Why Choose CSS */
+    .why-choose-text {
+        .media {
+            margin-bottom: 30px;
+            padding-left: 0;
+        }
+    }
+}
+
+

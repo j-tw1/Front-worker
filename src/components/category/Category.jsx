@@ -1,4 +1,7 @@
 import React from "react";
+import "./Category.scss"
+import "./Category.css"
+import "./Category-responsive.scss"
 
 
 function Category() {

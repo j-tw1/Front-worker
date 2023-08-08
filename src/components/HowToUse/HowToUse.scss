@@ -1,0 +1,95 @@
+/* Font Variables */
+$body-font: 'IBM Plex Sans', sans-serif;
+$navbar-font: 'Catamaran', sans-serif;
+
+/* Color Variables */
+$body-color: #707070;
+$heading-color: #001935;
+$red-color: #fd1616;
+$white-color: #ffffff;
+
+/* Others Variables */
+$transition: .5s;
+$font-size: 17px;
+$box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+
+/* Way To Use CSS Start */
+.use-section {
+    background-image: url(../../assets/img/section-bg/1.jpg);
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+    background-attachment: fixed;
+
+    &::before {
+        position: absolute;
+        content: '';
+        background: rgba(1,12,41,0.85);
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    .section-title {
+        h2 {
+            color: $white-color;
+        }
+    }
+}
+
+.use-text {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 0 20px;
+    position: relative;
+
+    span {
+        color: $red-color;
+        background: #fdc7c7;
+        width: 30px;
+        height: 30px;
+        border-radius: 20px;
+        line-height: 30px;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: -100px;
+        margin: auto;
+        z-index: 1;
+    }
+
+    i {
+        font-size: 50px;
+        color: $red-color;
+        background: $white-color;
+        display: inline-block;
+        border: 3px dashed $red-color;
+        position: relative;
+        width: 150px;
+        height: 150px;
+        line-height: 150px;
+        border-radius: 150px;
+        margin-bottom: 30px;
+        transition: $transition;
+    }
+
+    h3 {
+        color: $white-color;
+        margin-bottom: 20px;
+    }
+
+    p {
+        color: $white-color;
+        margin-bottom: 0;
+    }
+
+    &:hover i {
+        background: $red-color;
+        color: $white-color;
+    }
+}
+/* Way To Use CSS End */

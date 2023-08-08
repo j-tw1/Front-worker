@@ -1,6 +1,9 @@
 import React from "react";
 import { cards } from "../../data";
 import CatCard from "../catCard/CatCard";
+import "./Category2.scss"
+import "./Category2.css"
+import "./Category2-responsive.scss"
 
 
 

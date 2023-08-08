@@ -1,0 +1,82 @@
+
+/* Way To Use CSS Start */
+.use-section {
+    background-image: url(../../assets/img/section-bg/4.jpg);
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+    background-attachment: fixed;
+  }
+  
+  .use-section::before {
+    position: absolute;
+    content: '';
+    background: rgba(1, 12, 41, 0.85);
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  
+  .use-section .section-title h2 {
+    color: #ffffff;
+  }
+  
+  .use-text {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 0 20px;
+    position: relative;
+  }
+  
+  .use-text span {
+    color: #fd1616;
+    background: #fdc7c7;
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    line-height: 30px;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: -100px;
+    margin: auto;
+    z-index: 1;
+  }
+  
+  .use-text i {
+    font-size: 50px;
+    color: #fd1616;
+    background: #ffffff;
+    display: inline-block;
+    border: 3px dashed #fd1616;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    border-radius: 150px;
+    margin-bottom: 30px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  
+  .use-text h3 {
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+  
+  .use-text p {
+    color: #ffffff;
+    margin-bottom: 0;
+  }
+  
+  .use-text:hover i {
+    background: #fd1616;
+    color: #ffffff;
+  }
+  
+  /* Way To Use CSS End */

@@ -1,0 +1,85 @@
+// Small devices (landscape phones, 576px and up)
+@media (max-width:767px) {
+    /* Jobs CSS */
+    .job-card {
+        padding: 20px;
+        .thumb-img {
+            margin-bottom: 25px;
+        }
+
+        .job-info {
+            padding-left: 0;
+            margin-bottom: 20px;
+            text-align: center;
+
+            ul {
+                li {
+                    margin-bottom: 5px;
+                    padding-right: 0;
+                }
+            }
+        }
+
+        .job-save {
+            span {
+                margin-right: 10px;
+            }
+
+            a {
+                i {
+                    top: 5px;
+                    position: relative;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width:768px) and (max-width:991px) {
+    /* Jobs CSS */
+    .job-card {
+        .thumb-img {
+            margin-bottom: 25px;
+        }
+
+        .job-info {
+            padding-left: 0;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .job-save {
+            span {
+                margin-right: 10px;
+            }
+
+            a {
+                i {
+                    top: 5px;
+                    position: relative;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+}
+
+
+//Large devices (landscape ipad, desktops, 992px and up)
+@media (min-width:992px) and (max-width:1199px) {
+    /* Jobs CSS */
+    .job-card {
+        .job-info {
+            padding-left: 0;
+
+            ul {
+                li {
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+}
+

@@ -1,4 +1,7 @@
 import React from "react";
+import "./Feature.scss";
+import "./Feature-responsive.scss";
+import "./Feature.css";
 
 
 function Feature() {

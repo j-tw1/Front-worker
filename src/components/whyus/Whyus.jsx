@@ -1,4 +1,7 @@
 import React from "react";
+import "./Whyus.scss"
+import "./Whyus.css"
+import "./Whyus-responsive.scss"
 
 
 function Whyus() {

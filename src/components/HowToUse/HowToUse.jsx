@@ -1,4 +1,7 @@
 import React from "react";
+import "./HowToUse.scss"
+import "./HowToUse.css"
+import "./HowToUse-responsive.scss"
 
 
 function HowToUse() {

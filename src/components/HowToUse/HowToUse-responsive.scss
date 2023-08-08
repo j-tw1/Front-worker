@@ -1,0 +1,48 @@
+// Small devices (landscape phones, 576px and up)
+@media (max-width:767px) {
+    /* Way To USe CSS */
+    .use-section {
+        padding-bottom: 0;
+    }
+    .use-text {
+        margin-bottom: 50px;
+
+        i {
+            font-size: 40px;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            margin-bottom: 15px;
+        }
+    }
+
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width:768px) and (max-width:991px) {
+ /* Way To Use CSS */
+ .use-text {
+    padding: 0;
+
+    i {
+        font-size: 35px;
+        width: 120px;
+        height: 120px;
+        line-height: 120px;
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        margin-bottom: 15px;
+    }
+}
+
+}
+
+
+

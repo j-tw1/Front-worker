@@ -1,0 +1,28 @@
+// Small devices (landscape phones, 576px and up)
+@media (max-width:767px) {
+     /* Category CSS */
+     .category-card {
+        padding: 20px;
+
+        i {
+            font-size: 40px;
+        }
+    }
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width:768px) and (max-width:991px) {
+   /* Category CSS */
+   .category-card {
+    padding: 30px 20px;
+
+    h3 {
+        font-size: 20px;
+    }
+    }
+
+}
+
+
+

@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import "./Navbar.scss"
+import "./Navbar.css"
+import "./Navbar-responsive.scss"
+
 
 
 
