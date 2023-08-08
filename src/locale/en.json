@@ -1,0 +1,8 @@
+{
+    "titleLogin": "Login",
+    "SubTitleLogin": "Enter your credentials to log in",
+    "emailTitle" : "username",
+    "emailInput" : "enter your email",
+    "passTitle" : "password",
+    "passInput" : "enter your password"
+}

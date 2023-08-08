@@ -1,0 +1,9 @@
+{
+    "titleLogin": "تسجيل الدخول",
+    "SubTitleLogin": "أدخل البيانات الخاصة بك لتسجيل الدخول",
+    "emailTitle" : "إسم المستخدم",
+    "emailInput" : "enter your email",
+    "passTitle" : "كلمة السر",
+    "passInput" : "enter your password"
+
+}

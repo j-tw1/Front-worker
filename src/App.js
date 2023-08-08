@@ -6,6 +6,7 @@ import CatCard from './components/catCard/CatCard';
 import Home from './pages/Home/Home';
 
 
+
 function App() {
   const Layout = () => {
   return (
