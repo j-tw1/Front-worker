@@ -4,6 +4,8 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Navbar from './components/navbar/Navbar';
 import CatCard from './components/catCard/CatCard';
 import Home from './pages/Home/Home';
+import Signup from './pages/signup/Signup';
+import Signup2 from './pages/signup2/Signup2';
 
 
 
@@ -13,7 +15,7 @@ function App() {
     <>
     <Navbar/>
     
-    <Home/>
+    <Outlet/>
     </>
     
   );
@@ -27,6 +29,10 @@ function App() {
         {
           path: "/",
           element: <Home />,
+        },
+        {
+          path: "/About",
+          element: <Signup2 />,
         },
        
 

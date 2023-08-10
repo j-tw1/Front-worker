@@ -4,6 +4,8 @@
     "emailTitle" : "إسم المستخدم",
     "emailInput" : "enter your email",
     "passTitle" : "كلمة السر",
-    "passInput" : "enter your password"
+    "passInput" : "enter your password",
+    "title10" : "arab"
+
 
 }

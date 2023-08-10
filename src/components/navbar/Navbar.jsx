@@ -21,7 +21,7 @@ function Navbar() {
         <div className="navbar-area">
           {/* Menu For Mobile Device */}
           <div className="mobile-nav">
-            <a href="index.html" className="logo">
+            <a href="/" className="logo">
               <img src="assets/img/logo2.png" alt="logo" />
             </a>
           </div>
@@ -29,7 +29,7 @@ function Navbar() {
           <div className="main-nav">
             <div className="container">
               <nav className="navbar navbar-expand-lg navbar-light">
-                <a className="navbar-brand" href="index.html">
+                <a className="navbar-brand" href="/">
                   
                   <img src="assets/img/logo2.png" alt="logo" />
                 </a>
@@ -45,7 +45,7 @@ function Navbar() {
                       
                     </li>
                     <li className="nav-item">
-                      <a href="/AboutUs" className="nav-link">
+                      <a href="/About" className="nav-link">
                         About
                       </a>
                     </li>

@@ -1,6 +1,6 @@
 import React from "react";
 import { workers } from "../../data";
-import Wrk from "./Wrk";
+import Wrk from "./WorkerCard";
 
 
 

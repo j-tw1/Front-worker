@@ -1,0 +1,96 @@
+@media (min-width: 1025px) {
+    .h-custom {
+    height: auto !important;
+    }
+    
+    }
+    .card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .75em;
+    padding-right: .75em;
+    background-color: #4835d4;
+    }
+    .card-registration-2 {
+        background: #f4f7e5;
+        padding: 20px;
+
+    }
+    .card-registration .select-arrow {
+    top: 13px;
+    }
+    
+    .gradient-custom-2 {
+    /* fallback for old browsers */
+    background: #23b6c9;
+
+    .card2 {
+        padding-bottom: 20px;
+        align-items: center;
+        border: none;
+
+    }
+    .card2 img{
+        
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        margin-top: 40px;
+        margin-bottom: 30px;
+        margin-left: 215px;
+        display: flex;
+
+        
+    }
+    .lbl1{
+        display: block;
+        width: 200px;
+        background: #813d3d;
+        color: #ffffff;
+        padding: 12px;
+        margin: 10px auto ;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    #input-file{
+        display: none;
+    }
+
+    
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgb(76, 82, 92), rgba(194, 233, 251, 1));
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgb(11, 46, 82), rgb(39, 79, 119))
+    }
+    .bg-lwla {
+        background-color: #ffffff;
+        height: max-content;
+        
+   }
+   .b0{
+    color: #010c29;
+   }
+   .b1{
+    color: #ffffff;
+   }
+    .bg-indigo {
+    background-color: #010c29;
+    }
+    @media (min-width: 992px) {
+    .card-registration-2 .bg-indigo {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+ 
+    }
+    }
+    @media (max-width: 991px) {
+    .card-registration-2 .bg-indigo {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    }
+
+    }

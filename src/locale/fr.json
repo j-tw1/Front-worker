@@ -4,7 +4,8 @@
     "emailTitle" : "username",
     "emailInput" : "enter your email",
     "passTitle" : "password",
-    "passInput" : "enter your password"
+    "passInput" : "enter your password",
+    "title10" : "francais"
 
 
 }

@@ -5,7 +5,7 @@ import "../apply/Apply-responsive.scss"
 
 
 
-function Wrk({worker}) {
+function WorkerCard({worker}) {
   return (
     <div className="col-sm-6">
           <div className="job-card">
@@ -56,4 +56,4 @@ function Wrk({worker}) {
         </div>
   );
 }
-export default Wrk;
+export default WorkerCard;
