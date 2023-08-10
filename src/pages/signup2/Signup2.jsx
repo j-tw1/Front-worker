@@ -100,15 +100,20 @@ function Signup2() {
                                 </div>
                                 <div className="row">
                                 <div className="col-md-6 mb-4 pb-2">
-                                    <select className="form-control form-control-lg">
-                                    <option value={1}>Title</option>
-                                    <option value={2}>Two</option>
-                                    <option value={3}>Three</option>
-                                    <option value={4}>Four</option>
-                                    </select>
+                                    <div className="form-outline">
+                                    <input
+                                        type="text"
+                                        id="form3Examplev4"
+                                        className="form-control form-control-lg"
+                                        style={{ backgroundColor: 'lightgray' }}
+                                        defaultValue="Plombier"
+                                        readOnly
+
+                                    />
                                     <label className="form-label" htmlFor="form3Examplev4">
                                         Categorie
                                     </label>
+                                    </div>
                                 </div>
                                 <div className="col-md-6 mb-4 pb-2">
                                     <div className="form-outline">
@@ -116,6 +121,7 @@ function Signup2() {
                                         type="text"
                                         id="form3Examplev4"
                                         className="form-control form-control-lg"
+
                                     />
                                     <label className="form-label" htmlFor="form3Examplev4">
                                         Experience
@@ -123,23 +129,14 @@ function Signup2() {
                                     </div>
                                 </div>
                                 </div>
-                                <div className="row">
-                                    <div className="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
-                                    <div className="form-outline">
-                                    <input type="file" className="select-arrow form-control "/>
-                                        <label className="form-label" htmlFor="form3Examplev5">
-                                        CV
-                                        </label>
-                                    </div>
-                                    </div>
-                                    <div className="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
-                                    <div className="form-outline">
-                                    <input type="file" className="select-arrow form-control "/>
-                                        <label className="form-label" htmlFor="form3Examplev5">
-                                        Certificats
-                                        </label>
-                                    </div>
-                                    </div>
+                                
+                                <div className="col-md-12 mb-4 pb-2 mb-md-0 pb-md-0">
+                                <div className="form-outline">
+                                <input type="file" className="select-arrow form-control "/>
+                                    <label className="form-label" htmlFor="form3Examplev5">
+                                    Certificats
+                                    </label>
+                                </div>
                                 </div>
                                 <br></br><br></br><br></br>
                                 <div className="col-md-12">
@@ -219,6 +216,9 @@ function Signup2() {
                                         type="text"
                                         id="form3Examplea6"
                                         className="form-control form-control-lg"
+                                        style={{ backgroundColor: 'lightgray' }}
+                                        defaultValue="Maroc"
+                                        readOnly
                                     />
                                     <label className="form-label" htmlFor="form3Examplea6">
                                         Country
@@ -232,6 +232,9 @@ function Signup2() {
                                         type="text"
                                         id="form3Examplea7"
                                         className="form-control form-control-lg"
+                                        style={{ backgroundColor: 'lightgray' }}
+                                        defaultValue="+212"
+                                        readOnly
                                         />
                                         <label className="form-label" htmlFor="form3Examplea7">
                                         Code +
