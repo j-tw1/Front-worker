@@ -1,15 +1,19 @@
 /* Why Choose Section CSS Start */
 .why-ch {
   padding-top: 40px;
+  background-color: #ffffff;
 }
+
 .choose-card {
-    border: 1px dashed #010c29;
+    border: 1px  #010c29;
     padding: 36px;
     text-align: center;
     border-radius: 10px;
     margin-bottom: 30px;
     -webkit-transition: 0.5s;
     transition: 0.5s;
+    background-color: #dee0e4;
+    
   }
   
   .choose-card .i11 {

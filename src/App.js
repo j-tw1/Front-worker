@@ -31,21 +31,22 @@ function App() {
           element: <Home />,
         },
         {
-          path: "/Signin",
-          element: <LoginComp />,
-        },
-        {
-          path: "/Signup/ouvrier",
-          element: <SignupCat />,
-        },
-        {
           path: "/Signup",
           element: <Signup2 />,
         }
        
 
         
-      ],}
+      ],},
+      {
+        path: "/Signin",
+          element: <LoginComp />,
+      },
+      {
+        path: "/Signup/ouvrier",
+      element: <SignupCat />,
+        
+      },
     
   ]);
 
