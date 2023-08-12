@@ -2,7 +2,7 @@ import './App.css';
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Navbar from './components/navbar/Navbar';
 import Home from './pages/Home/Home';
-//import Signup2 from './pages/signup2/Signup2';
+import Signup2 from './pages/signup2/Signup2';
 import SignupCat from './pages/signup-ouvrier/SignCat';
 import LoginComp from './pages/LogRegComponent/LoginComp';
 //import LoginComp from './pages/LogRegComponent/LoginComp';
@@ -38,6 +38,10 @@ function App() {
           path: "/Signup/ouvrier",
           element: <SignupCat />,
         },
+        {
+          path: "/Signup",
+          element: <Signup2 />,
+        }
        
 
         
