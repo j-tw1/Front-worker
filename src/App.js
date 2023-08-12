@@ -1,11 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Navbar from './components/navbar/Navbar';
-import CatCard from './components/catCard/CatCard';
 import Home from './pages/Home/Home';
-import Signup from './pages/signup/Signup';
-import Signup2 from './pages/signup2/Signup2';
+//import Signup2 from './pages/signup2/Signup2';
+import SignupCat from './pages/signup-ouvrier/SignCat';
+import LoginComp from './pages/LogRegComponent/LoginComp';
+//import LoginComp from './pages/LogRegComponent/LoginComp';
 
 
 
@@ -31,8 +31,12 @@ function App() {
           element: <Home />,
         },
         {
-          path: "/About",
-          element: <Signup2 />,
+          path: "/Signin",
+          element: <LoginComp />,
+        },
+        {
+          path: "/Signup/ouvrier",
+          element: <SignupCat />,
         },
        
 

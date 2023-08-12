@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Navbar.scss"
+//import "./Navbar.scss"
 import "./Navbar.css"
 import "./Navbar-responsive.scss"
 
@@ -13,7 +13,7 @@ function Navbar() {
     const currentUser = {
       id: 1,
       username: "Mouad",
-      isSeller: true,
+      isSeller: false,
     };
 
     return (
@@ -87,12 +87,12 @@ function Navbar() {
                               </a>
                               <ul className="dropdown-menu">
                                 <li className="nav-item">
-                                  <a href="sign-in.html" className="nav-link">
+                                  <a href="/Signin" className="nav-link">
                                     Sign In
                                   </a>
                                 </li>
                                 <li className="nav-item">
-                                  <a href="sign-up.html" className="nav-link">
+                                  <a href="/Signup" className="nav-link">
                                     Sign Up
                                   </a>
                                 </li>
@@ -173,10 +173,10 @@ function Navbar() {
                   </ul>
                   {!currentUser?.isSeller && 
                     <div className="other-option">
-                    <a href="sign-up.html" className="signup-btn">
+                    <a href="/Signup/ouvrier" className="signup-btn">
                       Sign Up
                     </a>
-                    <a href="sign-in.html" className="signin-btn">
+                    <a href="/Signin" className="signin-btn">
                       Sign In
                     </a>
                   </div>

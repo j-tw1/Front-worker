@@ -1,11 +1,16 @@
 
-import React, { useEffect, useState } from "react";
-import { useTranslation } from 'react-i18next';
+import React, { useState } from "react";
+//import { useTranslation } from 'react-i18next';
 import defaultImage from "../../assets/img/account.jpg";
 import "./Signup2.css"
 
+
+
+
 function Signup2() {
-    const [t, i18n ] = useTranslation();
+    
+    
+    //const [t, i18n ] = useTranslation();
     const [selectedImage, setSelectedImage] = useState(defaultImage);
 
     const handleInputChange = (event) => {
@@ -38,7 +43,7 @@ function Signup2() {
                                     <b className="b0">General Infomation</b>
                                 </h3>
                                 <div className="card2">
-                                    <img src={selectedImage} id="prof-pic" />
+                                    <img src={selectedImage} alt="" id="prof-pic" />
                                     <label for="input-file" className="lbl1" id="prof-pic">update image</label>
                                     <input type="file" accept="image/jpeg, image/png, image/jpg" id="input-file" onChange={handleInputChange}/>
                                     
@@ -205,7 +210,7 @@ function Signup2() {
                                         className="form-control form-control-lg"
                                         />
                                         <label className="form-label" htmlFor="form3Examplea5">
-                                        Place
+                                        Ville
                                         </label>
                                     </div>
                                     </div>

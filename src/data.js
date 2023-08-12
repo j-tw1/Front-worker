@@ -1,27 +1,35 @@
+import plombierImage from "./assets/img/categories/plombier.png";
+import peintreImage from "./assets/img/categories/peintre.png";
+import electrecityImage from "./assets/img/categories/electrecity.png";
+import mecanicImage from "./assets/img/categories/mecanic.png";
+import menuisierImage from "./assets/img/categories/menuisier.png";
+
+
+
 export const cards = [
   {
     id: 1,
     title: "Électricien ",
     desc: "répare fils, circuits, appareils",
-    img: "https://images.pexels.com/photos/7532110/pexels-photo-7532110.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+    img: electrecityImage,
   },
   {
     id: 2,
     title: "Plombier",
     desc: "répare tuyaux eau, chauffage central",
-    img: "https://images.pexels.com/photos/11295165/pexels-photo-11295165.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+    img: plombierImage,
   },
   {
     id: 3,
     title: "Menuisier",
     desc: "fait meubles en bois",
-    img: "https://images.pexels.com/photos/4371669/pexels-photo-4371669.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+    img: mecanicImage,
   },
   {
     id: 4,
     title: "Peintre",
     desc: "applique peinture, enduits",
-    img: "https://images.pexels.com/photos/7608079/pexels-photo-7608079.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+    img: peintreImage,
   },
   {
     id: 5,
@@ -33,7 +41,7 @@ export const cards = [
     id: 6,
     title: "Mécanicien",
     desc: "répare moteurs, machines",
-    img: "https://images.pexels.com/photos/11378899/pexels-photo-11378899.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+    img: mecanicImage,
   },
   {
     id: 7,
@@ -195,5 +203,44 @@ export const workers = [
     name: "Wilton Hunt",
     category: "Plombier",
     city:"Nador",
+  },
+];
+
+export const categories = [
+  {
+    id: 1,
+    pp: plombierImage ,
+    desc: "Je suis un plombier",
+    category: "Plombier",
+  },
+  {
+    id: 2,
+    pp: mecanicImage,
+    desc: "Je suis un Mecanicien",
+    category: "Mecanicien",
+  },
+  {
+    id: 3,
+    pp: peintreImage,
+    desc: "Je suis un peintre",
+    category: "peintre",
+  },
+  {
+    id: 4,
+    pp: plombierImage,
+    desc: "Je suis un plombier",
+    category: "Plombier",
+  },
+  {
+    id: 5,
+    pp: menuisierImage,
+    desc: "Je suis un plombier",
+    category: "Menuisier",
+  },
+  {
+    id: 6,
+    pp: plombierImage,
+    desc: "Je suis un plombier",
+    category: "Plombier",
   },
 ];
