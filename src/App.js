@@ -7,6 +7,8 @@ import SignupCat from './pages/signup-ouvrier/SignCat';
 import LoginComp from './pages/LogRegComponent/LoginComp';
 //import LoginComp from './pages/LogRegComponent/LoginComp';
 
+import SignupClient from './pages/SignupClient/SignupClient';
+
 
 
 function App() {
@@ -33,7 +35,8 @@ function App() {
         {
           path: "/Signup",
           element: <Signup2 />,
-        }
+        },
+       
        
 
         
@@ -47,6 +50,10 @@ function App() {
       element: <SignupCat />,
         
       },
+      {
+        path:"/SignupClient",
+        element:<SignupClient/>,
+      }
     
   ]);
 
