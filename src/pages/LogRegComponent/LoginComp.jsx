@@ -95,7 +95,7 @@ const LoginComp = () => {
                           onChange={(e) => setPassword(e.target.value)}
                        />
                 <a href="#">Forgot your password?</a>
-                <button onClick={handleloginClick}>Sign In</button>
+                <button className="button11" onClick={handleloginClick}>Sign In</button>
               </form>
             </div>
 
