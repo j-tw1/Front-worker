@@ -1,4 +1,15 @@
 /* Banner CSS Start */
+
+.d-table {
+  width: 100%;
+  height: 100%;
+}
+
+.d-table-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
 .banner-section {
     height: 800px;
     background-image: url(../../assets/img/banner/11.jpg);
@@ -50,15 +61,17 @@
   
   .banner-section .banner-content .banner-form {
     background: rgba(255, 255, 255, 0.8);
-    padding: 30px;
+    padding-top: 30px;
     border-radius: 10px;
     margin-bottom: 45px;
+    
   }
   
   .banner-section .banner-content .banner-form .form-group {
     margin-bottom: 0;
     line-height: 1;
     text-align: left;
+    
   }
   
   .banner-section .banner-content .banner-form .form-group label {
@@ -144,10 +157,13 @@
     padding: 16px 20px;
     -webkit-transition: 0.5s;
     transition: 0.5s;
+    border-color: #fd1616;
+    margin-top: 10px;
   }
   
   .banner-section .banner-content .banner-form .find-btn:hover {
     background: #001935;
+    border-color: #001935;
   }
   
   .banner-section .banner-content .banner-form .find-btn i {
