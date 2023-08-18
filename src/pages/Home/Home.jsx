@@ -1,14 +1,9 @@
 import React from "react";
-import Category from '../../components/category/Category';
 import Feature from '../../components/feature/Feature';
 import HowToUse from '../../components/HowToUse/HowToUse';
 import Whyus from '../../components/whyus/Whyus';
-import Category2 from '../../components/category2/Category2';
-import Worker from '../../components/worker/Worker';
 import Apply from "../../components/apply/Apply";
-import SignupCat from "../signup-ouvrier/SignCat";
 import { useTranslation } from 'react-i18next';
-import { getLoggedInUser } from "../../services/AuthService";
 
 function Home() {
 
@@ -21,13 +16,9 @@ function Home() {
       
       <Feature />
       <Apply/>
-      <Category2/>
       <HowToUse/>
       <Whyus/>
-      <Worker/>
       
-      <Category/>
-      <SignupCat/>
 
   </>
 
