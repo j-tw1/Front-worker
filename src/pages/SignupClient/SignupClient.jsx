@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import './signupClient.css';
+import { registerAPICall } from '../../services/AuthService';
 
 function SignupClient() {
+  
   const [firstName, setfirstName] = useState('');
   const [lastName, setlastName] = useState('');
   const [email, setEmail] = useState('');
@@ -14,7 +16,7 @@ function SignupClient() {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const userData = {
+    const register = {
       firstName,
       lastName,
       email,
@@ -23,32 +25,13 @@ function SignupClient() {
       phone,
     };
 
-    try {
-      const response = await fetch(
-        'http://localhost:8081/api/v1/auth/register',
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(userData),
-        }
-      );
+    registerAPICall(register).then((response) => {  
+         console.log(response.data);
 
-      const data = await response.json();
-
-      if (response.status === 201) {
-        // Check the status code for success
-        setRegistrationStatus('Registration successful!');
-      } else {
-        setRegistrationStatus('Registration failed. Please check the data.');
-      }
-
-      window.location.href = '/';
-    } catch (error) {
-      console.error('Error registering:', error);
-      setRegistrationStatus('An error occurred during registration.');
-    }
+     })  .catch(error=>{
+          console.error(error); 
+     })
+ 
   };
   return (
     <>
@@ -61,7 +44,9 @@ function SignupClient() {
                 <span className="signup-details">firstName</span>
                 <input
                   type="text"
-                  placeholder="Enter your name"
+                  name='name'
+                  value={firstName}
+                  placeholder="Enter your firstname"
                   required
                   onChange={(e) => setfirstName(e.target.value)}
                 />
@@ -70,7 +55,8 @@ function SignupClient() {
                 <span className="signup-details">lastName</span>
                 <input
                   type="text"
-                  placeholder="Enter your username"
+                  name='lastname'
+                  placeholder="Enter your lastname"
                   required
                   onChange={(e) => setlastName(e.target.value)}
                 />
@@ -79,6 +65,7 @@ function SignupClient() {
                 <span className="signup-details">Email</span>
                 <input
                   type="text"
+                  name='email'
                   placeholder="Enter your email"
                   required
                   onChange={(e) => setEmail(e.target.value)}
@@ -88,16 +75,18 @@ function SignupClient() {
                 <span className="signup-details">password</span>
                 <input
                   type="text"
-                  placeholder="Enter your number"
+                  name='password'
+                  placeholder="Enter your password"
                   required
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
+              
               <div className="signup-input-box">
                 <span className="signup-details">address</span>
                 <input
-                  type="password"
-                  placeholder="Enter your password"
+                  type="address"
+                  placeholder="Enter your adress"
                   required
                   onChange={(e) => setaddress(e.target.value)}
                 />
@@ -105,8 +94,8 @@ function SignupClient() {
               <div className="signup-input-box">
                 <span className="signup-details">phone</span>
                 <input
-                  type="password"
-                  placeholder="Confirm your password"
+                  type="text"
+                  placeholder="enter your phone number"
                   required
                   onChange={(e) => setphone(e.target.value)}
                 />

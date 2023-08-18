@@ -8,8 +8,10 @@ import Worker from '../../components/worker/Worker';
 import Apply from "../../components/apply/Apply";
 import SignupCat from "../signup-ouvrier/SignCat";
 import { useTranslation } from 'react-i18next';
+import { getLoggedInUser } from "../../services/AuthService";
 
 function Home() {
+
   const [t, i18n ] = useTranslation();
   return ( 
   <>

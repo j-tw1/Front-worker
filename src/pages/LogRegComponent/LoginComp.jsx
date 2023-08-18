@@ -1,19 +1,60 @@
 import React, { useState } from 'react';
 import './logincomp.css';
+import { getRole, getToken, loginAPICall, saveLoggedInUser, storeRole, storeToken, storeTokenAndRole } from '../../services/AuthService';
+import { useNavigate } from 'react-router-dom';
 
 const LoginComp = () => {
+
+
+
+  const [username , setUsername] = useState('')
+
+  const [password , setPassword] = useState('')
+  
   const [isSignInActive, setIsSignInActive] = useState(true);
+
+  const navigator = useNavigate();
 
   const handleButtonClick = () => {
     const container = document.getElementById('container10');
     container.classList.toggle('right-panel-active');
-  };
+
+  }
+
+  async function handleloginClick (e) {
+    e.preventDefault();
+    
+   await loginAPICall(username,password).then((response)=>{
+      console.log(response.data);
+     
+      const token = 'Bearer ' + response.data.accessToken; 
+      const role =  response.data.role ;
+      
+      storeToken(token);
+      
+      storeRole(role);
+
+      saveLoggedInUser(username);
+
+      const roleY = getRole();
+
+      console.log(roleY);
+  
+      navigator('/home');
+      
+    }) .catch(error=> {
+      console.error(error);
+    })
+    
+    
+  }
+
 
   return (
     <>
       <div className="sign-ch">
-        <div class="sign-ch-two pb-70">
-          <div class="container"></div>
+        <div className="sign-ch-two pb-70">
+          <div className="container"></div>
           <div
             className={`container1 ${
               isSignInActive ? '' : 'right-panel-active'
@@ -42,10 +83,19 @@ const LoginComp = () => {
                   </a>
                 </div>
                 <span>or use your account</span>
-                <input type="email" placeholder="Email" />
-                <input type="password" placeholder="Password" />
+                <input type="text"
+
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value)}  // Corrected line
+                        placeholder="Email" />
+
+                <input type="password"
+                       placeholder="Password" 
+                       value={password}
+                          onChange={(e) => setPassword(e.target.value)}
+                       />
                 <a href="#">Forgot your password?</a>
-                <button>Sign In</button>
+                <button onClick={handleloginClick}>Sign In</button>
               </form>
             </div>
 
