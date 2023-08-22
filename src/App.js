@@ -7,6 +7,11 @@ import SignupCat from './pages/signup-ouvrier/SignCat';
 import LoginComp from './pages/LogRegComponent/LoginComp';
 import { Navigate } from 'react-router-dom';
 import { getRole, isUserLoggedIn } from './services/AuthService';
+
+import SignUpClient from './pages/SignUp-client/SignUpClient'
+
+import SignUpChoice from './pages/SignUpchoice/signUpChoice'
+import SignUpOuvrier from './pages/SignUpOuvrier/signUpOuvrier';
 //import LoginComp from './pages/LogRegComponent/LoginComp';
 
 
@@ -53,6 +58,7 @@ function App() {
     const isAuth = isUserLoggedIn();
     
     if(isAuth && getRole()=='Client'){
+      
       return children ;
 
     }
@@ -97,10 +103,42 @@ function App() {
         path: "/Signin",
           element: <LoginComp />,
       },
+
+    
+
+
+      
+      {
+        path: "/Signupchoice",
+          element: <SignUpChoice />,
+      },
+
+      {
+        path: "/Signup/ouvrier",
+          element: <SignUpOuvrier />,
+      },
+
+
+      
+      // {
+        
+      //   path: "/Signup/ouvrier",
+      // element:  <AuthenticatedAdmin> <SignupCat /> </AuthenticatedAdmin>,
+        
+      // },
+
+
+
+      // {
+        
+      //   path: "/Signup/ouvrier",
+      // element:  <AuthenticatedAdmin> <SignupCat /> </AuthenticatedAdmin>,
+        
+      // },
       {
         
-        path: "/Signup/ouvrier",
-      element:  <AuthenticatedAdmin> <SignupCat /> </AuthenticatedAdmin>,
+        path: "/SignupClient",
+      element:   <SignUpClient /> ,
         
       },
     

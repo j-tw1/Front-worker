@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import './logincomp.css';
-import { getRole, getToken, loginAPICall, saveLoggedInUser, storeRole, storeToken, storeUserDetails } from '../../services/AuthService';
+import './signupchoice.css';
+import { getRole, getToken, loginAPICall, saveLoggedInUser, storeRole, storeToken, storeTokenAndRole } from '../../services/AuthService';
 import { useNavigate } from 'react-router-dom';
 import logoImage from '../../assets/img/logo2.png'
 
-
-const LoginComp = () => {
+const SignUpChoice = () => {
 
 
 
@@ -19,9 +18,11 @@ const LoginComp = () => {
 
   const handleButtonClick = () => {
     const container = document.getElementById('container10');
+    
     container.classList.toggle('right-panel-active');
 
   }
+
 
   function handleHomeButtonClick(event){
     navigator('/'); 
@@ -35,13 +36,6 @@ const LoginComp = () => {
      
       const token = 'Bearer ' + response.data.accessToken; 
       const role =  response.data.role ;
-      const email = response.data.email;
-      const phone = response.data.phone ;
-      const firstname = response.data.firstname;
-      const lastname = response.data.lastname ;
-      const pays     = response.data.pays ; 
-      const ville = response.data.ville ; 
-      const cin = response.data.cin ; 
       
       storeToken(token);
       
@@ -49,21 +43,18 @@ const LoginComp = () => {
 
       saveLoggedInUser(username);
 
-      storeUserDetails(email, firstname, lastname, pays, phone, ville ,cin);
-
-
-
       const roleY = getRole();
 
       if (roleY == 'Ouvrier'){
 
-        navigator('/home');
+        navigator('/');
       }
       if (roleY == 'Client'){
-        navigator('/botswana')
+
+        navigator('/Client/Home')
       }
 
-      console.log(response.data.lastname);
+      console.log(roleY);
   
       
       
@@ -80,14 +71,14 @@ const LoginComp = () => {
       <div className="sign-ch">
       <div className="home-button-container">
         <button className="home-button" onClick={handleHomeButtonClick}>
-        <img src={logoImage} alt="jjj" className="home-logo" />
+        <img src={logoImage} alt="jjj" className="home-logo" />  
         </button>
       </div>
         <div className="sign-ch-two pb-70">
           <div className="container"></div>
           <div
             className={`container1 ${
-              isSignInActive ? '' : 'right-panel-active'
+              !isSignInActive ? '' : 'right-panel-active'
             }`}
             id="container10"
           >
@@ -163,4 +154,4 @@ const LoginComp = () => {
   );
 };
 
-export default LoginComp;
+export default SignUpChoice;

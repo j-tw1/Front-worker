@@ -1,0 +1,240 @@
+
+
+    .registration-page-ouvrier {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f4f6f9;
+        font-family: 'Arial', sans-serif;
+        background-image: url('/src/assets/img/be.jpg');
+        background-color: rgba(244, 246, 249, 0.8);
+        background-size: cover;
+        background-position: center;
+        /* justify-content: flex-end;  */
+
+      }
+      
+      .registration-form-container-ouvrier {
+        
+        width: 600px; /* Increased width */
+        padding: 7px;
+        border-radius: 20px;
+        box-shadow: 0px 10px 20px #0a5e9f;
+        background-color: #ffffff;
+        
+        
+      }
+      
+      h2.Registration-ouvrier {
+        font-size: 32px;
+        margin-bottom: 20px;
+        color: rgba(0, 24, 239, 0.715);
+      }
+      h2.Registration-ouvrier {
+        font-size: 36px;
+        font-weight: bold;
+        color: #0a5e9f;
+        margin-bottom: 20px;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+        text-align: center;
+        text-transform: uppercase;
+        position: relative;
+        padding-bottom: 10px; /* Add some spacing for the border */
+        border-bottom: 2px solid  #0a5e9f; /* Add a styled border */
+      }
+      
+      /* h2.Registration::after {
+        content: "";
+        display: block;
+        width: 60px;
+        height: 3px;
+        background: linear-gradient(to bottom, #007bff, #2c3e50);
+        position: absolute;
+        bottom: -10px;
+        left: calc(50% - 30px);
+      } */
+      
+      .form-group {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+      }
+      
+      .form-group input,
+      .form-group select {
+        flex: 1;
+        padding: 14px;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        background-color: #f0f3f8;
+        color: #333;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        transition: background-color 0.3s, box-shadow 0.3s;
+        box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.05);       }
+      
+      .form-group input:focus,
+      .form-group select:focus {
+        outline: none;
+        background-color: #ffffff;
+        box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.1);
+      }
+      
+      button.btn-C-ouvrier {
+        background: #0a5e9f;
+        color: white;
+        padding: 16px 32px;
+        border: none;
+        border-radius: 10px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: transform 0.2s, box-shadow 0.3s;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        text-transform: uppercase;
+      }
+      
+      button.btn-C-ouvrier:hover {
+        background: linear-gradient(to bottom, #2c3e50, #233140);
+        transform: scale(1.05);
+        box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+      }
+      
+      
+    
+      
+      .label {
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #555;
+      }
+      
+      .image-upload {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      
+      .image-upload label {
+        cursor: pointer;
+        background-color: #007bff;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+      
+      .image-upload label:hover {
+        background-color: #0056b3;
+      }
+      
+    
+      
+    
+    
+    
+    
+      
+      
+      
+      /* Responsive adjustments */
+      @media (max-width: 576px) {
+        .registration-form-container-ouvrier {
+          width: 90%;
+          padding: 20px;
+        }
+      
+        h2.Registration-ouvrier {
+          font-size: 28px;
+          margin-bottom: 15px;
+        }
+      
+        .form-group {
+          flex-direction: column;
+          margin-bottom: 15px;
+        }
+      
+        .form-group input,
+        .form-group select {
+          padding: 12px;
+          font-size: 14px;
+          margin-right: 0;
+          margin-bottom: 10px;
+        }
+      
+        .image-upload label {
+          padding: 8px 12px;
+        }
+      
+        .button-container {
+          justify-content: center;
+          margin-top: 15px;
+        }
+        
+        .button-container button.btn-C-ouvrier {
+          padding: 12px 24px;
+          font-size: 16px;
+        }
+      }
+      
+      @media (min-width: 577px) and (max-width: 992px) {
+        .registration-form-container-ouvrier {
+          width: 80%;
+          padding: 30px;
+        }
+      
+        h2.Registration-ouvrier {
+          font-size: 32px;
+          margin-bottom: 18px;
+        }
+      
+        .form-group input,
+        .form-group select {
+          padding: 12px;
+          font-size: 15px;
+          margin-right: 8px;
+          margin-bottom: 8px;
+        }
+      }
+    
+      .logo-ouvrier {
+        width: 100px; /* Adjust the width as needed */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 10px; /* Add some spacing below the logo */
+    }
+    .logo-container-ouvrier {
+      text-align: center;
+      margin-bottom: 10px;
+      position: relative;
+      justify-content: space-between;
+    
+    }
+    
+    .logo-container-ouvrier::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 55px; /* Adjust the width of the line */
+      height: 2px; /* Adjust the height of the line */
+      background-color:#0a5e9f; /* Adjust the color of the line */
+    }
+    
+    
+    .close-button-ouvrier {
+      background: none;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      color: #0a5e9f;
+position :absolute ;
+top: 10px; 
+  left: 10px;      
+    }
+    
+      
+      /* Rest of your styles */
+      

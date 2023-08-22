@@ -2,19 +2,33 @@ import React, { useState } from "react";
 //import "./Navbar.scss"
 import "./Navbar.css"
 import "./Navbar-responsive.scss"
+import { isUserLoggedIn , getUserDetails  } from "../../services/AuthService";
+
+import { useEffect } from "react";
 
 
 
 
 function Navbar() {
+
+
+
+  const userDetails = getUserDetails();
     
 
+ 
+
+  
 
     const currentUser = {
       id: 1,
       username: "Mouad",
       isSeller: false,
     };
+
+    // if(isUserLoggedIn()){
+
+
 
     return (
       <>
@@ -86,6 +100,8 @@ function Navbar() {
                                 Member
                               </a>
                               <ul className="dropdown-menu">
+
+                                
                                 <li className="nav-item">
                                   <a href="/Signin" className="nav-link">
                                     Sign In
@@ -171,28 +187,58 @@ function Navbar() {
                       </a>
                     </li>
                   </ul>
-                  {!currentUser?.isSeller && 
+
+
+                  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  {isUserLoggedIn() ? (
+                    <>
                     <div className="other-option">
-                    <a href="/Signup/ouvrier" className="signup-btn">
+                   <h1 className="fname"> {userDetails.firstname  }  {userDetails.lastname}</h1>
+                    
+                    
+                   {/* <h1 className="fname">{userDetails.lastname} </h1>  */}
+                  </div>
+                  </>
+                  ) : (
+                    <>
+                    <div className="other-option">
+                    <a href="/Signupchoice" className="signup-btn">
                       Sign Up
                     </a>
                     <a href="/Signin" className="signin-btn">
                       Sign In
                     </a>
                   </div>
-                  }
-                  {currentUser?.isSeller && 
-                    <div >
+                  </>
+                    
+                  )}
+                  
                       
-                      <img className="img22"
-                        src="assets/img/img2.jpg"
-                        alt=""
-                      />
-                      <span className="user22">{currentUser?.username}</span>
                     
                     
-                    </div>
-                  }
+                    
+                  
                   
                   
                 </div>
@@ -208,6 +254,7 @@ function Navbar() {
 </>
 
     );
-  }
+                }
+  
 
 export default Navbar;

@@ -3,11 +3,18 @@ import "./Feature.scss";
 import "./Feature-responsive.scss";
 import "./Feature.css";
 import { useTranslation } from 'react-i18next';
+import { isUserLoggedIn   } from "../../services/AuthService";
+
 
 function Feature() {
   const [t, i18n ] = useTranslation();
   return (
+
+   
     <div className="banner-section">
+ 
+       
+
     <div className="d-table">
       <div className="d-table-cell">
         <div className="container">
