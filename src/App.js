@@ -7,6 +7,7 @@ import SignupCat from './pages/signup-ouvrier/SignCat';
 import LoginComp from './pages/LogRegComponent/LoginComp';
 import { Navigate } from 'react-router-dom';
 import { getRole, isUserLoggedIn } from './services/AuthService';
+import OuvrierList from './components/clientComp/listOuvrier/OuvrierList'
 //import LoginComp from './pages/LogRegComponent/LoginComp';
 
 
@@ -94,12 +95,18 @@ function App() {
       ],},
       {
         path: "/Signin",
-          element: <LoginComp />,
+          element: <OuvrierList />,
       },
       {
         
         path: "/Signup/ouvrier",
       element:  <AuthenticatedAdmin> <SignupCat /> </AuthenticatedAdmin>,
+        
+      },
+      {
+        
+        path: "/Client",
+      element:  <OuvrierList />,
         
       },
     

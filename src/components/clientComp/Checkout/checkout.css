@@ -1,0 +1,35 @@
+.media2{
+    padding-left: 15px;
+    padding-right: 15px;
+    flex-direction: row;
+    align-items: flex-start;
+    display: flex;
+}
+#col2 {
+
+    width: 100%;
+}
+
+.gold-members {
+    padding: 1.5rem !important;
+
+
+}
+.addresses-item .media2 {
+    height: auto;width: auto;
+
+}
+.addresses-item .media2 .rrr{
+    margin-right: 1rem!important;
+    
+}
+.addresses-item .media2 .media-body .Title1{
+    color: black ;
+    
+}
+.addresses-item .media2 .media-body p.Desc1{
+    color: black ;
+    padding: 0;
+    margin: 0;
+    
+}
