@@ -1,0 +1,40 @@
+.link1 {
+    outline: none !important;
+    color: #ff3008;
+    text-decoration: none !important;
+}
+.btn-link1 {
+    outline: none !important;
+    text-decoration: none !important;
+}
+
+.list-cate-page {
+    margin: -5px 0px 0px 0px;
+}
+.filters-card-body {
+    padding: 18px 0 0 0;
+}
+.filters-search {
+    position: relative;
+}
+.filters-search i {
+    position: absolute;
+    left: 12px;
+    top: 13px;
+}
+.filters-search .form-control {
+    padding-left: 34px;
+}
+.custom-checkbox label.custom-control-label,
+.custom-radio label.custom-control-label {
+    padding-top: 2px;
+    cursor: pointer;
+}
+.filters-card-header a {
+    font-weight: 500;
+    width: 100%;
+    display: block;
+}
+.filters-card-header a i {
+    margin: 2px -2px 0 0;
+}

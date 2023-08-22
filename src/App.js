@@ -7,11 +7,14 @@ import SignupCat from './pages/signup-ouvrier/SignCat';
 import LoginComp from './pages/LogRegComponent/LoginComp';
 import { Navigate } from 'react-router-dom';
 import { getRole, isUserLoggedIn } from './services/AuthService';
+import OuvrierList from './components/clientComp/listOuvrier/OuvrierList'
 
 import SignUpClient from './pages/SignUp-client/SignUpClient'
 
 import SignUpChoice from './pages/SignUpchoice/signUpChoice'
 import SignUpOuvrier from './pages/SignUpOuvrier/signUpOuvrier';
+
+
 //import LoginComp from './pages/LogRegComponent/LoginComp';
 
 
@@ -101,7 +104,7 @@ function App() {
       
       {
         path: "/Signin",
-          element: <LoginComp />,
+          element: <OuvrierList />,
       },
 
     
@@ -139,6 +142,12 @@ function App() {
         
         path: "/SignupClient",
       element:   <SignUpClient /> ,
+        
+      },
+      {
+        
+        path: "/Client",
+      element:  <OuvrierList />,
         
       },
     

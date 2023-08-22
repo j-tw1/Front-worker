@@ -1,0 +1,46 @@
+.list-card .count-number {
+    margin: 4px 0 0 0;
+    display: inline-block;
+}
+.list-card .star {
+    right: 8px;
+    bottom: 8px;
+}
+.list-card .star .badge {
+    font-size: 11px;
+    padding: 5px 5px;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075)!important;
+}
+.list-card .member-plan {
+    left: 8px;
+    top: 8px;
+}
+.list-card .member-plan .badge {
+    font-size: 11px;
+    padding: 5px 5px;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075)!important;
+}
+.list-card .list-card-image {
+    position: relative;
+    
+}
+.list-card .list-card-image .img-fluid {
+    height: 160px;
+    width: 255px;
+    
+}
+.list-card .favourite-heart {
+    right: 8px;
+    top: 8px;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075)!important;
+}
+.list-card .favourite-heart i {
+    background: #fff;
+    width: 23px;
+    height: 23px;
+    display: inline-block;
+    text-align: center;
+    font-size: 15px;
+    line-height: 24px;
+    border-radius: 50px;
+}

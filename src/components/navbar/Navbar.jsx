@@ -59,8 +59,8 @@ function Navbar() {
                       
                     </li>
                     <li className="nav-item">
-                      <a href="/About" className="nav-link">
-                        About
+                      <a href="/Client" className="nav-link">
+                        Client
                       </a>
                     </li>
                     <li className="nav-item">

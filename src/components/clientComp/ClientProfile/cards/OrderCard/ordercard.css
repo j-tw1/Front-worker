@@ -1,0 +1,22 @@
+.media1 img.mr-4 {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075)!important;
+    border-radius: 2px;
+    margin-right: 1.5rem!important;
+
+}
+.media1 .media-body{
+    width: 100%;
+
+}
+.media1 .media-body .float-right {
+    float: right!important;
+}
+.media1 {
+
+    display: flex;
+    align-items: flex-start;
+    
+}
