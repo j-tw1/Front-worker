@@ -4,6 +4,12 @@
     padding: 20px 0;
     position: relative;
   }
+
+  .fname{
+    font-size: 25px;
+    color: #ffffff;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
   
   .navbar-area .main-nav .navbar {
     padding: 0;

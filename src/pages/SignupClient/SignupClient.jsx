@@ -3,7 +3,7 @@ import './signupClient.css';
 import { registerAPICall } from '../../services/AuthService';
 
 function SignupClient() {
-  
+
   const [firstName, setfirstName] = useState('');
   const [lastName, setlastName] = useState('');
   const [email, setEmail] = useState('');
@@ -37,7 +37,7 @@ function SignupClient() {
     <>
       <div className="signup-container">
         <div className="signup-title">Registration</div>
-        <div className="signup-content">
+          <div className="signup-content">
           <form onSubmit={handleSubmit}>
             <div className="signup-user-details">
               <div className="signup-input-box">

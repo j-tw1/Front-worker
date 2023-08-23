@@ -13,7 +13,7 @@ function Home() {
       <button onClick={() => i18n.changeLanguage('ar')} class="language-button">ar</button>
       <button onClick={() => i18n.changeLanguage('en')} class="language-button">en</button>
       <button onClick={() => i18n.changeLanguage('fr')} class="language-button">fr</button>
-      
+ 
       <Feature />
       <Apply/>
       <HowToUse/>
