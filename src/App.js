@@ -8,6 +8,13 @@ import LoginComp from './pages/LogRegComponent/LoginComp';
 import { Navigate } from 'react-router-dom';
 import { getRole, isUserLoggedIn } from './services/AuthService';
 import OuvrierList from './components/clientComp/listOuvrier/OuvrierList'
+
+import SignUpClient from './pages/SignUp-client/SignUpClient'
+
+import SignUpChoice from './pages/SignUpchoice/signUpChoice'
+import SignUpOuvrier from './pages/SignUpOuvrier/signUpOuvrier';
+
+
 //import LoginComp from './pages/LogRegComponent/LoginComp';
 
 
@@ -54,6 +61,7 @@ function App() {
     const isAuth = isUserLoggedIn();
     
     if(isAuth && getRole()=='Client'){
+      
       return children ;
 
     }
@@ -93,14 +101,53 @@ function App() {
        
 
       ],},
+      
       {
         path: "/Signin",
+          element: <LoginComp />,
+      },
+
+
+      {
+        path: "/workerlist",
           element: <OuvrierList />,
       },
+
+    
+
+
+      
+      {
+        path: "/Signupchoice",
+          element: <SignUpChoice />,
+      },
+
+      {
+        path: "/Signup/ouvrier",
+          element: <SignUpOuvrier />,
+      },
+
+
+      
+      // {
+        
+      //   path: "/Signup/ouvrier",
+      // element:  <AuthenticatedAdmin> <SignupCat /> </AuthenticatedAdmin>,
+        
+      // },
+
+
+
+      // {
+        
+      //   path: "/Signup/ouvrier",
+      // element:  <AuthenticatedAdmin> <SignupCat /> </AuthenticatedAdmin>,
+        
+      // },
       {
         
-        path: "/Signup/ouvrier",
-      element:  <AuthenticatedAdmin> <SignupCat /> </AuthenticatedAdmin>,
+        path: "/SignupClient",
+      element:   <SignUpClient /> ,
         
       },
       {
@@ -115,4 +162,4 @@ function App() {
   return <RouterProvider router={router} />;
 }
 
-export default App;
+export default App;
