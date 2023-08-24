@@ -1,9 +1,13 @@
 import React from 'react'
 import "./checkout.css"
 
+
 function Checkout() {
   return (
     <>
+            <section className="section pt-5 pb-5 products-listing">
+      <div className="container"></div>
+
     <div className="row">
   <div className="col-md-8">
     <div className="offer-dedicated-body-left">
@@ -76,15 +80,7 @@ function Checkout() {
                           className="form-control"
                           placeholder="Card number"
                         />
-                        <div className="input-group-append">
-                          <button
-                            className="btn btn-outline-secondary"
-                            type="button"
-                            id="button-addon2"
-                          >
-                            <i className="icofont-card" />
-                          </button>
-                        </div>
+                        
                       </div>
                     </div>
                     <div className="form-group col-md-8">
@@ -115,7 +111,6 @@ function Checkout() {
                       <div className="custom-control custom-checkbox">
                         <input
                           type="checkbox"
-                          className="custom-control-input"
                           id="customCheck1"
                         />
                         <label
@@ -200,6 +195,7 @@ function Checkout() {
     </div>
   </div>
 </div>
+</section>
 
     </>
   )

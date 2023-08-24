@@ -1,14 +1,18 @@
 import React from 'react'
 import "./clientprofile.css"
 import "../listOuvrier/ouvrierlist.css"
-import { workers } from '../../../data'
-import OuvrierCard from '../listOuvrier/OuvrierCard/OuvrierCard'
-import OrderCard from './cards/OrderCard/OrderCard'
-import AdressCard from './cards/AdresseCard/AdressCard'
+
+import AddressesList from './cardslist/AddressesList'
+import OrdersList from './cardslist/OrdersList'
+import FavouritesList from './cardslist/FavouritesList'
+import ClientModals from '../ClientModals'
 
 function ClientProfile() {
   return (
     <>
+    <ClientModals/>
+        <section className="section pt-5 pb-5 products-listing">
+      <div className="container"></div>
     <div className="row">
   <div className="col-md-3">
     <div className="osahan-account-page-left shadow-sm bg-white h-100">
@@ -90,55 +94,14 @@ function ClientProfile() {
   <div className="col-md-9">
     <div className="osahan-account-page-right shadow-sm bg-white p-4 h-100">
       <div className="tab-content" id="myTabContent">
-        <div
-          className="tab-pane fade active show"
-          id="orders"
-          role="tabpanel"
-          aria-labelledby="orders-tab"
-        >
-          <h4 className="font-weight-bold mt-0 mb-4">Past Orders</h4>
-          <OrderCard/>
-
-        </div>
-
-        <div
-          className="tab-pane fade"
-          id="favourites"
-          role="tabpanel"
-          aria-labelledby="favourites-tab"
-        >
-          <h4 className="font-weight-bold mt-0 mb-4">Favourites</h4>
-          <div className="row">
-          {workers.filter((worker) => worker.fav === true)
-            .map((worker) => (
-              <OuvrierCard key={worker.id} worker={worker} />
-            ))}
-            <div className="col-md-12 text-center load-more">
-              <button className="btn btn-primary" type="button" disabled="">
-                <span
-                  className="spinner-grow spinner-grow-sm"
-                  role="status"
-                  aria-hidden="true"
-                />
-                Loading...
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div
-          className="tab-pane fade"
-          id="addresses"
-          role="tabpanel"
-          aria-labelledby="addresses-tab"
-        >
-          <h4 className="font-weight-bold mt-0 mb-4">Manage Addresses</h4>
-          <AdressCard/>
-        </div>
+        <OrdersList/>
+        <FavouritesList/>
+        <AddressesList/>
       </div>
     </div>
   </div>
 </div>
+    </section>
 
     </>
   )

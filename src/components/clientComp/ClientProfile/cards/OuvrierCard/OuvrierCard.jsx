@@ -9,7 +9,7 @@ function OuvrierCard({worker}) {
             <div className="list-card bg-white h-100 rounded overflow-hidden position-relative shadow-sm">
               <div className="list-card-image">
                 <div className="star position-absolute">
-                  <span className="badge badge-success">
+                  <span className="badge">
                     <i className="icofont-star" /> {worker.star} ({worker.ReviewsNumber}+)
                   </span>
                 </div>

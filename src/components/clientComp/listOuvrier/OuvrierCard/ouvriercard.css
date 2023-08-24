@@ -10,6 +10,8 @@
     font-size: 11px;
     padding: 5px 5px;
     box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075)!important;
+    color: rgb(255, 255, 255);
+    background-color: #1e336d;
 }
 .list-card .member-plan {
     left: 8px;
@@ -18,7 +20,9 @@
 .list-card .member-plan .badge {
     font-size: 11px;
     padding: 5px 5px;
-    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075)!important;
+    box-shadow: 0 .125rem .25rem rgba(255, 134, 134, 0.075)!important;
+    color: white;
+    background-color: orangered;
 }
 .list-card .list-card-image {
     position: relative;
@@ -26,7 +30,7 @@
 }
 .list-card .list-card-image .img-fluid {
     height: 160px;
-    width: 255px;
+    width: 100%;
     
 }
 .list-card .favourite-heart {

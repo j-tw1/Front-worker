@@ -35,7 +35,7 @@ function ClientModals() {
         <div className="modal-body">
           <form className="form1">
             <div className="form-row1">
-              <div className="form-group col-md-12">
+              <div className="form-group1 col-md-12">
                 <label>Phone number</label>
                 <input
                   type="text"
@@ -43,7 +43,7 @@ function ClientModals() {
                   placeholder="+212 6969696969"
                 />
               </div>
-              <div className="form-group col-md-12">
+              <div className="form-group1 col-md-12">
                 <label>Email id</label>
                 <input
                   type="text"
@@ -51,7 +51,7 @@ function ClientModals() {
                   placeholder="mouad69@gmail.com"
                 />
               </div>
-              <div className="form-group col-md-12 mb-0">
+              <div className="form-group1 col-md-12 mb-0">
                 <label>Password</label>
                 <input
                   type="password"
@@ -107,7 +107,7 @@ function ClientModals() {
         <div className="modal-body">
           <form className="form1">
             <div className="form-row1">
-              <div className="form-group col-md-12">
+              <div className="form-group1 col-md-12">
                 <label htmlFor="inputPassword4">Delivery Area</label>
                 <div className="input-group">
                   <input
@@ -126,7 +126,7 @@ function ClientModals() {
                   </div>
                 </div>
               </div>
-              <div className="form-group col-md-12">
+              <div className="form-group1 col-md-12">
                 <label htmlFor="inputPassword4">Complete Address</label>
                 <input
                   type="text"
@@ -134,7 +134,7 @@ function ClientModals() {
                   placeholder="Complete Address e.g. house number, street name, landmark"
                 />
               </div>
-              <div className="form-group col-md-12">
+              <div className="form-group1 col-md-12">
                 <label htmlFor="inputPassword4">Delivery Instructions</label>
                 <input
                   type="text"
@@ -142,7 +142,7 @@ function ClientModals() {
                   placeholder="Delivery Instructions e.g. Opposite Gold Souk Mall"
                 />
               </div>
-              <div className="form-group mb-0 col-md-12">
+              <div className="form-group1 mb-0 col-md-12">
                 <label htmlFor="inputPassword4">Nickname</label>
                 <div
                   className="btn-group btn-group-toggle d-flex justify-content-center"
@@ -229,8 +229,8 @@ function ClientModals() {
         <div className="modal-body">
           <form className="form1">
             <div className="form-row1">
-              <div className="form-group col-md-12">
-                <p class="mb-2">Give a rate</p>
+              <div className="form-group1 col-md-12">
+                <label>Give a rate</label>
                 <div class="mb-4">
                     <span class="star-rating">
                     <a href="#"><i class="icofont-ui-rating icofont-2x"></i></a>
@@ -244,6 +244,7 @@ function ClientModals() {
                 <textarea
                   type="text"
                   className="form-control description-area"
+                  id='desclabel'
                   placeholder="Write your feedback here ..."
                 />
               </div>
@@ -299,7 +300,7 @@ function ClientModals() {
         <div className="modal-body">
           <form className="form1">
             <div className="form-row1">
-              <div className="form-group col-md-12">
+              <div className="form-group1 col-md-12">
                 
                 <label>Reclamation</label>
                 <textarea
