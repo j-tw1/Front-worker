@@ -1,8 +1,10 @@
 import React from 'react'
+import "./adresscard.css"
 
 function AdressCard() {
   return (
     <>
+    
     <div className="row">
             <div className="col-md-6">
               <div className="bg-white card addresses-item mb-4 border border-primary shadow">

@@ -13,7 +13,6 @@ function OuvrierList() {
   return (
     <>
     <ClientModals/>
-    <ClientNav/>
     
 
       <section class="breadcrumb-osahan pt-5 pb-5 bg-dark position-relative text-center">
@@ -22,8 +21,6 @@ function OuvrierList() {
       </section>
     <section className="section pt-5 pb-5 products-listing">
       <div className="container">
-     
-        <ClientProfile/>
         <div className="row d-none-m">
           <div className="col-md-12">
             <div className="dropdown float-right">

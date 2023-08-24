@@ -13,19 +13,19 @@ function ClientNav() {
             <div class="collapse navbar-cl" id="navbarNavDropdown">
                <ul class="navbar-nav ml-auto">
                   <li class="nav-item active">
-                     <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                     <a class="nav-link" href="/Client">Home <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item">
                      <a class="nav-link" href="offers.html"><i class="icofont-sale-discount"></i> Offers <span class="badge badge-danger">New</span></a>
                   </li>
                   <li class="nav-item dropdown">
-                     <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                     Restaurants
+                     <a class="nav-link dropdown-toggle" href="/ouvrierlist" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     Ouvriers
                      </a>
                      <div class="dropdown-menu dropdown-menu-right shadow-sm border-0">
-                        <a class="dropdown-item" href="listing.html">Listing</a>
+                        <a class="dropdown-item" href="/ouvrierlist">Listing</a>
                         <a class="dropdown-item" href="detail.html">Detail + Cart</a>
-                        <a class="dropdown-item" href="checkout.html">Checkout</a>
+                        <a class="dropdown-item" href="/checkout">Checkout</a>
                      </div>
                   </li>
                   <li class="nav-item dropdown">
@@ -46,11 +46,9 @@ function ClientNav() {
                      <img alt="Generic placeholder image" src="https://ets-goossens.be/images/photos/chauffagiste-intervention-chaudiere-gaz.jpg" class="nav-osahan-pic rounded-pill"/> My Account
                      </a>
                      <div class="dropdown-menu dropdown-menu-right shadow-sm border-0">
-                        <a class="dropdown-item" href="orders.html#orders"><i class="icofont-food-cart"></i> Orders</a>
-                        <a class="dropdown-item" href="orders.html#offers"><i class="icofont-sale-discount"></i> Offers</a>
-                        <a class="dropdown-item" href="orders.html#favourites"><i class="icofont-heart"></i> Favourites</a>
-                        <a class="dropdown-item" href="orders.html#payments"><i class="icofont-credit-card"></i> Payments</a>
-                        <a class="dropdown-item" href="orders.html#addresses"><i class="icofont-location-pin"></i> Addresses</a>
+                        <a class="dropdown-item" href="/Profile#orders"><i class="icofont-food-cart"></i> Orders</a>
+                        <a class="dropdown-item" href="/Profile#favourites"><i class="icofont-heart"></i> Favourites</a>
+                        <a class="dropdown-item" href="/Profile#addresses"><i class="icofont-location-pin"></i> Addresses</a>
                      </div>
                   </li>
 

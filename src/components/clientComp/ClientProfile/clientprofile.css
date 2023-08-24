@@ -1,4 +1,27 @@
 /* My Account */
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    width: 100%;
+    padding-right: var(--bs-gutter-x,.75rem);
+    padding-left: var(--bs-gutter-x,.75rem);
+    margin-right: auto;
+    margin-left: auto;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    color: #000000;
+}
+button, a {
+    outline: none !important;
+    color: #ff3008;
+    text-decoration: none !important;
+}
+a {
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 15px 0;
+}
+
+
 .payments-item img.mr-3 {
     width: 47px;
 }
@@ -7,6 +30,14 @@
     min-width: 121px;
     font-size: 13px;
     padding: 7px 0 7px 0;
+}
+
+.osahan-user-media p {
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin: 20px 0 30px;
 }
 
 .osahan-account-page-left .nav-link {

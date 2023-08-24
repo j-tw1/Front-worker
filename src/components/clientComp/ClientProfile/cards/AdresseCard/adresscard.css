@@ -1,0 +1,27 @@
+.addresses-item p {
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin: 20px 0 30px;
+}
+
+.addresses-item .gold-members {
+    padding: 1.5rem !important;
+}
+
+.addresses-item button, a {
+    outline: none !important;
+    color: #ff3008;
+    text-decoration: none !important;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    color: #000000;
+}
+.addresses-item a {
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 15px 0;
+}

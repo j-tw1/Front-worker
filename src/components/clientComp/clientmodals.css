@@ -8,9 +8,24 @@
     outline: 0;
 
 }
+
+.modal-content span {
+    font-size: 12px;
+}
+.modal-content form {
+    padding: 0 50px;
+    height: 100%;
+}
+
+
 .modal-content .modal-header {
 
     padding: 1rem 1rem;
+
+}
+.modal-content .modal-header h5{
+
+    color: black;
 
 }
 .modal-content .modal-header button.close {
@@ -36,10 +51,28 @@
 
 }
 
+.modal-body .form1 .form-row1 label{
+
+    padding-bottom: 10px;
+}
 .modal-body .form1 .form-row1{
 
-    width: 100%;
+width: 100%;}
 
+.modal-body .form1 .form-row1 .form-group1 p{
+
+    padding-bottom: 5px;
+    color: rgb(0, 0, 0);}
+
+
+.modal-body .form1 .form-row1 .form-group1 .star-rating i{
+
+    color: rgb(201, 191, 191);}
+
+
+.modal-body .form1 .form-row1 .form-group1 .star-rating i:hover{
+
+    color: #e0cd1c;
 
 }
 
@@ -57,4 +90,9 @@
     flex-wrap: nowrap;
     flex-direction: row-reverse;
 
+}
+
+.modal-footer .btn1 {
+    font-size: 14px;
+    padding: 12px 16px;
 }
