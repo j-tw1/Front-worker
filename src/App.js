@@ -104,6 +104,12 @@ function App() {
       
       {
         path: "/Signin",
+          element: <LoginComp />,
+      },
+
+
+      {
+        path: "/workerlist",
           element: <OuvrierList />,
       },
 

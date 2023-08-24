@@ -229,7 +229,7 @@ function ClientModals() {
         <div className="modal-body">
           <form className="form1">
             <div className="form-row1">
-              <div className="form-group col-md-12">
+              <div >
                 <p class="mb-2">Give a rate</p>
                 <div class="mb-4">
                     <span class="star-rating">

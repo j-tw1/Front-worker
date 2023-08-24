@@ -22,7 +22,7 @@ function OuvrierList() {
       </section>
     <section className="section pt-5 pb-5 products-listing">
       <div className="container">
-      <Checkout/>
+     
         <ClientProfile/>
         <div className="row d-none-m">
           <div className="col-md-12">

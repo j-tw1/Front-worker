@@ -2,7 +2,7 @@ import React, { useState } from "react";
 //import "./Navbar.scss"
 import "./Navbar.css"
 import "./Navbar-responsive.scss"
-import { isUserLoggedIn , getUserDetails  } from "../../services/AuthService";
+import { isUserLoggedIn , getUserDetails , handleLogout } from "../../services/AuthService";
 
 import { useEffect } from "react";
 
@@ -16,7 +16,14 @@ function Navbar() {
   const userDetails = getUserDetails();
     
 
+  async function sed(event){
+
+    handleLogout();
+
+  }
  
+
+
 
   
 
@@ -80,6 +87,7 @@ function Navbar() {
                             Company
                           </a>
                         </li>
+                        <button onClick={sed}>logout</button>
                         <li className="nav-item">
                           <a href="pricing.html" className="nav-link">
                             Pricing
