@@ -1,11 +1,44 @@
 {
     "titleLogin": "Login",
-    "SubTitleLogin": "Enter your credentials FR",
+    "SubTitleLogin": "",
     "emailTitle" : "username",
     "emailInput" : "enter your email",
     "passTitle" : "password",
     "passInput" : "enter your password",
-    "title10" : "francais"
+    "title10" : "francais",
+    "title12" :"Façon d'utilisation",
+    "title13":"Parcourir Les Emplois",
+    "title14":"Trouvez votre Ouvrier",
+    "title15":"Restez en contact avec Les Ouvriers",
+    "title16":"Rechercher et voir les offres d'emploi disponibles sur Internet, dans le but de trouver le bon emploi",
+    "title17":"Cherchant à trouver le travailleur pour effectuer les tâches ou le travail au sein de votre organisation ou institution",
+    "title18":"Maintenir une communication et une interaction continues avec l'équipe de travail pour assurer l'échange d'informations et une coordination efficace",
+    "title19":"Pourquoi Choisir الحرفة?",
+    "title20":"il sert de plate-forme en ligne accessible et pratique qui fournit des informations et des services essentiels aux Clients et aux Travailleurs. Il offre une interface conviviale, permettant aux individus de naviguer facilement et d'interagir avec le contenu qu'ils recherchent",
+    "title21":"Travailleurs les plus talentueux",
+    "title22":"Des travailleurs faciles à trouver",
+    "title23":"Facile à communiquer",
+    "title24":"Option Recrutement International",
+    "title25":"fait référence à des personnes exceptionnelles qui possèdent une combinaison remarquable de compétences, d'expérience et de capacités",
+    "title26":"processus de recrutement simplifié et convivial qui permet aux Clients d'identifier et d'engager rapidement des Travailleurs potentiels",
+    "title27":"interaction via des outils conviviaux, permettant des échanges fluides pour une collaboration et une compréhension efficaces",
+    "title28":"approche stratégique où les organisations recherchent et embauchent activement des talents à travers le pays",
+    "title29" : "1068",
+    "title30" : "87",
+    "title31" : "504",
+    "title32" : "2043",
+    "title33":"Offres publiées",
+    "title34":"offres échouées",
+    "title35":"Ouvriers",
+    "title36":"Clients",
+    "title37":"Bienvenue sur الحرفة ",
+    "title42":"Découvrez nos services de haute qualité et notre engagement envers nos clients",
+    "title38":"Vous cherchez un ouvrier ?",
+    "title39":"Rejoignez-nous pour faire partie de la plate-forme",
+    "title40":"Rejoindre",
+    "title41":"Êtes-vous un ouvrier ?"
+   
+    
 
 
 }

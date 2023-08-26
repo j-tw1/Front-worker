@@ -157,6 +157,7 @@
   
   .looking-job .media .media-body h5 {
     font-size: 25px;
+    font-family:  "Comic Sans MS", cursive;
     font-weight: 600;
     color: #ffffff;
     margin-bottom: 10px;
@@ -165,11 +166,13 @@
   .looking-job .media .media-body p {
     color: #ffffff;
     margin-bottom: 5px;
+    font-family:  "Comic Sans MS", cursive;
   }
   
   .looking-job .media .media-body a {
     color: #ffffff;
-    font-size: 15px;
+    font-size: 20px;
+    font-family:  Times New Roman, Times, serif;
   }
   
   .looking-job .media .media-body a:hover, .looking-job .media .media-body a:hover i {
@@ -223,6 +226,7 @@
   .recruiting-card .media .media-body h5 {
     font-size: 25px;
     font-weight: 600;
+    font-family:  "Comic Sans MS", cursive;
     color: #ffffff;
     margin-bottom: 10px;
   }
@@ -230,11 +234,13 @@
   .recruiting-card .media .media-body p {
     color: #ffffff;
     margin-bottom: 5px;
+    font-family:  "Comic Sans MS", cursive;
   }
   
   .recruiting-card .media .media-body a {
     color: #ffffff;
-    font-size: 15px;
+    font-size: 20px;
+    font-family:  Times New Roman, Times, serif;
   }
   
   .recruiting-card .media .media-body a:hover, .recruiting-card .media .media-body a:hover i {
