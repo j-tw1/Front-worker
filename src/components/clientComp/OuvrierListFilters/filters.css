@@ -1,12 +1,20 @@
-.link1 {
+.filters a {
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 15px 0;
+}
+
+.filters .btn-link1 {
+    outline: none !important;
+    text-decoration: none !important;
+}
+.filters .link1 {
     outline: none !important;
     color: #ff3008;
     text-decoration: none !important;
 }
-.btn-link1 {
-    outline: none !important;
-    text-decoration: none !important;
-}
+
 
 .list-cate-page {
     margin: -5px 0px 0px 0px;
@@ -25,16 +33,37 @@
 .filters-search .form-control {
     padding-left: 34px;
 }
-.custom-checkbox label.custom-control-label,
+.filters .custom-checkbox label.custom-control-label,
 .custom-radio label.custom-control-label {
+    max-width: 0px;
     padding-top: 2px;
     cursor: pointer;
+}
+.custom-control.custom-checkbox {
+    display: flex;
+    flex-direction: row-reverse;
 }
 .filters-card-header a {
     font-weight: 500;
     width: 100%;
     display: block;
 }
+
 .filters-card-header a i {
     margin: 2px -2px 0 0;
+}
+.filters h1, h2, h3, h4, h5, h6 {
+    color: #000000;
+}
+.filters input {
+    background-color: #eee;
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%;
+}
+
+.filters-card:hover {
+    background-color: #c5c2c1;
+    border: none;
 }

@@ -5,7 +5,7 @@ function OrderCard() {
   return (
     <>
     <div className="bg-white card mb-4 order-list shadow-sm">
-            <div className="gold-members p-4">
+            <div className="gold-members1 p-4">
               <a href="#"></a>
               <div className="media1">
                 
@@ -47,7 +47,7 @@ function OrderCard() {
                   <div className="float-right">
                   <a 
 
-                    className="btn btn-sm btn-outline-primary" 
+                    className="btn2 btn-sm btn-outline-primary" 
                     data-toggle="modal"
                     data-target="#reclamation-modal"
                     href="#"

@@ -14,6 +14,9 @@ import SignUpClient from './pages/SignUp-client/SignUpClient'
 import SignUpChoice from './pages/SignUpchoice/signUpChoice'
 import SignUpOuvrier from './pages/SignUpOuvrier/signUpOuvrier';
 import Workerhome from './pages/WorkerProfil/workerprofil';
+import Checkout from './components/clientComp/Checkout/Checkout';
+import ClientNav from './components/clientComp/ClientNav';
+import ClientProfile from './components/clientComp/ClientProfile/ClientProfile';
 
 
 //import LoginComp from './pages/LogRegComponent/LoginComp';
@@ -76,7 +79,7 @@ function App() {
   return (
     <>
     <Navbar/>
-    
+    <ClientNav/>
     <Outlet/>
     </>
     
@@ -98,13 +101,43 @@ function App() {
         {
           path: "/Signup",
           element: <Signup2 />,
-        }
+        },
+        {
+        
+          path: "/checkout",
+          element:  <Checkout />,
+          
+        },
+        {
+        
+          path: "/Profile",
+        element:  <ClientProfile />,
+          
+        },
+        {
+        
+          path: "/ouvrierlist",
+        element:  <OuvrierList />,
+          
+        },
+        {
+        
+          path: "/Client",
+        element:  <OuvrierList />,
+          
+        },
        
 
       ],},
       
       {
         path: "/Signin",
+          element: <LoginComp />,
+      },
+
+
+      {
+        path: "/workerlist",
           element: <OuvrierList />,
       },
 
@@ -152,16 +185,12 @@ function App() {
       element:   <SignUpClient /> ,
         
       },
-      {
-        
-        path: "/Client",
-      element:  <OuvrierList />,
-        
-      },
+      
+      
     
   ]);
 
   return <RouterProvider router={router} />;
 }
 
-export default App;
+export default App;

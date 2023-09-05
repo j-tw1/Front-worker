@@ -1,3 +1,45 @@
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    color: #000000;
+}
+
+
+.list-card-body a {
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 15px 0;
+}
+.list-card-body button, a {
+    outline: none !important;
+    color: #ff3008;
+    text-decoration: none !important;
+}
+.list-card-body span {
+    font-size: 12px;
+}
+.list-card-body .badge {
+    display: inline-block;
+    padding: 0.35em 0.65em;
+    font-size: .75em;
+    font-weight: 700;
+    line-height: 1;
+    color: #f30000;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+}
+.list-card-body p {
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin: 20px 0 30px;
+    color: #7a7e8a;
+
+}
+
+
 .list-card .count-number {
     margin: 4px 0 0 0;
     display: inline-block;
@@ -26,14 +68,24 @@
 }
 .list-card .list-card-image .img-fluid {
     height: 160px;
-    width: 255px;
+    width: 100%;
     
 }
+
+
+
 .list-card .favourite-heart {
     right: 8px;
     top: 8px;
     box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075)!important;
 }
+.list-card a {
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 15px 0;
+}
+
 .list-card .favourite-heart i {
     background: #fff;
     width: 23px;
