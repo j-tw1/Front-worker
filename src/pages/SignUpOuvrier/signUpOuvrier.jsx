@@ -20,6 +20,7 @@ function SignUpOuvrier() {
         image: '',
         pays: '',
         ville:'',
+        categorie:'',
         
 
       });
@@ -37,7 +38,7 @@ function SignUpOuvrier() {
         const { name, value } = event.target;
         setFormData({ ...formData, [name]: value });
 
-        if (name === "pays" || name === "ville") {
+        if (name === "pays" || name === "ville" || name === "categorie") {
             setFormData({ ...formData, [name]: value });
           } else {
             setFormData({ ...formData, [name]: value });
@@ -83,8 +84,10 @@ function SignUpOuvrier() {
               <input className="client-input" type="text" name="lastName" placeholder="Last Name" onChange={handleInputChange} required />
             </div>
             <div className="form-group">
-              <input className="client-input" type="Email" name="email" placeholder="Email" onChange={handleInputChange} required />
+              <input className="client-input"  type="Email" name="email" placeholder="Email" onChange={handleInputChange} required />
+              
             </div>
+            
             <div className="form-group">
               <input className="client-input" type="password" name="password" placeholder="Password" onChange={handleInputChange} required />
               <input className="client-input" type="cin" name="cin" placeholder="CIN" onChange={handleInputChange} required />
@@ -97,6 +100,24 @@ function SignUpOuvrier() {
               <input className="client-input" type="file" name="image" accept="image/*" onChange={handleImageUpload}  />
             </div>
             <div className="form-group">
+
+            <select name="categorie" onChange={handleInputChange} required>
+                <option value="">Categorie</option>
+                <option value="Plombier">Plombier</option>
+                <option value="Peintre">Peintre</option>
+                <option value="Electricien">Electricien</option>
+                <option value="Serrurier">Serrurier</option>
+
+
+
+              
+
+              </select>
+
+
+
+
+
               <select name="pays" onChange={handleInputChange} required>
                 <option value="">Pays</option>
                 <option value="Maroc">Maroc</option>
@@ -110,6 +131,9 @@ function SignUpOuvrier() {
                 <option value="Rabat">Rabat</option>
 
               </select>
+
+
+              
             </div>
             <button className="btn-C-ouvrier" type="submit">Register</button>
           </form>

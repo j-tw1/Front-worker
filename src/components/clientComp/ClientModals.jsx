@@ -1,8 +1,13 @@
 import React from 'react'
 import "./clientmodals.css"
+import { isUserLoggedIn , getUserDetails , handleLogout } from "../../services/AuthService";
+
 
 
 function ClientModals() {
+
+       const client = getUserDetails()
+
   return (
     
     <>
@@ -37,11 +42,11 @@ function ClientModals() {
             <div className="form-row1">
               <div className="form-group1 col-md-12">
                 <label>Phone number</label>
-                <input
+                {<input
                   type="text"
                   className="form-control"
                   placeholder="+212 6969696969"
-                />
+                />}
               </div>
               <div className="form-group1 col-md-12">
                 <label>Email id</label>

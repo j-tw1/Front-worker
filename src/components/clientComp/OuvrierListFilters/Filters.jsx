@@ -1,7 +1,8 @@
-import React from 'react'
+import React , {useState}from 'react'
 import "./filters.css"
 import LocationFilter from './LocationFilter'
 import CategorieFilter from './CategorieFilter'
+
 
 function Filters() {
   return (
@@ -13,7 +14,7 @@ function Filters() {
               </div>
               <div className="filters-body">
                 <div id="accordion">
-                  <LocationFilter/>
+                  <LocationFilter />
                   <CategorieFilter/>
                   
                 </div>

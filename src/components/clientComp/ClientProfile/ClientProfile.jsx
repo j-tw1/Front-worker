@@ -7,7 +7,16 @@ import OrdersList from './cardslist/OrdersList'
 import FavouritesList from './cardslist/FavouritesList'
 import ClientModals from '../ClientModals'
 
+import {   getUserDetails  } from "../../../services/AuthService";
+
+import {   getOuvrierList } from "../../../services/OuvrierService";
+
+
 function ClientProfile() {
+
+  const client = getUserDetails() 
+  const ouvriers = getOuvrierList()
+  
   
   return (
     <>
@@ -26,9 +35,9 @@ function ClientProfile() {
               alt="gurdeep singh osahan"
             />
             <div className="osahan-user-media-body">
-              <h6 className="mb-2">Mouad Emsi</h6>
-              <p className="mb-1">+212 69696969</p>
-              <p>mouad69@gmail.com</p>
+              <h6 className="mb-2">{client.firstname} {client.lastname}</h6>
+              <p className="mb-1">{client.phone}</p>
+              <p>{client.email}</p>
               <p className="mb-0 text-black font-weight-bold">
                 <a
                   className="text-primary mr-3"

@@ -2,16 +2,40 @@ import React from 'react'
 import "./ouvrierlist.css"
 import ClientNav from '../ClientNav'
 import OuvrierCard from './OuvrierCard/OuvrierCard'
-import { workers } from '../../../data'
+//  import { workers } from '../../../data'
 
 import Filters from '../OuvrierListFilters/Filters'
 import ClientProfile from '../ClientProfile/ClientProfile'
 import ClientModals from '../ClientModals'
-import Checkout from '../Checkout/Checkout'
+import { getOuvrierList } from '../../../services/OuvrierService'
+import { useState } from 'react'
+import { useEffect } from 'react'
+
+
 
 function OuvrierList() {
+
+const [workers , setWorkers] = useState([])
+
+
+
+
+useEffect(()=>{
+  listWorkers();
+},[])
+
+function listWorkers(){
+  getOuvrierList().then((response)=>{
+  setWorkers(response.data);
+}).catch(error=>{
+  console.error(error);
+})};
+  
+  
+
   return (
     <>
+    
     <ClientModals/>
     
 

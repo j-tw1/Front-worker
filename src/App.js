@@ -6,7 +6,7 @@ import Signup2 from './pages/signup2/Signup2';
 import SignupCat from './pages/signup-ouvrier/SignCat';
 import LoginComp from './pages/LogRegComponent/LoginComp';
 import { Navigate } from 'react-router-dom';
-import { getRole, isUserLoggedIn } from './services/AuthService';
+import { getRole, isUserLoggedIn ,isOuvrier } from './services/AuthService';
 import OuvrierList from './components/clientComp/listOuvrier/OuvrierList'
 
 import SignUpClient from './pages/SignUp-client/SignUpClient'
@@ -24,9 +24,13 @@ import ClientProfile from './components/clientComp/ClientProfile/ClientProfile';
 
 function App() {
 
+  const isO = isOuvrier();
+  const isLogged = isUserLoggedIn();
+
   function AuthenticatedUser({children}){
 
     const isAuth = isUserLoggedIn();
+    const isO = isOuvrier();
     
     if(isAuth ){
       return children ;
@@ -76,9 +80,20 @@ function App() {
 
   const Layout = () => {
   return (
-    <>
-    <Navbar/>
+<>
+    {isO  &&
     <ClientNav/>
+    
+
+     }
+     {
+      !isLogged && <Navbar/>
+     }
+
+
+    
+     
+    
     <Outlet/>
     </>
     

@@ -1,6 +1,7 @@
 import React from 'react'
 
 function LocationFilter() {
+  
   return (
     <>
     <div className="filters-card border-bottom p-4">

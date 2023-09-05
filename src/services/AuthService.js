@@ -47,10 +47,6 @@ export const getUserDetails = () => {
 
 export const  handleLogout = async () => {
  
- 
-
-  
-
 
     
        localStorage.clear();
@@ -73,6 +69,13 @@ export const getLoggedInUser = () =>{
     const email = sessionStorage.getItem("authenticatedUser");
     return email ; 
 }
+
+export const isOuvrier = () => {
+
+  if(getRole()=='Ouvrier'){return true ; }
+  else {return false ; }
+}
+
 
 
   
