@@ -13,6 +13,7 @@ import SignUpClient from './pages/SignUp-client/SignUpClient'
 
 import SignUpChoice from './pages/SignUpchoice/signUpChoice'
 import SignUpOuvrier from './pages/SignUpOuvrier/signUpOuvrier';
+import Workerhome from './pages/WorkerProfil/workerprofil';
 
 
 //import LoginComp from './pages/LogRegComponent/LoginComp';
@@ -120,6 +121,13 @@ function App() {
         path: "/Signup/ouvrier",
           element: <SignUpOuvrier />,
       },
+
+      {
+        path: "/Workerhome",
+          element: <Workerhome />,
+      },
+
+
 
 
       

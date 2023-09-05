@@ -1,0 +1,50 @@
+
+
+
+.all{
+  position: relative;
+  right:760px;
+  
+}
+
+.text-center{
+  font-family: 'Merriweather', serif;
+  
+}
+
+.py-5{
+  background: linear-gradient(to bottom right, #164ccb, #0dc1c1); /* Degraded blue background */
+      color: white; /* Text color */
+}
+
+.mb-45{
+  position: relative;
+  
+}
+
+.card-body{
+  font-family: 'Merriweather', serif;
+  
+
+}
+
+.cls{
+  position: relative;
+  max-width: 630px;
+  margin: 0 auto 40px;
+  text-transform: capitalize;
+  font-family: 'Merriweather', serif;
+
+  
+}
+
+
+@media (max-width: 768px) {
+  .all {
+    position: static; /* Reset the positioning */
+    margin-top: 20px; /* Add margin to adjust spacing */
+  }
+  .cls{
+    
+ }
+}
