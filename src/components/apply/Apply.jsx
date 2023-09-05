@@ -2,9 +2,12 @@ import React from "react";
 import "./Apply.scss"
 import "./Apply.css"
 import "./Apply-responsive.scss"
+import { useTranslation } from 'react-i18next';
+
 
 
 function Apply() {
+  const [t, i18n ] = useTranslation();
   return (
     <div className="job-info pt-100 pb-70">
     <div className="container">
@@ -14,12 +17,11 @@ function Apply() {
             <div className="media">
               <i className="flaticon-group align-self-start mr-3" />
               <div className="media-body">
-                <h5 className="mt-0">Vous cherchez un ouvrier ?</h5>
+                <h5 className="mt-0">{t('title38')}</h5>
                 <p>
-                Rejoignez-nous pour faire partie de la plate-forme
-                </p>
+                {t('title39')}                </p>
                 <a href="job-list.html">
-                Rejoindre
+                {t('title40')}
                   <i className="bx bx-chevrons-right" />
                 </a>
               </div>
@@ -31,12 +33,12 @@ function Apply() {
             <div className="media">
               <i className="flaticon-resume align-self-start mr-3" />
               <div className="media-body">
-                <h5 className="mt-0">Êtes-vous un ouvrier ?</h5>
+                <h5 className="mt-0">{t('title41')}</h5>
                 <p>
-                Rejoignez-nous pour faire partie de la plate-forme
+                {t('title39')}   
                 </p>
                 <a href="post-job.html">
-                Rejoindre
+                {t('title40')}
                   <i className="bx bx-chevrons-right" />
                 </a>
               </div>

@@ -52,12 +52,69 @@
   
   .banner-section .banner-content h1 {
     font-size: 65px;
+    font-family:  Times New Roman, Times, serif;
     font-weight: 700;
-    color: #ffffff;
+    color: #fe0000;
     max-width: 630px;
     margin: 0 auto 40px;
     text-transform: capitalize;
   }
+
+  .banner-section .banner-content h2 {
+    font-size: 35px;
+    font-family:  "Comic Sans MS", cursive;
+    font-weight: 700;
+    color: #f7f0f0f4;
+    max-width: 630px;
+    margin: 0 auto 40px;
+    text-transform: full-widith ;
+  }
+
+
+  
+  .animated-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .animated-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden ;
+  }
+  
+  .focus-text {
+    font-size: 36px;
+    color: blue;
+    position: relative;
+    animation: focusIn 6s ease-in-out forwards;
+  }
+  
+  @keyframes focusIn {
+    0%,0% {
+      filter: blur(10px);
+      opacity: 0;
+    }
+    50% {
+      filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  
+  
+  
+  
+  
+
+
+
+
+  
   
   .banner-section .banner-content .banner-form {
     background: rgba(255, 255, 255, 0.8);

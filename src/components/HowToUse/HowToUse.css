@@ -23,6 +23,10 @@
   
   .use-section .section-title h2 {
     color: #ffffff;
+    font-family:  "Comic Sans MS", cursive;
+    font-size: 40px;
+    font-weight: 700;
+
   }
   
   .use-text {
@@ -67,11 +71,15 @@
   .use-text h3 {
     color: #ffffff;
     margin-bottom: 20px;
+    font-family:  Times New Roman, Times, serif;
+    font-weight:  600;
+
   }
   
   .use-text p {
     color: #ffffff;
     margin-bottom: 0;
+    font-family:  "Comic Sans MS", cursive;
   }
   
   .use-text:hover i {
@@ -79,4 +87,7 @@
     color: #ffffff;
   }
   
+
+  
+
   /* Way To Use CSS End */
