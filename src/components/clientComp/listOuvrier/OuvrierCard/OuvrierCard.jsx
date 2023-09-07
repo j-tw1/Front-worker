@@ -3,6 +3,10 @@ import "./ouvriercard.css"
 
 
 function OuvrierCard({worker}) {
+
+
+
+
   return (
     <>
         <div className="col-md-4 col-sm-6 mb-4 pb-2">
@@ -10,7 +14,7 @@ function OuvrierCard({worker}) {
               <div className="list-card-image">
                 <div className="star position-absolute">
                   <span className="badge badge-success">
-                    <i className="icofont-star" /> {worker.star} ({worker.ReviewsNumber}+)
+                    {/* <i className="icofont-star" /> {worker.star} ({worker.ReviewsNumber}+) */}
                   </span>
                 </div>
                 <div className="favourite-heart text-danger position-absolute">
@@ -19,7 +23,7 @@ function OuvrierCard({worker}) {
                   </a>
                 </div>
                 <div className="member-plan position-absolute">
-                  <span className="badge badge-danger">{worker.category}</span>
+                  <span className="badge badge-danger">{worker.categorie}</span>
                 </div>
                 <a href="detail.html">
                   <img src={worker.pp} className="img-fluid item-img" />
@@ -29,11 +33,11 @@ function OuvrierCard({worker}) {
                 <div className="list-card-body">
                   <h6 className="mb-1">
                     <a href="detail.html" className="text-black">
-                      {worker.name}
+                      {worker.firstName} {worker.lastName}
                     </a>
                   </h6>
                   <p className="text-gray mb-3">
-                    {worker.city} • {worker.country} 
+                    {worker.pays} • {worker.ville} 
                   </p>
                   <p className="text-gray mb-3 time">
                     <span className="bg-light text-dark rounded-sm pl-2 pb-1 pt-1 pr-2">
@@ -41,7 +45,7 @@ function OuvrierCard({worker}) {
                     </span>{" "}
                     <span className="float-right text-black-50">
                       {" "}
-                      {worker.price} DH
+                      {/* {worker.price} DH */}
                     </span>
                   </p>
                 </div>

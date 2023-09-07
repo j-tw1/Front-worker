@@ -8,6 +8,8 @@ import { isUserLoggedIn   } from "../../services/AuthService";
 
 function Feature() {
   const [t, i18n ] = useTranslation();
+
+  
   return (
 
    
@@ -19,8 +21,18 @@ function Feature() {
       <div className="d-table-cell">
         <div className="container">
           <div className="banner-content text-center">
+            <div className="animated-text">
+              <span className="focus-text">
             <p>{t('SubTitleLogin')}</p>
-            <h1>join us &amp; small text</h1>
+            
+            <h1>{t('title37')}</h1>
+            <h2>{t('title42')}</h2>
+
+            </span>
+
+
+            </div>
+
             
           </div>
         </div>

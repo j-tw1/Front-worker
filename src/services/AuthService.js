@@ -6,6 +6,9 @@ const AUTH_REST_API_BASE_URL = "http://localhost:8081/api/auth/"
 const GET_USER_API_BASE_URL = "http://localhost:8081/users/"
 
 
+
+
+
 export const registerClientAPICall = (registerObj) => axios.post(AUTH_REST_API_BASE_URL + 'register/client', registerObj);
 
 export const registerOuvrierAPICall = (registerObj) => axios.post(AUTH_REST_API_BASE_URL + 'register/ouvrier', registerObj);
@@ -42,6 +45,16 @@ export const getUserDetails = () => {
   return null;
 };
 
+export const  handleLogout = async () => {
+ 
+
+    
+       localStorage.clear();
+       sessionStorage.clear();
+   
+
+};
+
 
 export const saveLoggedInUser = (email) => sessionStorage.setItem("authenticatedUser",email);
 
@@ -56,6 +69,13 @@ export const getLoggedInUser = () =>{
     const email = sessionStorage.getItem("authenticatedUser");
     return email ; 
 }
+
+export const isOuvrier = () => {
+
+  if(getRole()=='Ouvrier'){return true ; }
+  else {return false ; }
+}
+
 
 
   

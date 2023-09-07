@@ -6,13 +6,14 @@ import Signup2 from './pages/signup2/Signup2';
 import SignupCat from './pages/signup-ouvrier/SignCat';
 import LoginComp from './pages/LogRegComponent/LoginComp';
 import { Navigate } from 'react-router-dom';
-import { getRole, isUserLoggedIn } from './services/AuthService';
+import { getRole, isUserLoggedIn ,isOuvrier } from './services/AuthService';
 import OuvrierList from './components/clientComp/listOuvrier/OuvrierList'
 
 import SignUpClient from './pages/SignUp-client/SignUpClient'
 
 import SignUpChoice from './pages/SignUpchoice/signUpChoice'
 import SignUpOuvrier from './pages/SignUpOuvrier/signUpOuvrier';
+import Workerhome from './pages/WorkerProfil1/workerprofil';
 import Checkout from './components/clientComp/Checkout/Checkout';
 import ClientNav from './components/clientComp/ClientNav';
 import ClientProfile from './components/clientComp/ClientProfile/ClientProfile';
@@ -28,9 +29,13 @@ import OuvrierContent from './components/ouvriercomp/OuvrierContent';
 
 function App() {
 
+  const isO = isOuvrier();
+  const isLogged = isUserLoggedIn();
+
   function AuthenticatedUser({children}){
 
     const isAuth = isUserLoggedIn();
+    const isO = isOuvrier();
     
     if(isAuth ){
       return children ;
@@ -80,10 +85,28 @@ function App() {
 
   const Layout = () => {
   return (
+<<<<<<< HEAD
     <>
     
 <OuvrierNav/>
   <Outlet/>
+=======
+<>
+    {isO  &&
+    <ClientNav/>
+    
+
+     }
+     {
+      !isLogged && <Navbar/>
+     }
+
+
+    
+     
+    
+    <Outlet/>
+>>>>>>> 8a57ba834f38f7cc4e0c4338f39e4a2f456bee64
     </>
     
   );
@@ -166,6 +189,13 @@ function App() {
         path: "/Signup/ouvrier",
           element: <SignUpOuvrier />,
       },
+
+      {
+        path: "/Workerhome",
+          element: <Workerhome />,
+      },
+
+
 
 
       

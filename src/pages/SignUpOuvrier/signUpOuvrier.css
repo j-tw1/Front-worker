@@ -223,7 +223,14 @@
       background-color:#0a5e9f; /* Adjust the color of the line */
     }
     
-    
+    .select-cat{
+
+      
+
+    }
+
+
+
     .close-button-ouvrier {
       background: none;
       border: none;
@@ -234,6 +241,8 @@ position :absolute ;
 top: 10px; 
   left: 10px;      
     }
+
+
     
       
       /* Rest of your styles */

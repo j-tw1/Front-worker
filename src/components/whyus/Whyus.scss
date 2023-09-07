@@ -33,24 +33,51 @@ $box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
 
 .why-choose-text {
     padding-left: 25px;
-    padding-right: 25px;
+    padding-right: 2px;
+    text-align: center;
+    font-family:  "Comic Sans MS", cursive;
+
 
     .section-title {
         margin-bottom: 50px;
+    
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family:  Times New Roman, Times, serif;
+
+          
+    
 
         h2 {
             color: $white-color;
+            font-family:  Times New Roman, Times, serif;
+            font-weight: 900;
+            max-width: 800px;
+
+            
         }
 
         p {
             color: $white-color;
             max-width: 500px;
+            line-height: 30px;
+            font-size: 19px;
+            text-transform: capitalize
+            
+           
+            
+        
+          
+        
         }
     }
 
     .media {
         margin-bottom: 30px;
         display: flex;
+        text-align: center;
 
         i {
             background: #182441;
@@ -80,15 +107,20 @@ $box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
                 color: $white-color;
                 font-size: 15px;
                 max-width: 260px;
+                text-align: center;
             }
         }
     }
 }
 
+
+
+
 .counter-area {
     .counter-text {
         text-align: center;
         margin-bottom: 30px;
+        text-align: center;
 
         h2 {
             color: $red-color;
@@ -100,6 +132,7 @@ $box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
             color: $white-color;
             font-weight: 500;
             font-size: 15px;
+            text-align: center;
         }
     }
 }
@@ -111,3 +144,31 @@ $box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
     height: 100%;
 }
 /* Why Choose CSS End */
+
+
+
+
+
+.vibrating-text {
+    font-size: 24px;
+    color: blue;
+    animation: vibrateText 1s ease-in-out infinite;
+  }
+  
+  @keyframes vibrateText {
+    0% {
+      transform: rotateZ(0deg);
+    }
+    25% {
+      transform: rotateZ(2deg);
+    }
+    50% {
+      transform: rotateZ(0deg);
+    }
+    75% {
+      transform: rotateZ(-2deg);
+    }
+    100% {
+      transform: rotateZ(0deg);
+    }
+  }

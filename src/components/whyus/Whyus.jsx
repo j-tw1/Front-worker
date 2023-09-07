@@ -2,9 +2,11 @@ import React from "react";
 import "./Whyus.scss"
 import "./Whyus.css"
 import "./Whyus-responsive.scss"
+import { useTranslation } from 'react-i18next';
 
 
 function Whyus() {
+  const [t, i18n ] = useTranslation();
   return (
     <section className="why-choose">
     <div className="container-fluid">
@@ -12,21 +14,25 @@ function Whyus() {
         <div className="col-lg-7 p-0">
           <div className="why-choose-text pt-100 pb-70">
             <div className="section-title text-center">
-              <h2>Why You Choose Jovie?</h2>
+            <div className="animated-text">
+            <span className="vibrating-text">
+              <h2>{t('title19')}</h2>
+              </span>
+              </div>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolorei.
+              {t('title20')}
               </p>
+          
             </div>
             <div className="row">
               <div className="col-sm-6">
                 <div className="media">
                   <i className="flaticon-group align-self-center mr-3" />
                   <div className="media-body">
-                    <h5 className="mt-0">Best Talented People</h5>
+                  
+                    <h5 className="mt-0">{t('title21')}</h5>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
+                    {t('title25')}                    </p>
                   </div>
                 </div>
               </div>
@@ -34,10 +40,9 @@ function Whyus() {
                 <div className="media">
                   <i className="flaticon-research align-self-center mr-3" />
                   <div className="media-body">
-                    <h5 className="mt-0">Easy To Find Canditate</h5>
+                    <h5 className="mt-0">{t('title22')}</h5>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
+                    {t('title26')}                    </p>
                   </div>
                 </div>
               </div>
@@ -45,10 +50,9 @@ function Whyus() {
                 <div className="media">
                   <i className="flaticon-discussion align-self-center mr-3" />
                   <div className="media-body">
-                    <h5 className="mt-0">Easy To Communicate</h5>
+                    <h5 className="mt-0">{t('title23')}</h5>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
+                    {t('title27')}                      </p>
                   </div>
                 </div>
               </div>
@@ -56,10 +60,9 @@ function Whyus() {
                 <div className="media">
                   <i className="flaticon-recruitment align-self-center mr-3" />
                   <div className="media-body">
-                    <h5 className="mt-0">Global Recruitment Option</h5>
+                    <h5 className="mt-0">{t('title24')}</h5>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
+                    {t('title28')}                    </p>
                   </div>
                 </div>
               </div>
@@ -68,33 +71,33 @@ function Whyus() {
               <div className="col-md-3 col-6">
                 <div className="counter-text">
                   <h2>
-                    <span>127</span>
+                    <span>{t('title29')}</span>
                   </h2>
-                  <p>Job Posted</p>
+                  <p>{t('title33')}</p>
                 </div>
               </div>
               <div className="col-md-3 col-6">
                 <div className="counter-text">
                   <h2>
-                    <span>137</span>
+                    <span>{t('title30')}</span>
                   </h2>
-                  <p>Job Filed</p>
+                  <p>{t('title34')}</p>
                 </div>
               </div>
               <div className="col-md-3 col-6">
                 <div className="counter-text">
                   <h2>
-                    <span>180</span>
+                    <span>{t('title31')}</span>
                   </h2>
-                  <p>Company</p>
+                  <p>{t('title35')}</p>
                 </div>
               </div>
               <div className="col-md-3 col-6">
                 <div className="counter-text">
                   <h2>
-                    <span>144</span>
+                    <span>{t('title32')}</span>
                   </h2>
-                  <p>Members</p>
+                  <p>{t('title36')}</p>
                 </div>
               </div>
             </div>
