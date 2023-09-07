@@ -16,6 +16,10 @@ import SignUpOuvrier from './pages/SignUpOuvrier/signUpOuvrier';
 import Checkout from './components/clientComp/Checkout/Checkout';
 import ClientNav from './components/clientComp/ClientNav';
 import ClientProfile from './components/clientComp/ClientProfile/ClientProfile';
+//import OuvrierDashboard from './components/ouvriercomp/OuvrierDashboard';
+import OuvrierNav from './components/ouvriercomp/OuvrierNav/OuvrierNav';
+import OuvrierSideBar from './components/ouvriercomp/OuvrierSideBar/OuvrierSideBar';
+import OuvrierContent from './components/ouvriercomp/OuvrierContent';
 
 
 //import LoginComp from './pages/LogRegComponent/LoginComp';
@@ -77,9 +81,9 @@ function App() {
   const Layout = () => {
   return (
     <>
-    <Navbar/>
-    <ClientNav/>
-    <Outlet/>
+    
+<OuvrierNav/>
+  <Outlet/>
     </>
     
   );
@@ -123,6 +127,15 @@ function App() {
         
           path: "/Client",
         element:  <OuvrierList />,
+          
+        },
+
+        //ouvrier
+
+        {
+        
+          path: "/ouvdash",
+        element:  <OuvrierContent/>,
           
         },
        

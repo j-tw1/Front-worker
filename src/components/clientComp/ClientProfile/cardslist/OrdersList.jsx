@@ -1,5 +1,4 @@
 import React from 'react'
-import "./cardslist.css"
 import OrderCard from '../cards/OrderCard/OrderCard'
 
 function OrdersList() {

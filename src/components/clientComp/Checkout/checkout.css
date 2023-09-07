@@ -1,3 +1,17 @@
+.checkout{
+
+    padding-top: 15px;
+
+    background-color: #9df0c9;
+}
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    width: 100%;
+    padding-right: var(--bs-gutter-x,.75rem);
+    padding-left: var(--bs-gutter-x,.75rem);
+    margin-right: auto;
+    margin-left: auto;
+    margin: 0 auto;
+}
 .osahan-payment h1, h2, h3, h4, h5, h6 {
     color: #000000;
 }
@@ -145,6 +159,11 @@
     padding: 0;
     margin: 0;
     
+}
+.custom-control.custom-checkbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .addresses-item a.btn.btn-sm {

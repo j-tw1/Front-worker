@@ -5,8 +5,8 @@ import "./checkout.css"
 function Checkout() {
   return (
     <>
-            <section className="section pt-5 pb-5 products-listing">
-      <div className="container"></div>
+            <section className="checkout">
+      <div className="container">
 
     <div className="row">
   <div className="col-md-8">
@@ -194,6 +194,7 @@ function Checkout() {
       
     </div>
   </div>
+</div>
 </div>
 </section>
 

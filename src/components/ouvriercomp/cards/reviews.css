@@ -1,0 +1,85 @@
+.Reviews .btn-sm, .btn-group-sm > .btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 5rem;
+    margin-right: 1mm;
+    min-width: 1px;
+
+}
+.Reviews .float-right a.btn-danger {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+.Reviews .float-right a.btn-info {
+    color: #fff;
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
+.Reviews .float-right a.btn-success {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+.Reviews .float-right a.btn-warning {
+    color: #212529;
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+.Reviews .float-right {
+    float: right !important;
+    display: flex;
+}
+.Reviews p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+.text-black-50 {
+    color: rgb(0 0 0 / 50%) !important;
+}
+.text-success {
+    color: #28a745 !important;
+}
+
+.Reviews .float-right a {
+    float: right !important;
+}
+.Reviews .media-body {
+    flex: 1;
+    padding-left: 15px;
+}
+.Reviews .gold-members img.mr-4 {
+    width: 120px;
+    border-radius: 6px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    height: 120px;
+    object-fit: cover;
+}
+.Reviews .media {
+    display: flex;
+    align-items: flex-start;
+}
+.Reviews a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+    margin: 0;
+
+}
+.Reviews .p-4 {
+    padding: 1.5rem !important;
+}
+
+.Reviews .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    border: none;
+    word-wrap: break-word;
+    background-color: #efefec;
+    background-clip: border-box;
+    box-shadow: 0 0.5rem 1rem #001935;
+    border-radius: 0.25rem;
+}

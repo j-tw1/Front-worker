@@ -39,9 +39,11 @@
     padding-top: 2px;
     cursor: pointer;
 }
-.custom-control.custom-checkbox {
+.filters-card .custom-control.custom-checkbox {
     display: flex;
     flex-direction: row-reverse;
+    align-items: center;
+
 }
 .filters-card-header a {
     font-weight: 500;
@@ -63,7 +65,6 @@
     width: 100%;
 }
 
-.filters-card:hover {
-    background-color: #c5c2c1;
-    border: none;
+.btn-link1:hover {
+    color: #e94a16;
 }

@@ -148,3 +148,4 @@ var fiveobjowlcarousel = $(".owl-carousel-five");
 $('[data-toggle="tooltip"]').tooltip();
 
 })(jQuery); // End of use strict
+
