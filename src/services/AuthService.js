@@ -48,7 +48,7 @@ export const getUserDetails = () => {
 export const  handleLogout = async () => {
  
 
-    
+      
        localStorage.clear();
        sessionStorage.clear();
    

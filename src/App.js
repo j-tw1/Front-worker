@@ -31,7 +31,6 @@ function App() {
   function AuthenticatedUser({children}){
 
     const isAuth = isUserLoggedIn();
-    const isO = isOuvrier();
     
     if(isAuth ){
       return children ;
@@ -82,14 +81,16 @@ function App() {
   const Layout = () => {
   return (
 <>
+    {
+      !isLogged && <Navbar/>
+     }
+     
     {isO  &&
-    <ClientNav/>
+       <ClientNav/>
     
 
      }
-     {
-      !isLogged && <Navbar/>
-     }
+  
 
 
     
