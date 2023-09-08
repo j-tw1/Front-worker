@@ -21,9 +21,10 @@ function ClientProfile() {
   return (
     <>
     <ClientModals/>
-        <section className="section pt-5 pb-5 products-listing">
-      <div className="container"></div>
-    <div className="row">
+        <section className="profile">
+          
+      <div className="container">
+    <div className="row profile">
   <div className="col-md-3">
     <div className="osahan-account-page-left shadow-sm bg-white h-100">
       <div className="border-bottom p-4">
@@ -110,6 +111,7 @@ function ClientProfile() {
       </div>
     </div>
   </div>
+</div>
 </div>
     </section>
 

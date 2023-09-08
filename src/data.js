@@ -355,3 +355,108 @@ export const categories = [
     category: "Plombier",
   },
 ];
+export const reviews = [
+  {
+    id: 1,
+    pp: "https://www.ifapme.be/sites/default/files/styles/wvn_facebook/public/2022-05/metiers_MM_mecanicien_automobile_garage_BR.jpg?itok=AW6LI2M1",
+    desc: "I will create ai art character from your images and prompts",
+    star: 9,
+    name: "Oussama Ababou",
+    title:"Good service"
+  },
+  {
+    id: 2,
+    pp: "https://mobusproperty.com.gh/wp-content/uploads/2021/05/kaf-MobusGh1.jpg",
+    desc: "Lorem ipsum dolor sit amet, dolores mandamus moderatius ea ius,sed civibus vivendum imperdiet ei, amet tritani sea id. Ut veridiceret fierent mei, qui facilisi suavitate euripidis ad. In vim    mucius menandri convenire, an rute zril vis. Ancillae delectus    necessitatibus no eam, at porro solet veniam mel, ad everti    nostrud vim. Eam no menandri pertinacia deterruisset",
+    star: 3.2,
+    name: "Mouad Emsi",
+    title:"3yan had siyad",
+  },
+  {
+    id: 3,
+
+    pp: "https://marcopolis.net/images/stories/Ghana_Report/2023/biographies/Kojo_Ansah_Mensah/Kojo_Ansah_Mensah_CEO_of_Mobus_Property.jpg",
+    desc: "I will create ai art character from your images and prompts",
+    star: 9,
+    name: "Oussama Ababou",
+    title:"Good service",
+  },
+  
+];
+export const orders = [
+  {
+    id: 1,
+    pp: "https://www.ifapme.be/sites/default/files/styles/wvn_facebook/public/2022-05/metiers_MM_mecanicien_automobile_garage_BR.jpg?itok=AW6LI2M1",
+    desc: "2x robini , 3x 9wads",
+    name: "Oussama Ababou",
+    title:"Good service",
+    address:"Rue 15 Rabat",
+    prix: 200,
+    country:"Maroc",
+    city:"Rabat",
+    phone:"+212654823154"
+  },
+  {
+    id: 2,
+    pp: "https://mobusproperty.com.gh/wp-content/uploads/2021/05/kaf-MobusGh1.jpg",
+    desc: "2x robini , 3x 9wads",
+    name: "Anass nnnn",
+    title:"Good service",
+    address:"Rue 15 Rabat",
+    prix: 300,
+    country:"Maroc",
+    city:"Rabat",
+    phone:"+21264652134"
+  },
+  {
+    id: 3,
+
+    pp: "https://marcopolis.net/images/stories/Ghana_Report/2023/biographies/Kojo_Ansah_Mensah/Kojo_Ansah_Mensah_CEO_of_Mobus_Property.jpg",
+    desc: "2x robini , 3x 9wads",
+    name: "Mouad Emsi",
+    title:"Good service",
+    address:"Rue 15 Rabat",
+    prix: 500,
+    country:"Maroc",
+    city:"Rabat",
+    phone:"+212654871694"
+  },
+  {
+  id: 4,
+    pp: "https://www.ifapme.be/sites/default/files/styles/wvn_facebook/public/2022-05/metiers_MM_mecanicien_automobile_garage_BR.jpg?itok=AW6LI2M1",
+    desc: "2x robini , 3x 9wads",
+    name: "Oussama Ababou",
+    title:"Good service",
+    address:"Rue 15 Rabat",
+    prix: 200,
+    country:"Maroc",
+    city:"Rabat",
+    phone:"+212654823154"
+  },
+  {
+    id: 5,
+    pp: "https://mobusproperty.com.gh/wp-content/uploads/2021/05/kaf-MobusGh1.jpg",
+    desc: "2x robini , 3x 9wads",
+    name: "Anass nnnn",
+    title:"Good service",
+    address:"Rue 15 Rabat",
+    prix: 300,
+    country:"Maroc",
+    city:"Rabat",
+    phone:"+21264652134"
+  },
+  {
+    id: 6,
+
+    pp: "https://marcopolis.net/images/stories/Ghana_Report/2023/biographies/Kojo_Ansah_Mensah/Kojo_Ansah_Mensah_CEO_of_Mobus_Property.jpg",
+    desc: "2x robini , 3x 9wads",
+    name: "Mouad Emsi",
+    title:"Good service",
+    address:"Rue 15 Rabat",
+    prix: 500,
+    country:"Maroc",
+    city:"Rabat",
+    phone:"+212654871694"
+  },
+  
+];

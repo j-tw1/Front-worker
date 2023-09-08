@@ -17,6 +17,10 @@ import Workerhome from './pages/WorkerProfil1/workerprofil';
 import Checkout from './components/clientComp/Checkout/Checkout';
 import ClientNav from './components/clientComp/ClientNav';
 import ClientProfile from './components/clientComp/ClientProfile/ClientProfile';
+//import OuvrierDashboard from './components/ouvriercomp/OuvrierDashboard';
+import OuvrierNav from './components/ouvriercomp/OuvrierNav/OuvrierNav';
+import OuvrierSideBar from './components/ouvriercomp/OuvrierSideBar/OuvrierSideBar';
+import OuvrierContent from './components/ouvriercomp/OuvrierContent';
 
 
 //import LoginComp from './pages/LogRegComponent/LoginComp';
@@ -80,6 +84,12 @@ function App() {
 
   const Layout = () => {
   return (
+<<<<<<< HEAD
+    <>
+    
+<OuvrierNav/>
+  <Outlet/>
+=======
 <>
     {
       !isLogged && <Navbar/>
@@ -97,6 +107,7 @@ function App() {
      
     
     <Outlet/>
+>>>>>>> 8a57ba834f38f7cc4e0c4338f39e4a2f456bee64
     </>
     
   );
@@ -140,6 +151,15 @@ function App() {
         
           path: "/Client",
         element:  <OuvrierList />,
+          
+        },
+
+        //ouvrier
+
+        {
+        
+          path: "/ouvdash",
+        element:  <OuvrierContent/>,
           
         },
        

@@ -71,8 +71,8 @@ function Navbar() {
                       </a>
                     </li>
                     <li className="nav-item">
-                      <a href="/Categories" className="nav-link">
-                        Categories
+                      <a href="/ouvdash" className="nav-link">
+                        ouvrierdash
                       </a>
                       
                     </li>

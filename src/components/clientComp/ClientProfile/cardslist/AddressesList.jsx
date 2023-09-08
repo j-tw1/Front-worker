@@ -1,5 +1,4 @@
 import React from 'react'
-import "./cardslist.css"
 import AdressCard from '../cards/AdresseCard/AdressCard'
 
 
