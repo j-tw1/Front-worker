@@ -17,9 +17,6 @@ function OuvrierList() {
 
 const [workers , setWorkers] = useState([])
 
-
-
-
 useEffect(()=>{
   listWorkers();
 },[])
@@ -29,8 +26,8 @@ function listWorkers(){
   setWorkers(response.data);
 }).catch(error=>{
   console.error(error);
-})};
-  
+})
+}
   
 
   return (
@@ -104,4 +101,4 @@ function listWorkers(){
   )
 }
 
-export default OuvrierList
+export default OuvrierList 

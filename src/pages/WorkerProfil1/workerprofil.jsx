@@ -1,7 +1,30 @@
 import React from 'react';
 import './workerprofil.css';
+import { addConsultationAPICall, getUserDetails } from '../../services/AuthService';
 
 function workerprofil() {
+
+  const client = getUserDetails ;
+  
+
+
+
+  const handleReserverButton = (event) => {
+    event.preventDefault();
+    
+    // console.log(formData); 
+    
+
+    addConsultationAPICall(2 ,1).then((response) => {  
+      
+        console.log(response.data);
+
+    })  .catch(error=>{
+         console.error(error); 
+    })
+    
+    // Send this data to your backend or perform necessary actions
+  };
   return (
     <>
       <html style={{ fontSize: '16px' }} lang="en">
@@ -61,7 +84,7 @@ function workerprofil() {
               </p>
 
               <div className="button-places">
-                <button type="button" className="btn btn-danger">
+                <button type="button" className="btn btn-danger" onClick={handleReserverButton}>
                   Reserver
                 </button>
                 <button type="button" className="btn btn-info">
