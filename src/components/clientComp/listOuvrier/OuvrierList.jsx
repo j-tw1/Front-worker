@@ -15,27 +15,25 @@ import NavbarV1 from '../../navbar/NavbarV1';
 function OuvrierList() {
   const [workers, setWorkers] = useState([]);
 
-const [workers , setWorkers] = useState([])
+  useEffect(() => {
+    listWorkers();
+  }, []);
 
-
-useEffect(()=>{
-  listWorkers();
-},[])
-
-function listWorkers(){
-  getOuvrierList().then((response)=>{
-  setWorkers(response.data);
-}).catch(error=>{
-  console.error(error);
-})
-}
-  
+  function listWorkers() {
+    getOuvrierList()
+      .then((response) => {
+        setWorkers(response.data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }
 
   return (
     <>
-    
-    {/* <ClientModals/> */}
-    
+      {/* <ClientModals/> */}
+
+      <ClientNav />
 
       <section class="breadcrumb-osahan pt-5 pb-5 bg-dark position-relative text-center">
         <h1 class="text-white">Workers List</h1>
@@ -103,5 +101,4 @@ function listWorkers(){
   );
 }
 
-export default OuvrierList 
-export default OuvrierList
+export default OuvrierList;

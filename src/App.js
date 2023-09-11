@@ -86,7 +86,7 @@ function App() {
   return (
 
 <>
-    {
+    {/* {
       !isLogged && <Navbar/>
      }
      
@@ -95,9 +95,11 @@ function App() {
     
 
      }
-  
+   */}
 
 
+
+    <Navbar/>
     
      
     
@@ -142,12 +144,6 @@ function App() {
         
         //ouvrier
 
-        {
-        
-          path: "/ouvdash",
-        element:<AuthenticatedOuvrier><OuvrierContent/></AuthenticatedOuvrier>   ,
-          
-        },
        
 
       ],},
@@ -160,7 +156,13 @@ function App() {
         
       },
 
-      
+      {
+        
+        path: "/ouvdash",
+        element:<AuthenticatedOuvrier><OuvrierContent/></AuthenticatedOuvrier>   ,
+        
+      },
+     
       {
         
         path: "/ouvrierlist",
