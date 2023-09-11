@@ -66,6 +66,16 @@ export const  handleLogout = async () => {
 
 export const saveLoggedInUser = (email) => sessionStorage.setItem("authenticatedUser",email);
 
+export const savechoosedWorkerEmail = (email) => sessionStorage.setItem("workerEmail",email) ;
+
+export const saveWorker = (obj) => sessionStorage.setItem("worker" ,obj);
+
+
+export const getWorker = localStorage.getItem("worker") ;
+
+
+export const getWorkerEmail = localStorage.getItem("workerEmail") ;
+
 export const isUserLoggedIn = () => {
     const email = sessionStorage.getItem("authenticatedUser"); 
     if(email == null){return false ; }

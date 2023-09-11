@@ -84,12 +84,7 @@ function App() {
 
   const Layout = () => {
   return (
-<<<<<<< HEAD
-    <>
-    
-<OuvrierNav/>
-  <Outlet/>
-=======
+
 <>
     {
       !isLogged && <Navbar/>
@@ -107,7 +102,6 @@ function App() {
      
     
     <Outlet/>
->>>>>>> 8a57ba834f38f7cc4e0c4338f39e4a2f456bee64
     </>
     
   );
@@ -172,10 +166,7 @@ function App() {
       },
 
 
-      {
-        path: "/workerlist",
-          element: <OuvrierList />,
-      },
+      
 
     
 

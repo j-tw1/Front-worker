@@ -17,6 +17,7 @@ function OuvrierList() {
 
 const [workers , setWorkers] = useState([])
 
+
 useEffect(()=>{
   listWorkers();
 },[])
@@ -33,7 +34,7 @@ function listWorkers(){
   return (
     <>
     
-    <ClientModals/>
+    {/* <ClientModals/> */}
     
 
       <section class="breadcrumb-osahan pt-5 pb-5 bg-dark position-relative text-center">

@@ -1,8 +1,23 @@
 import React from 'react'
 import "./ouvriercard.css"
+import { saveWorker, savechoosedWorkerEmail } from '../../../../services/AuthService'
+import { useNavigate } from 'react-router-dom'
 
 
-function OuvrierCard({worker}) {
+function OuvrierCard({worker }) {
+
+  const navigator = useNavigate();
+  
+
+  function handleImgClick (e)  {
+
+    
+    savechoosedWorkerEmail(worker.firstName);  
+    navigator('/workerhome');
+
+
+
+  }
 
 
 
@@ -25,7 +40,7 @@ function OuvrierCard({worker}) {
                 <div className="member-plan position-absolute">
                   <span className="badge badge-danger">{worker.categorie}</span>
                 </div>
-                <a href="detail.html">
+                <a  onClick={handleImgClick}>
                   <img src={worker.pp} className="img-fluid item-img" />
                 </a>
               </div>
