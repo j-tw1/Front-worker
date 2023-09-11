@@ -57,10 +57,10 @@ const LoginComp = () => {
 
       if (roleY == 'Ouvrier'){
 
-        navigator('/home');
+        navigator('/ouvdash');
       }
       if (roleY == 'Client'){
-        navigator('/botswana')
+        navigator('/ouvrierlist')
       }
 
       console.log(response.data.lastname);

@@ -85,28 +85,15 @@ function App() {
 
   const Layout = () => {
   return (
-<<<<<<< HEAD
     <>
     
-<OuvrierNav/>
-  <Outlet/>
-=======
-<>
-    {isO  &&
-    <ClientNav/>
-    
-
-     }
-     {
-      !isLogged && <Navbar/>
-     }
+ {/* <OuvrierNav/> */}
 
 
-    
-     
-    
-    <Outlet/>
->>>>>>> 8a57ba834f38f7cc4e0c4338f39e4a2f456bee64
+
+  <Navbar/>
+  <Outlet/> 
+
     </>
     
   );
@@ -117,6 +104,9 @@ function App() {
     {
       path: "/",
       element: <Layout />, 
+
+
+      
       children: [
         {
 
@@ -140,31 +130,35 @@ function App() {
         element:  <ClientProfile />,
           
         },
-        {
+       
         
-          path: "/ouvrierlist",
-        element:  <OuvrierList />,
-          
-        },
-        {
-        
-          path: "/Client",
-        element:  <OuvrierList />,
-          
-        },
-
         //ouvrier
 
         {
         
           path: "/ouvdash",
-        element:  <OuvrierContent/>,
+        element:<AuthenticatedOuvrier><OuvrierContent/></AuthenticatedOuvrier>   ,
           
         },
        
 
       ],},
+
+
+      {
+        
+        path: "/Client",
+        element:<AuthenticatedClient><OuvrierList /></AuthenticatedClient>  ,
+        
+      },
+
       
+      {
+        
+        path: "/ouvrierlist",
+        element:  <OuvrierList />,
+        
+      },
       {
         path: "/Signin",
           element: <LoginComp />,

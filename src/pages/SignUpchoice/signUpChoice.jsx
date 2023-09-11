@@ -47,7 +47,7 @@ const SignUpChoice = () => {
 
       if (roleY == 'Ouvrier'){
 
-        navigator('/');
+        navigator('/ouvdash');
       }
       if (roleY == 'Client'){
 

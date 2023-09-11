@@ -1,4 +1,5 @@
 /*! CSS Used from: https://capp.nicepage.com/af44303e4c6913309d52397e38e073f99f4a2a89/nicepage.css ; media=screen */
+
 @media screen {
   section {
     display: block;
@@ -488,14 +489,6 @@
     width: 100px; /* Make the button full-width */
     text-align: center; /* Center the text within the button */
     margin-top: 10px; /* Add some top margin for spacing */
-  }
-}
-
-/* Add media query for even smaller screens if needed */
-@media (max-width: 576px) {
-  .button-places {
-    /* Further adjust button properties for smaller screens */
-    font-size: 14px; /* Reduce font size if necessary */
   }
 }
 
