@@ -13,7 +13,7 @@ function OuvrierCard({worker }) {
 
     
     savechoosedWorkerEmail(worker.firstName);  
-    navigator('/workerhome');
+    navigator('/workerhome'); 
 
 
 

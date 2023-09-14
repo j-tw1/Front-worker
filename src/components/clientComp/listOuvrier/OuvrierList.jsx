@@ -20,7 +20,8 @@ function OuvrierList() {
   }, []);
 
   function listWorkers() {
-    getOuvrierList()
+
+      getOuvrierList()
       .then((response) => {
         setWorkers(response.data);
       })

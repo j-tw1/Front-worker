@@ -21,7 +21,7 @@ function workerprofil() {
 
 
 
-    addConsultationAPICall('amine@gmail.com' ,'mouad@gmail.com').then((response) => {  
+    addConsultationAPICall('o@gmail.com' ,'e@gmail.com').then((response) => {  
 
         console.log(response.data);
 
