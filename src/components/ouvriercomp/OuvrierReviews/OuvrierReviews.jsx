@@ -1,9 +1,11 @@
 import React from 'react'
 import Review from '../cards/Review'
 import { reviews } from '../../../data'
+import Reviewmodal from './Reviewmodal'
 function OuvrierReviews() {
   return (
     <>
+    <Reviewmodal/>
     <div id="layoutSidenav_content">
     <main>
           <div className="Reviews">

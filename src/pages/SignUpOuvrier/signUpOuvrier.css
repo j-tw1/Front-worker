@@ -14,6 +14,9 @@
         /* justify-content: flex-end;  */
 
       }
+      .registration-page-ouvrier form {
+        background-color: #ffffff;
+      }
       
       .registration-form-container-ouvrier {
         
@@ -55,13 +58,13 @@
         left: calc(50% - 30px);
       } */
       
-      .form-group {
+      .registration-page .form-group {
         display: flex;
         flex-wrap: wrap;
         margin-bottom: 20px;
       }
       
-      .form-group input,
+      .registration-page .form-group input,
       .form-group select {
         flex: 1;
         padding: 14px;
@@ -105,19 +108,19 @@
       
     
       
-      .label {
+      .registration-page .label {
         font-weight: bold;
         margin-bottom: 5px;
         color: #555;
       }
       
-      .image-upload {
+      .registration-page .image-upload {
         display: flex;
         align-items: center;
         margin-bottom: 20px;
       }
       
-      .image-upload label {
+      .registration-page .image-upload label {
         cursor: pointer;
         background-color: #007bff;
         color: white;
@@ -126,7 +129,7 @@
         transition: background-color 0.3s;
       }
       
-      .image-upload label:hover {
+      .registration-page .image-upload label:hover {
         background-color: #0056b3;
       }
       
@@ -151,12 +154,12 @@
           margin-bottom: 15px;
         }
       
-        .form-group {
+        .registration-page-ouvrier .form-group {
           flex-direction: column;
           margin-bottom: 15px;
         }
       
-        .form-group input,
+        .registration-page-ouvrier .form-group input,
         .form-group select {
           padding: 12px;
           font-size: 14px;
@@ -190,7 +193,7 @@
           margin-bottom: 18px;
         }
       
-        .form-group input,
+        .Registration-ouvrier .form-group input,
         .form-group select {
           padding: 12px;
           font-size: 15px;

@@ -6,7 +6,7 @@ import { isUserLoggedIn , getUserDetails , handleLogout } from "../../services/A
 
 function ClientModals() {
 
-       const client = getUserDetails()
+  const client = getUserDetails()
 
   return (
     <>

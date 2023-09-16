@@ -1,8 +1,10 @@
 import React from 'react'
 import './orders.css'
+import OrderModal from '../OuvrierOrders/OrderModal'
 function Message({order}) {
   return (
     <>
+    <OrderModal/>
     <div className="card mb-4 order-list">
         <div className="gold-members p-4">
           <a href="#"></a>
@@ -39,22 +41,21 @@ function Message({order}) {
               </p>
               <hr />
               <div className="float-right">
+                <a href="#0" className="btn btn-sm btn-success">
+                  <i className="feather-check-circle" /> Accepter
+                </a><a href="#0" className="btn btn-sm btn-danger">
+                  <i className="feather-trash" /> Refuser
+                </a>
                 <a href="messages.html" className="btn btn-sm btn-warning">
                   <i className="feather-message-circle" /> Message
                 </a>
-                <a href="#0" className="btn btn-sm btn-success">
-                  <i className="feather-check-circle" /> Approve
-                </a>
                 <a
-                  href="#0"
                   className="btn btn-sm btn-info"
                   data-toggle="modal"
-                  data-target="#edit_booking"
+                  data-target="#detail-profile-modal"
+                  href="#"
                 >
-                  <i className="feather-edit" /> Edit
-                </a>
-                <a href="#0" className="btn btn-sm btn-danger">
-                  <i className="feather-trash" /> Cancel
+                  <i className="feather-edit" /> Details
                 </a>
               </div>
               <p className="mb-0 text-dark text-dark pt-2">

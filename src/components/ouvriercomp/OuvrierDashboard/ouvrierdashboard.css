@@ -33,3 +33,7 @@
   width: 55px;
   
 }
+.container-fluid .row .col-md-6 {
+  flex: auto;
+  max-width: 50%;
+}

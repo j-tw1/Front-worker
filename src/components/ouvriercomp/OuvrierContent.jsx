@@ -25,6 +25,8 @@ import OuvrierReviews from './OuvrierReviews/OuvrierReviews';
 // import OuvrierMessages from './OuvrierMessages/OuvrierMessages';
 import OuvrierOrders from './OuvrierOrders/OuvrierOrders'; // Import your Orders component
 import OuvrierNav from './OuvrierNav/OuvrierNav';
+import MyProfile from './MyProfile/MyProfile';
+import MyMessages from './MyMessages/MyMessages';
 
 function OuvrierContent() {
   const [selectedOption, setSelectedOption] = useState('dashboard'); // Initialize with 'dashboard'
@@ -43,6 +45,10 @@ function OuvrierContent() {
     dashboardContent = <OuvrierOrders />;
   } else if (selectedOption === 'reviews') {
     dashboardContent = <OuvrierReviews />;
+  }else if (selectedOption === 'profile') {
+    dashboardContent = <MyProfile />;
+  }else if (selectedOption === 'messages') {
+    dashboardContent = <MyMessages />;
   }
 
   return (

@@ -1,0 +1,166 @@
+.ouvriermessages .card-header {
+    padding: 15px 1.25rem;
+    margin-bottom: 0;
+    background-color: #fff;
+    border-bottom: 1px solid rgb(0 0 0 / 7%);
+    font-size: 16px;
+    font-weight: 500;
+}
+.ouvriermessages .mr-1, .mx-1 {
+    margin-right: 0.25rem !important;
+}
+
+.ouvriermessages .pl-0, .px-0 {
+    padding-left: 0 !important;
+}
+
+.ouvriermessages .pr-0, .px-0 {
+    padding-right: 0 !important;
+}
+.ouvriermessages .border-right {
+    border-right: 1px solid #dee2e6 !important;
+}
+
+.ouvriermessages .m-0 {
+    margin: 0 !important;
+}
+
+.ouvriermessages .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -0.75rem;
+    margin-left: -0.75rem;
+}
+.ouvriermessages .card-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem;
+}
+.ouvriermessages .p-0 {
+    padding: 0 !important;
+}
+
+
+.ouvriermessages .icon-form-control .form-control {
+    padding-left: 40px;
+}
+
+
+
+
+.icon-form-control i {
+    display: flex;
+    top: 0;
+    bottom: 0;
+    align-items: center;
+    font-size: 16px;
+    justify-content: center;
+    width: 40px;
+}
+
+.position-absolute {
+    position: absolute !important;
+}
+
+.p-3 {
+    padding: 1rem !important;
+}
+
+.position-relative {
+    position: relative !important;
+}
+.border-bottom {
+    border-bottom: 1px solid #dee2e6 !important;
+}
+
+.ouvriermessages img {
+    vertical-align: middle;
+    border-style: none;
+}
+.ouvriermessages .dropdown-list-image img {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.ouvriermessages .rounded-circle {
+    border-radius: 50% !important;
+}
+.mr-3, .mx-3 {
+    margin-right: 1rem !important;
+}
+
+.ouvriermessages .dropdown-list-image {
+    position: relative;
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+
+.ouvriermessages .overflow-hidden {
+    overflow: hidden !important;
+}
+.align-items-center {
+    align-items: center !important;
+}
+.d-flex {
+    display: flex !important;
+}
+
+.osahan-chat-list {
+    overflow-y: auto;
+    height: calc(100vh - 242px);
+    min-height: 463px;
+}
+
+.text-muted {
+    color: #6c757d !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+.pt-1, .py-1 {
+    padding-top: 0.25rem !important;
+}
+small, .small {
+    font-size: 80%;
+    font-weight: 400;
+}
+.ml-auto, .mx-auto {
+    margin-left: auto !important;
+}
+
+.mb-auto, .my-auto {
+    margin-bottom: auto !important;
+}
+.text-black-50 {
+    color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.font-weight-bold {
+    font-weight: 700 !important;
+}
+
+/*messages*/
+
+.osahan-chat-box {
+    height: calc(100vh - 374px);
+    overflow-y: scroll;
+}
+
+.ouvriermessages .btn {
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+}
+
+.ouvriermessages .btn-group {
+    padding-left: 15px;
+}
+
+
