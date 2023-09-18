@@ -69,12 +69,12 @@ export const saveLoggedInUser = (email) => sessionStorage.setItem("authenticated
 export const savechoosedWorkerEmail = (email) => sessionStorage.setItem("workerEmail",email) ;
 
 export const saveWorker = (obj) => sessionStorage.setItem("worker" ,obj);
+export const getWorkerEmail = () =>  sessionStorage.getItem("workerEmail") ;
 
 
-export const getWorker = localStorage.getItem("worker") ;
+export const getWorker = () => sessionStorage.getItem("worker") ;
 
 
-export const getWorkerEmail = localStorage.getItem("workerEmail") ;
 
 export const isUserLoggedIn = () => {
     const email = sessionStorage.getItem("authenticatedUser"); 

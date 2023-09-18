@@ -1,35 +1,44 @@
-import React from 'react';
+import React , { useState }from 'react';
 import './workerprofil.css';
 import { addConsultationAPICall, getUserDetails , getWorker, getWorkerEmail } from '../../services/AuthService';
+import { getOuvrierByEmail } from '../../services/OuvrierService';
 
-function workerprofil() {
+function Workerprofil() {
 
-  const client = getUserDetails() ;
+const [workerfirstname , setFirstname] = useState('')
 
-  const worker = getWorkerEmail;
+const [workerlastname , setLastname] = useState('')
   
+const workerEmail = getWorkerEmail();
 
-  console.log(worker);
-  
+ const worker = getOuvrierByEmail(workerEmail);
 
+ const client = getUserDetails();
+
+ 
+
+   getOuvrierByEmail(workerEmail).then((response)=>{
+        console.log(response.data);
+        setFirstname(response.data.firstName) ;
+        setLastname(response.data.lastName ) ;
+        
+  });
+
+   console.log(worker) ;
 
 
   const handleReserverButton = (event) => {
     event.preventDefault();
-    
-    // console.log(formData); 
 
+    // console.log(formData);
 
-
-    addConsultationAPICall('o@gmail.com' ,'e@gmail.com').then((response) => {  
+    addConsultationAPICall(client.email ,workerEmail).then((response) => {
 
         console.log(response.data);
 
     })  .catch(error=>{
-         console.error(error); 
+         console.error(error);
     })
-    
-    // Send this data to your backend or perform necessary actions
   };
   return (
     <>
@@ -58,7 +67,7 @@ function workerprofil() {
                 data-animation-name="customAnimationIn"
                 data-animation-duration="1500"
               >
-                A Bit About Me 
+                A Bit About Me
               </h4>
               <h2
                 className="u-text u-text-palette-2-base u-text-2"
@@ -82,7 +91,7 @@ function workerprofil() {
                 data-animation-duration="1500"
                 data-animation-delay="500"
               >
-                Hi I'm {worker}. Click here to add your own text and edit me.
+                Hi I'm  {workerfirstname} {workerlastname} . Click here to add your own text and edit me.
                 ​Ut enim ad minim veniam, quis nostrud exercitation ullamco
                 laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
                 dolor in reprehenderit in voluptate velit esse cillum dolore eu
@@ -219,4 +228,5 @@ function workerprofil() {
   );
 }
 
-export default workerprofil;
+export default Workerprofil;
+

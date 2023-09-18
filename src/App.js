@@ -21,6 +21,7 @@ import ClientProfile from './components/clientComp/ClientProfile/ClientProfile';
 import OuvrierNav from './components/ouvriercomp/OuvrierNav/OuvrierNav';
 import OuvrierSideBar from './components/ouvriercomp/OuvrierSideBar/OuvrierSideBar';
 import OuvrierContent from './components/ouvriercomp/OuvrierContent';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 
 //import LoginComp from './pages/LogRegComponent/LoginComp';
@@ -140,14 +141,18 @@ function App() {
         element:  <ClientProfile />,
           
         },
-       
-        
+        // <Route path="/workerhome/:firstName/:lastName" component={Workerhome} />
+      
         //ouvrier
 
        
 
       ],},
-
+  {
+          path:"/workerhome",
+          element: <Workerhome/>
+        },
+        
 
       {
         
@@ -191,10 +196,10 @@ function App() {
           element: <SignUpOuvrier />,
       },
 
-      {
-        path: "/Workerhome",
-          element: <Workerhome />,
-      },
+      // {
+      //   path: "/Workerhome",
+      //     element: <Workerhome />,
+      // },
 
 
 
