@@ -8,6 +8,9 @@
     background-image: url('/src/assets/img/elec.jpg');
 
   }
+  .registration-page form {
+    background-color: #ffffff;
+  }
   
   .registration-form-container {
     width: 600px; /* Increased width */

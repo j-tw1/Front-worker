@@ -1,8 +1,9 @@
 import React from 'react'
 import './reviews.css'
+import Reviewmodal from '../OuvrierReviews/Reviewmodal'
 function Review({review}) {
   return (
-    <>
+    <> <Reviewmodal/>
     <div className="card mb-4 order-list">
         <div className="gold-members p-4">
           <a href="#"></a>
@@ -31,10 +32,10 @@ function Review({review}) {
               <hr />
               <div className="float-right">
                 <a
-                  href="#0"
+                  href="#"
                   className="btn btn-sm btn-success"
                   data-toggle="modal"
-                  data-target="#edit_booking"
+                  data-target="#review-profile-modal"
                 >
                   <i className="fa fa-fw fa-reply" /> Reply to this review
                 </a>

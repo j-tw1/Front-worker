@@ -51,12 +51,12 @@ z-index: 9;
     transition: opacity 0.3s ease-in-out;
   }
   
-  @media (min-width: 992px) {
+  @media (min-width: 400px) {
     #layoutSidenav #layoutSidenav_nav {
       transform: translateX(0);
     }
     #layoutSidenav #layoutSidenav_content {
-      margin-left: 30dvh;
+      margin-left: 200px;
       transition: margin 0.15s ease-in-out;
     }
   

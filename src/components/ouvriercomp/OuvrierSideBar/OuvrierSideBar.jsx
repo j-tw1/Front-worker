@@ -123,7 +123,12 @@ function OuvrierSideBar({ onOptionClick, selectedOption }) {
                 </div>
                 Reviews
               </a>
-              <a className="nav-link" href="my-profile.html">
+              <a className={`nav-link ${
+                  selectedOption === 'profile' ? 'active' : ''
+                }`}
+                href="#"
+                onClick={() => handleOptionClick('profile')}
+                >
                 <div className="sb-nav-link-icon">
                   <i className="feather-user" />
                 </div>

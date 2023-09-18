@@ -1,0 +1,127 @@
+/* Modal */
+
+  
+  .modalContainer {
+    max-width: 500px;
+    width: 100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 8px;
+  }
+  
+  #imgmodal {
+    width: 250px;
+    object-fit: cover;
+    border-radius: 10%;
+    margin-top: 5px;
+    
+    
+  }
+  
+  .modalRight {
+    width: 100%;
+  }
+  
+  .closeBtn {
+    position: fixed;
+    top: 8px;
+    right: 8px;
+  }
+  
+  .contentModal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem 2rem;
+  }
+  
+  .btnContainer {
+    display: flex;
+    padding: 1rem 1rem;
+  }
+  .btnContainer button {
+    width: 100%;
+    margin: .5rem;
+    padding: 16px 0;
+    /* border: none; */
+    border: 1px solid #e6e6e6;
+    /* color: #ffffff; */
+  }
+  
+  .btnPrimary {
+    background-color: #43883a;
+    color: white;
+  }
+  
+  .btnOutline {
+    /* background-color: #a76a99; */
+    background-color: rgb(219, 82, 82);
+    color: #ffffff;
+  }
+  
+  .bold {
+    font-weight: 600;
+  }
+  .nameorder {
+    display: flex;
+    margin-top: 5px;
+    justify-content: center;    
+    color: rgb(255, 255, 255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  .ordernum {
+    display: flex;
+    justify-content: space-between;
+  }
+  .ordernum #city {
+    color: black;
+    font-weight: bold;
+  }
+  .citytime {
+    display: flex;
+    justify-content: space-between;
+  }
+  .citytime #city {
+    color: black;
+    font-weight: bold;
+  }
+  .citytime #timeorder {
+    color: #195f10;
+  }
+
+  .descr {
+    display: flex;
+    flex-direction: column;
+  }
+  .descr #descreption{
+    font-weight: bold;
+    color: black;
+  }
+  .descr h6{
+    color: black;
+    border-color: black;
+    border-style: solid;
+    border-width: thin;
+    height: 60px;
+  }
+.totalprice {
+  display:flex ;
+}
+.totalprice p,span{
+  font-size: 20px;
+}
+#total {
+  padding-left: 5px;
+  color: #43883a;
+}
+#total span{
+  font-weight: bold;
+}

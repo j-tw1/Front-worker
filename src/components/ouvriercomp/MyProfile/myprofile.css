@@ -1,0 +1,128 @@
+.myprofile a {
+    color: #615f5f;
+}
+.myprofile .save a {
+    color: #ffffff;
+}
+.myprofile .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -0.75rem;
+    margin-left: -0.75rem;
+
+}
+.myprofile .col-md-4 {
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
+}
+
+.myprofile .dropzone {
+    min-height: 150px;
+    border: 2px dashed #ced4db;
+    background: white;
+    padding: 0;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.myprofile .dropzone.dz-clickable {
+    cursor: pointer;
+}
+
+.dropzone.dz-clickable .dz-message, .dropzone.dz-clickable .dz-message * {
+    cursor: pointer;
+}
+.dropzone .dz-message {
+    text-align: center;
+    margin: 2em 0;
+}
+.myprofile .col-md-8 {
+    flex: 0 0 66.6666666667%;
+    max-width: 66.6666666667%;
+}
+.myprofile .col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.myprofile label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    font-size: 12px;
+    color: #615f5f;
+    margin: 0 0 6px 0;
+}
+.myprofile .form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.myprofile .form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 .25rem rgba(13,110,253,.25);
+}
+.myprofile .form-group input, .form-group select {
+    flex: auto;
+    
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #f0f3f8;
+    color: #333;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.05);
+}
+.myprofile .gold-members11 {
+    padding: 0;
+}
+
+#image-file {
+    display: none;
+      
+}
+
+#edit-image {
+    padding: 10px 20px;
+    max-width: 100px;
+    background-color: #198754;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    align-items: center;
+  }
+  
+#edit-image:hover {
+    background-color: #45a049;
+  }
+.myprofile .form-group2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap:wrap
+}
+
+
+#image-profile{
+    max-width: 190px;
+    max-height: 200px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-radius: 50%;
+}
