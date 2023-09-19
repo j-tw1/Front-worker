@@ -9,12 +9,9 @@ function OuvrierCard({ worker }) {
   const navigator = useNavigate();
 
   function handleImgClick(e) {
-    
-      console.log(worker.categorie);
-      console.log(worker.email);
 
     savechoosedWorkerEmail(worker.email);
-    // navigator('/workerhome');
+
     navigator(`/workerhome/`);
   }
 
@@ -25,7 +22,7 @@ function OuvrierCard({ worker }) {
           <div className="list-card-image">
             <div className="star position-absolute">
               <span className="badge badge-success">
-                {/* <i className="icofont-star" /> {worker.star} ({worker.ReviewsNumber}+) */}
+              
               </span>
             </div>
             <div className="favourite-heart text-danger position-absolute">

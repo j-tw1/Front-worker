@@ -1,10 +1,35 @@
-import React from 'react'
+import React ,{useState ,useEffect } from 'react'
 import Order from '../cards/Order'
-import { orders } from '../../../data'
+// import { orders } from '../../../data'
+import { getConsultationByIdOuvrier, getConsultationList } from '../../../services/ConsultationService'
+import { getUserDetails } from '../../../services/AuthService'
 
 function OuvrierMessages() {
 
+
+
+  const [orders, setOrders] = useState([]);
+
   
+  useEffect(() => {
+
+    listConsultation();
+    
+  }, []);
+
+
+  async function listConsultation(){
+    const user = getUserDetails();
+
+ await getConsultationByIdOuvrier(user.id).then((response)=>{
+
+    setOrders(response.data);
+
+    console.log(response.data) ;
+  
+      }).catch((error) => {
+        console.error(error);})
+      }
   return (
     <>
     <div id="layoutSidenav_content">
@@ -21,7 +46,7 @@ function OuvrierMessages() {
   <div className="row">
     <div className="col-xl-12">
     {orders.map((order) => (
-              <Order key={order.id} order={order} />
+              <Order key={order.idConsultation} order={order} />
             ))}
       <div className="card mb-4 order-list">
         <div className="gold-members p-4">
@@ -133,4 +158,4 @@ function OuvrierMessages() {
     )
 }
 
-export default OuvrierMessages
+export default OuvrierMessages 

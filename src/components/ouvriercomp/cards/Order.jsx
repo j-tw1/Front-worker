@@ -1,10 +1,29 @@
-import React from 'react'
+import React ,{useState} from 'react'
 import './orders.css'
 import OrderModal from '../OuvrierOrders/OrderModal'
+import { getConsultationByIdOuvrier, getConsultationList } from '../../../services/ConsultationService'
+import { getUserDetails } from '../../../services/AuthService'
 function Message({order}) {
+
+
+  // const [order, setOrders] = useState([]);
+
+
+  // const user = getUserDetails();
+
+  // getConsultationByIdOuvrier(user.id).then((response)=>{
+  
+  //     setOrders(response.data);
+
+
+  // })
+
+ 
+  
   return (
     <>
     <OrderModal/>
+
     <div className="card mb-4 order-list">
         <div className="gold-members p-4">
           <a href="#"></a>
@@ -19,7 +38,7 @@ function Message({order}) {
             <div className="media-body">
               <a href="#">
                 <span className="float-right text-success">
-                  Delivered on Mon, Nov 12, 7:18 PM{" "}
+                {order.consultationDate}{" "}
                   <i className="feather-check-circle text-success" />
                 </span>
               </a>
@@ -30,14 +49,14 @@ function Message({order}) {
                 </a>
               </h6>
               <p className="text-black-50 mb-1">
-                <i className="feather-map-pin" /> {order.addresse} ,{order.city} ,{order.country}
+                <i className="feather-map-pin" /> {order.addresse} , Maroc ,{order.ville}
               </p>
               <p className="text-black-50 mb-3">
-                <i className="feather-list" /> ORDER #{order.id}{" "}
-                <i className="feather-clock ml-2" /> Mon, Nov 12, 6:26 PM
+                <i className="feather-list" /> ORDER # {order.idConsultation}{" "}
+                <i className="feather-clock ml-2" /> {order.consultationDate}
               </p>
               <p className="text-dark">
-                {order.desc}
+                {order.description}
               </p>
               <hr />
               <div className="float-right">
@@ -70,4 +89,4 @@ function Message({order}) {
   )
 }
 
-export default Message
+export default Message;

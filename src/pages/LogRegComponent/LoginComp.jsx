@@ -32,7 +32,7 @@ const LoginComp = () => {
     
    await loginAPICall(username,password).then((response)=>{
       console.log(response.data);
-     
+      const id = response.data.id ;
       const token = 'Bearer ' + response.data.accessToken; 
       const role =  response.data.role ;
       const email = response.data.email;
@@ -49,7 +49,7 @@ const LoginComp = () => {
 
       saveLoggedInUser(username);
 
-      storeUserDetails(email, firstname, lastname, pays, phone, ville ,cin);
+      storeUserDetails(id,email, firstname, lastname, pays, phone, ville ,cin);
 
 
 
@@ -116,7 +116,7 @@ const LoginComp = () => {
                 <input type="text"
 
                         value={username}
-                        onChange={(e) => setUsername(e.target.value)}  // Corrected line
+                        onChange={(e) => setUsername(e.target.value)}  
                         placeholder="Email" />
 
                 <input type="password"
