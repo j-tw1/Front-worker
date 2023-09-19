@@ -1,0 +1,30 @@
+/* Footer.css */
+
+.footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #040427f9; /* Dark blue color */
+  color: #fff;
+  padding: 20px 0;
+  text-align: left;
+  border-top: 1px solid #333; /* Add a 1px solid border at the top */
+}
+
+/* Rest of your CSS styles for language links */
+
+.language-links {
+  margin-top: 10px; /* Add some spacing between the links */
+}
+
+.language-link {
+  margin-right: 10px; /* Add space between each language link */
+  color: #fff; /* Set link color to white */
+  text-decoration: none; /* Remove underlines from links */
+  cursor: pointer; /* Change cursor on hover for better user experience */
+}
+
+.language-link:hover {
+  text-decoration: underline; /* Underline the link on hover */
+}

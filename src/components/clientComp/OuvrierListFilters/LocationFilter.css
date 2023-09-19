@@ -1,0 +1,17 @@
+/* CSS for LocationFilter */
+
+/* Style for custom checkboxes and labels */
+.custom-control.custom-checkbox {
+  margin-bottom: 8px; /* Adjust the margin as needed */
+}
+
+.custom-control.custom-checkbox input[type='checkbox'] {
+  width: 20px; /* Adjust the width as needed */
+  margin-right: 8px; /* Adjust the margin as needed */
+  vertical-align: middle;
+}
+
+.custom-control-label {
+  display: inline;
+  vertical-align: middle;
+}

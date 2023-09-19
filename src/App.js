@@ -22,6 +22,7 @@ import OuvrierNav from './components/ouvriercomp/OuvrierNav/OuvrierNav';
 import OuvrierSideBar from './components/ouvriercomp/OuvrierSideBar/OuvrierSideBar';
 import OuvrierContent from './components/ouvriercomp/OuvrierContent';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Footer from './components/Footer/Footer';
 
 
 //import LoginComp from './pages/LogRegComponent/LoginComp';
@@ -105,7 +106,12 @@ function App() {
      
     
     <Outlet/>
+    
+    <Footer/>
+
+    
     </>
+    
     
   );
   };
