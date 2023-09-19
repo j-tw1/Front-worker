@@ -1,111 +1,153 @@
 /* Navbar CSS Start */
+/* Navbar CSS Start */
 .navbar-area .main-nav {
-    background: #010c29;
-    padding: 20px 0;
-    position: relative;
-  }
+  background: #010c29;
+  padding: 20px 0;
+  position: relative;
+  border-bottom: 1px solid #333; /* Add a 1px solid border at the bottom */
+}
 
-  .fname{
-    font-size: 25px;
-    color: #ffffff;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  }
-  
-  .navbar-area .main-nav .navbar {
-    padding: 0;
-  }
-  
-  .navbar-area .main-nav .navbar .navbar-brand {
-    padding: 0;
-  }
-  
-  .navbar-area .main-nav .navbar .navbar-nav .nav-item {
-    padding: 10px 0;
-  }
-  
-  .navbar-area .main-nav .navbar .navbar-nav .nav-item .nav-link {
-    text-transform: capitalize;
-    font-family: "Catamaran", sans-serif;
-    font-size: 17px;
-  }
-  
-  .navbar-area .main-nav .navbar .navbar-nav .nav-item .nav-link.dropdown-toggle::after {
-    border: 0;
-    content: '\ea17';
-    font-family: 'boxicons';
-    vertical-align: middle;
-    line-height: 1;
-  }
-  
-  .navbar-area .main-nav .navbar .navbar-nav .nav-item .nav-link.active {
-    color: #fd1616;
-  }
-  
-  .navbar-area .main-nav .navbar .navbar-nav .nav-item .dropdown-menu {
-    padding: 0;
-    border-radius: 0;
-    background: none;
-  }
-  
-  .navbar-area .main-nav .navbar .navbar-nav .nav-item .dropdown-menu .nav-item {
-    padding: 0;
-  }
-  
-  .navbar-area .main-nav .navbar .navbar-nav .nav-item .dropdown-menu .nav-item .nav-link {
-    border-bottom: 1px dashed #4d5877;
-    background: #061742;
-    font-size: 15px !important;
-  }
-  
-  .navbar-area .main-nav .navbar .navbar-nav .nav-item .dropdown-menu .nav-item .nav-link.active, .navbar-area .main-nav .navbar .navbar-nav .nav-item .dropdown-menu .nav-item .nav-link:hover {
-    color: #ffffff;
-    background: #657294 !important;
-  }
-  
-  .navbar-area .main-nav .navbar .navbar-nav .nav-item .dropdown-menu .nav-item:last-child .nav-link {
-    border-bottom: 0;
-  }
-  
-  .navbar-area .main-nav .navbar .other-option .signin-btn, .navbar-area .main-nav .navbar .other-option .signup-btn {
-    color: #ffffff;
-    font-family: "Catamaran", sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    padding: 5px 20px;
-    background: #fd1616;
-    border-radius: 5px;
-  }
-  
-  .navbar-area .main-nav .navbar .other-option .signin-btn:hover, .navbar-area .main-nav .navbar .other-option .signup-btn:hover {
-    background: #ffffff;
-    color: #001935;
-  }
-  
-  .navbar-area .main-nav .navbar .other-option .signup-btn {
-    background: none;
-    padding: 0;
-    margin-right: 10px;
-  }
-  
-  .navbar-area .main-nav .navbar .other-option .signup-btn:hover {
-    color: #fd1616;
-    background: none;
-  }
-  
-  .is-sticky {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    z-index: 999;
-    -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
-    -webkit-animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
-            animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
-    width: 100% !important;
-  }
-  
-  /* Navbar CSS End */
+.fname {
+  font-size: 25px;
+  color: #ffffff;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Rest of your existing CSS styles for the navbar */
+
+/* Navbar CSS End */
+
+.navbar-area .main-nav .navbar {
+  padding: 0;
+}
+
+.navbar-area .main-nav .navbar .navbar-brand {
+  padding: 0;
+}
+
+.navbar-area .main-nav .navbar .navbar-nav .nav-item {
+  padding: 10px 0;
+}
+
+.navbar-area .main-nav .navbar .navbar-nav .nav-item .nav-link {
+  text-transform: capitalize;
+  font-family: 'Catamaran', sans-serif;
+  font-size: 17px;
+}
+
+.navbar-area
+  .main-nav
+  .navbar
+  .navbar-nav
+  .nav-item
+  .nav-link.dropdown-toggle::after {
+  border: 0;
+  content: '\ea17';
+  font-family: 'boxicons';
+  vertical-align: middle;
+  line-height: 1;
+}
+
+.navbar-area .main-nav .navbar .navbar-nav .nav-item .nav-link.active {
+  color: #fd1616;
+}
+
+.navbar-area .main-nav .navbar .navbar-nav .nav-item .dropdown-menu {
+  padding: 0;
+  border-radius: 0;
+  background: none;
+}
+
+.navbar-area .main-nav .navbar .navbar-nav .nav-item .dropdown-menu .nav-item {
+  padding: 0;
+}
+
+.navbar-area
+  .main-nav
+  .navbar
+  .navbar-nav
+  .nav-item
+  .dropdown-menu
+  .nav-item
+  .nav-link {
+  border-bottom: 1px dashed #4d5877;
+  background: #061742;
+  font-size: 15px !important;
+}
+
+.navbar-area
+  .main-nav
+  .navbar
+  .navbar-nav
+  .nav-item
+  .dropdown-menu
+  .nav-item
+  .nav-link.active,
+.navbar-area
+  .main-nav
+  .navbar
+  .navbar-nav
+  .nav-item
+  .dropdown-menu
+  .nav-item
+  .nav-link:hover {
+  color: #ffffff;
+  background: #657294 !important;
+}
+
+.navbar-area
+  .main-nav
+  .navbar
+  .navbar-nav
+  .nav-item
+  .dropdown-menu
+  .nav-item:last-child
+  .nav-link {
+  border-bottom: 0;
+}
+
+.navbar-area .main-nav .navbar .other-option .signin-btn,
+.navbar-area .main-nav .navbar .other-option .signup-btn {
+  color: #ffffff;
+  font-family: 'Catamaran', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 5px 20px;
+  background: #fd1616;
+  border-radius: 5px;
+}
+
+.navbar-area .main-nav .navbar .other-option .signin-btn:hover,
+.navbar-area .main-nav .navbar .other-option .signup-btn:hover {
+  background: #ffffff;
+  color: #001935;
+}
+
+.navbar-area .main-nav .navbar .other-option .signup-btn {
+  background: none;
+  padding: 0;
+  margin-right: 10px;
+}
+
+.navbar-area .main-nav .navbar .other-option .signup-btn:hover {
+  color: #fd1616;
+  background: none;
+}
+
+.is-sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 999;
+  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+  -webkit-animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+  animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  width: 100% !important;
+}
+
+/* Navbar CSS End */
