@@ -10,6 +10,7 @@ import ClientModals from '../ClientModals'
 import {   getUserDetails  } from "../../../services/AuthService";
 
 import {   getOuvrierList } from "../../../services/OuvrierService";
+import ClientNav from '../ClientNav'
 
 
 function ClientProfile() {
@@ -20,6 +21,7 @@ function ClientProfile() {
   
   return (
     <>
+    <ClientNav/>
     <ClientModals/>
         <section className="profile">
           

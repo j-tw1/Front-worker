@@ -141,12 +141,7 @@ function App() {
           element:  <Checkout />,
           
         },
-        {
-        
-          path: "/Profile",
-        element:  <ClientProfile />,
-          
-        },
+      
         // <Route path="/workerhome/:firstName/:lastName" component={Workerhome} />
       
         //ouvrier
@@ -154,6 +149,12 @@ function App() {
        
 
       ],},
+        {
+        
+          path: "/Profile",
+        element:  <ClientProfile />,
+          
+        },
   {
           path:"/workerhome",
           element: <Workerhome/>
