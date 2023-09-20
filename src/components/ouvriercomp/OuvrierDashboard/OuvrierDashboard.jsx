@@ -81,7 +81,7 @@ function OuvrierDashboard() {
               <div className="card-header">
                 <i className="fas fa-table mr-1" /> RECENT ORDERS
               </div>
-              <div className="card-body">
+              <div className="card-body1">
                 <div className="table-responsive">
                   <table
                     className="table"

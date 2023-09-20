@@ -10,6 +10,9 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#345bff', endColorstr='#2850ff',GradientType=1 );
   box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 6%);
 }
+.card {
+  border: 1px solid black;
+}
 .bg-danger {
   background: #96b6c5;
   background: -moz-linear-gradient(45deg, #96b6c5 0%, #96b6c5 100%);
