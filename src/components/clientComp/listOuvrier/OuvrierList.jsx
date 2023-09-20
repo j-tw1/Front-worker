@@ -14,7 +14,7 @@ function OuvrierList() {
 
   function listWorkers() {
     // Use your actual API path here
-    let apiUrl = 'http://localhost:8081/users/ListOuvrier';
+    let apiUrl = 'http://localhost:8081/users/ListOuvrierParams';
 
     const locationParams = selectedLocations
       .map((location) => `ville=${location}`)
