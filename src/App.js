@@ -23,6 +23,7 @@ import OuvrierSideBar from './components/ouvriercomp/OuvrierSideBar/OuvrierSideB
 import OuvrierContent from './components/ouvriercomp/OuvrierContent';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Footer from './components/Footer/Footer';
+import ContactUs from './components/ContactUs/ContactUs';
 
 
 //import LoginComp from './pages/LogRegComponent/LoginComp';
@@ -173,6 +174,8 @@ function App() {
         element:<AuthenticatedOuvrier><OuvrierContent/></AuthenticatedOuvrier>   ,
         
       },
+
+   
      
       {
         
