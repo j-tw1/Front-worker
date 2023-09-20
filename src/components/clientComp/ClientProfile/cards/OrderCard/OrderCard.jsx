@@ -1,7 +1,40 @@
-import React from 'react'
+import React ,{useState ,useEffect}from 'react'
 import "./ordercard.css"
+import { getConsultationByIdClient } from '../../../../../services/ConsultationService';
+import { getUserDetails } from '../../../../../services/AuthService';
 
 function OrderCard() {
+
+
+  const client = getUserDetails();
+  const [orders, setOrders] = useState([]);
+
+  
+  useEffect(() => {
+
+    listConsultation();
+    
+  }, []);
+
+
+  async function listConsultation()
+  {
+        await getConsultationByIdClient(client.id).then((response)=>{
+
+          setOrders(response.data);
+
+
+
+        })
+
+
+
+
+      }
+
+
+
+
   return (
     <>
     <div className="bg-white card mb-4 order-list shadow-sm">
