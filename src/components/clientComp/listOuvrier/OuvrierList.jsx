@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import ClientNav from '../ClientNav';
 import OuvrierCard from './OuvrierCard/OuvrierCard';
 import LocationFilter from '.././OuvrierListFilters/LocationFilter';
-import LocationFilter from '.././OuvrierListFilters/LocationFilter';
 
 function OuvrierList() {
   const [workers, setWorkers] = useState([]);
@@ -10,9 +9,8 @@ function OuvrierList() {
   const [selectedCategories, setSelectedCategories] = useState([]);
 
   useEffect(() => {
-
     listWorkers();
-  }, []);
+  }, [selectedLocations, selectedCategories]);
 
   function listWorkers() {
     // Use your actual API path here

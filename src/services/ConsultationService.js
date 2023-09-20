@@ -11,6 +11,9 @@ export const getConsultationByIdOuvrier = (id) => axios.get(`${GET_ALL_CONSULTAI
 
 export const getClientByConsultaiton= (id) => axios.get(`${GET_CLIENT_CONSULTATION_BASE_URL}clientConsultation?id=${id}`);
 
+export const ConfirmConsultation = (id) => axios.post(`${GET_ALL_CONSULTAION_BASE_URL}confirm?id=${id}`);
+
+
 
 
 

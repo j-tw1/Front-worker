@@ -30,6 +30,11 @@ function OuvrierMessages() {
       }).catch((error) => {
         console.error(error);})
       }
+
+      function removeConfirmedOrder(orderId) {
+        const updatedOrders = orders.filter((order) => order.idConsultation !== orderId);
+        setOrders(updatedOrders);
+      }
   return (
     <>
     <div id="layoutSidenav_content">
@@ -46,7 +51,7 @@ function OuvrierMessages() {
   <div className="row">
     <div className="col-xl-12">
     {orders.map((order) => (
-              <Order key={order.idConsultation} order={order} />
+              <Order key={order.idConsultation} order={order} onOrderConfirmation={removeConfirmedOrder} />
             ))}
       <div className="card mb-4 order-list">
         <div className="gold-members p-4">
