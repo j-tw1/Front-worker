@@ -92,7 +92,6 @@
   min-height: 107px;
 }
 .dropdown-cart-top-header .img-fluid {
-  background: linear-gradient(to right, #698693, rgb(213, 212, 219) 100%);
   border-radius: 3px;
   float: left;
   height: 59px;
@@ -136,7 +135,6 @@
   padding: 0.6rem 1rem !important;
 }
 .dropdown-menu {
-  background: linear-gradient(to right, #698693, rgb(213, 212, 219) 100%);
 }
 .no-arrow .dropdown-toggle::after {
   display: none;
