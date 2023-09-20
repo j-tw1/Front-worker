@@ -11,8 +11,8 @@ export const registerClientAPICall = (registerObj) => axios.post(AUTH_REST_API_B
 
 export const registerOuvrierAPICall = (registerObj) => axios.post(AUTH_REST_API_BASE_URL + 'register/ouvrier', registerObj);
 
-export const addConsultationAPICall = (idClient, idOuvrier) => {
-  const url = `${ADD_CONSULTAION_BASE_URL}create?client_id=${idClient}&ouvrier_id=${idOuvrier}`;
+export const addConsultationAPICall = (idClient, idOuvrier,description) => {
+  const url = `${ADD_CONSULTAION_BASE_URL}create?client_id=${idClient}&ouvrier_id=${idOuvrier}&description=${description}`;
   
   return axios.post(url);
 };

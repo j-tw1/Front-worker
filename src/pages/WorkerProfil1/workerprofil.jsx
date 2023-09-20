@@ -9,6 +9,10 @@ const [workerfirstname , setFirstname] = useState('')
 
 const [workerlastname , setLastname] = useState('')
   
+  const [description, setDescription] = useState(''); // Add description state
+
+  const [selectedOption, setSelectedOption] = useState(''); 
+
  const workerEmail = getWorkerEmail();
 
  const worker = getOuvrierByEmail(workerEmail);
@@ -30,9 +34,9 @@ const [workerlastname , setLastname] = useState('')
   const handleReserverButton = (event) => {
     event.preventDefault();
 
-    // console.log(formData);
+   
 
-    addConsultationAPICall(client.email ,workerEmail).then((response) => {
+    addConsultationAPICall(client.email ,workerEmail,description).then((response) => {
 
         console.log(response.data);
 
@@ -98,129 +102,38 @@ const [workerlastname , setLastname] = useState('')
                 fugiat nulla pariatur.
               </p>
 
-              <div className="button-places">
+              <div className="button-container">
+
+              <input
+          type="text"
+          placeholder="Description"
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+          className="description-input" // Apply the description input style
+        />
+        <select
+          value={selectedOption}
+          onChange={(e) => setSelectedOption(e.target.value)}
+          className="dropdown-select" // Apply the dropdown style
+        >
+          <option value="">Consultation type</option>
+          <option value="option1">Option 1</option>
+          <option value="option2">Option 2</option>
+          {/* Add more options as needed */}
+        </select>
+        </div>
+        <div className="button-container">
                 <button type="button" className="btn btn-danger" onClick={handleReserverButton}>
                   Reserver
                 </button>
-                <button type="button" className="btn btn-info">
-                  Message
-                </button>
-              </div>
-
-              <div className="u-expanded-width u-list u-list-1">
-                <div className="u-repeater u-repeater-1">
-                  {/* Repeat the following div for each item */}
-                  <div
-                    className="u-align-center-xs u-align-left-lg u-align-left-md u-align-left-sm u-align-left-xl u-border-10 u-border-no-left u-border-no-right u-border-no-top u-border-palette-2-base u-container-style u-list-item u-radius-22 u-repeater-item u-shape-round u-white u-list-item-1"
-                    data-animation-name="customAnimationIn"
-                    data-animation-duration="1500"
-                    data-animation-delay="250"
-                  >
-                    <div className="u-container-layout u-similar-container u-valign-top u-container-layout-1">
-                      <span
-                        className="u-file-icon u-icon u-text-palette-2-base u-icon-1"
-                        data-animation-name="customAnimationIn"
-                        data-animation-duration="1500"
-                        data-animation-delay="750"
-                      >
-                        <img
-                          src="https://www.creativefabrica.com/wp-content/uploads/2021/05/10/Job-Logo-Graphics-11872332-1-1-580x386.jpg"
-                          alt=""
-                        />
-                      </span>
-                      <h4 className="u-custom-font u-font-roboto-condensed u-text u-text-5">
-                        Plombier
-                      </h4>
-                      <a
-                        href="https://nicepage.site"
-                        className="u-border-1 u-border-active-grey-70 u-border-black u-border-hover-grey-70 u-border-no-left u-border-no-right u-border-no-top u-bottom-left-radius-0 u-bottom-right-radius-0 u-btn u-button-style u-none u-radius-0 u-text-active-palette-2-base u-text-body-color u-text-hover-palette-2-base u-top-left-radius-0 u-top-right-radius-0 u-btn-2"
-                      >
-                        more
-                      </a>
-                    </div>
-                  </div>
-                  <div
-                    className="u-align-center-xs u-align-left-lg u-align-left-md u-align-left-sm u-align-left-xl u-border-10 u-border-no-left u-border-no-right u-border-no-top u-border-palette-2-base u-container-style u-list-item u-radius-22 u-repeater-item u-shape-round u-white u-list-item-1"
-                    data-animation-name="customAnimationIn"
-                    data-animation-duration="1500"
-                    data-animation-delay="250"
-                  >
-                    <div className="u-container-layout u-similar-container u-valign-top u-container-layout-1">
-                      <span
-                        className="u-file-icon u-icon u-text-palette-2-base u-icon-1"
-                        data-animation-name="customAnimationIn"
-                        data-animation-duration="1500"
-                        data-animation-delay="750"
-                      >
-                        <img src="images/841589-7bfd0878.png" alt="" />
-                      </span>
-                      <h4 className="u-custom-font u-font-roboto-condensed u-text u-text-5">
-                        Plombier
-                      </h4>
-                      <a
-                        href="https://nicepage.site"
-                        className="u-border-1 u-border-active-grey-70 u-border-black u-border-hover-grey-70 u-border-no-left u-border-no-right u-border-no-top u-bottom-left-radius-0 u-bottom-right-radius-0 u-btn u-button-style u-none u-radius-0 u-text-active-palette-2-base u-text-body-color u-text-hover-palette-2-base u-top-left-radius-0 u-top-right-radius-0 u-btn-2"
-                      >
-                        more
-                      </a>
-                    </div>
-                  </div>
-                  <div
-                    className="u-align-center-xs u-align-left-lg u-align-left-md u-align-left-sm u-align-left-xl u-border-10 u-border-no-left u-border-no-right u-border-no-top u-border-palette-2-base u-container-style u-list-item u-radius-22 u-repeater-item u-shape-round u-white u-list-item-1"
-                    data-animation-name="customAnimationIn"
-                    data-animation-duration="1500"
-                    data-animation-delay="250"
-                  >
-                    <div className="u-container-layout u-similar-container u-valign-top u-container-layout-1">
-                      <span
-                        className="u-file-icon u-icon u-text-palette-2-base u-icon-1"
-                        data-animation-name="customAnimationIn"
-                        data-animation-duration="1500"
-                        data-animation-delay="750"
-                      >
-                        <img src="images/841589-7bfd0878.png" alt="" />
-                      </span>
-                      <h4 className="u-custom-font u-font-roboto-condensed u-text u-text-5">
-                        Plombier
-                      </h4>
-                      <a
-                        href="https://nicepage.site"
-                        className="u-border-1 u-border-active-grey-70 u-border-black u-border-hover-grey-70 u-border-no-left u-border-no-right u-border-no-top u-bottom-left-radius-0 u-bottom-right-radius-0 u-btn u-button-style u-none u-radius-0 u-text-active-palette-2-base u-text-body-color u-text-hover-palette-2-base u-top-left-radius-0 u-top-right-radius-0 u-btn-2"
-                      >
-                        more
-                      </a>
-                    </div>
-                  </div>
-                  <div
-                    className="u-align-center-xs u-align-left-lg u-align-left-md u-align-left-sm u-align-left-xl u-border-10 u-border-no-left u-border-no-right u-border-no-top u-border-palette-2-base u-container-style u-list-item u-radius-22 u-repeater-item u-shape-round u-white u-list-item-1"
-                    data-animation-name="customAnimationIn"
-                    data-animation-duration="1500"
-                    data-animation-delay="250"
-                  >
-                    <div className="u-container-layout u-similar-container u-valign-top u-container-layout-1">
-                      <span
-                        className="u-file-icon u-icon u-text-palette-2-base u-icon-1"
-                        data-animation-name="customAnimationIn"
-                        data-animation-duration="1500"
-                        data-animation-delay="750"
-                      >
-                        <img src="images/841589-7bfd0878.png" alt="" />
-                      </span>
-                      <h4 className="u-custom-font u-font-roboto-condensed u-text u-text-5">
-                        Plombier
-                      </h4>
-                      <a
-                        href="https://nicepage.site"
-                        className="u-border-1 u-border-active-grey-70 u-border-black u-border-hover-grey-70 u-border-no-left u-border-no-right u-border-no-top u-bottom-left-radius-0 u-bottom-right-radius-0 u-btn u-button-style u-none u-radius-0 u-text-active-palette-2-base u-text-body-color u-text-hover-palette-2-base u-top-left-radius-0 u-top-right-radius-0 u-btn-2"
-                      >
-                        more
-                      </a>
-                    </div>
-                  </div>
-                  {/* Repeat the above div for each item */}
+                
+              
                 </div>
               </div>
-            </div>
+                  
+                
+              
+          
           </section>
         </body>
       </html>
