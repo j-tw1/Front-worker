@@ -15,7 +15,7 @@ function OuvrierSideBar({ onOptionClick, selectedOption }) {
         >
           <div className="sb-sidenav-menu">
             <div className="nav">
-                <a
+              <a
                 className={`nav-link ${
                   selectedOption === 'dashboard' ? 'active' : ''
                 }`}
