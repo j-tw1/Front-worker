@@ -2,10 +2,16 @@ import React, { useState, useEffect } from 'react';
 import "./ordercard.css"
 import { getConsultationByIdClient } from '../../../../../services/ConsultationService';
 import { getUserDetails } from '../../../../../services/AuthService';
+import { getOuvrierById } from '../../../../../services/OuvrierService';
 
 function OrderCard() {
   const client = getUserDetails();
   const [orders, setOrders] = useState([]);
+  const [idouvrier , setIdouvrier] = useState('')
+
+  const [ouvrier , setOuvrier] = useState('');
+
+  
 
   useEffect(() => {
     listConsultation();
@@ -15,13 +21,14 @@ function OrderCard() {
     await getConsultationByIdClient(client.id).then((response) => {
       setOrders(response.data);
       console.log(response.data);
+      
     })
   }
 
   return (
     <>
       {orders.map((order) => (
-        <div key={order.idConsultation} className="bg-white card mb-4 order-list shadow-sm">
+        <div key={order.idConsultation} className="bg-white card mb-4 order-list shadow-sm"  >
           <div className="gold-members1 p-4">
             <a href="#"></a>
             <div className="media1">
@@ -50,7 +57,7 @@ function OrderCard() {
                   <i className="icofont-location-arrow" /> {order.address}
                 </p>
                 <p className="text-gray mb-3">
-                  <i className="icofont-list" /> ORDER #{order.idConsultation}{" "}
+                  <i className="icofont-list"  /> ORDER #{order.idConsultation}{" "}
                   <i className="icofont-clock-time ml-2" /> {order.orderDate}
                 </p>
                 <p className="text-dark">
