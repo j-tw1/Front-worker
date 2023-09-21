@@ -33,6 +33,7 @@ const LoginComp = () => {
    await loginAPICall(username,password).then((response)=>{
       console.log(response.data);
       const id = response.data.id ;
+      const address = response.data.addresse
       const token = 'Bearer ' + response.data.accessToken; 
       const role =  response.data.role ;
       const email = response.data.email;
@@ -49,7 +50,7 @@ const LoginComp = () => {
 
       saveLoggedInUser(username);
 
-      storeUserDetails(id,email, firstname, lastname, pays, phone, ville ,cin);
+      storeUserDetails(id,address,email, firstname, lastname, pays, phone, ville ,cin);
 
 
 
@@ -63,7 +64,7 @@ const LoginComp = () => {
         navigator('/ouvrierlist')
       }
 
-      console.log(response.data.lastname);
+      
   
       
       

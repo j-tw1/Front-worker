@@ -2,14 +2,20 @@ import React, { useState, useEffect } from 'react';
 import "./ordercard.css"
 import { getConsultationByIdClient } from '../../../../../services/ConsultationService';
 import { getUserDetails } from '../../../../../services/AuthService';
-import { getOuvrierById } from '../../../../../services/OuvrierService';
+import { getOuvrierByIdConsultation } from '../../../../../services/OuvrierService';
 
 function OrderCard() {
   const client = getUserDetails();
   const [orders, setOrders] = useState([]);
-  const [idouvrier , setIdouvrier] = useState('')
+  const [idc, setId] = useState([]);
 
-  const [ouvrier , setOuvrier] = useState('');
+  const [ouvriers, setOuvriers] = useState([]); 
+  const [selectedOuvrierPhone, setSelectedOuvrierPhone] = useState('');
+  const [showModal, setShowModal] = useState(false);
+
+  
+
+
 
   
 
@@ -18,16 +24,45 @@ function OrderCard() {
   }, []);
 
   async function listConsultation() {
-    await getConsultationByIdClient(client.id).then((response) => {
+    await getConsultationByIdClient(client.id).then(async (response) => {
       setOrders(response.data);
-      console.log(response.data);
-      
-    })
+
+      // Fetch ouvriers information for each order
+      const ouvrierPromises = response.data.map(async (order) => {
+        const ouvrierResponse = await getOuvrierByIdConsultation(order.idConsultation);
+        return ouvrierResponse.data;
+      });
+
+      // Wait for all ouvrier requests to complete
+      const ouvrierData = await Promise.all(ouvrierPromises);
+      setOuvriers(ouvrierData);
+    });
+
+
+  
   }
+
+
+  const handleContactClick = (phone) => {
+    setSelectedOuvrierPhone(phone);
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+    setSelectedOuvrierPhone('');
+  };
+   
+
+   
+
+  
+
+  
 
   return (
     <>
-      {orders.map((order) => (
+      {orders.map((order ,  index) => (
         <div key={order.idConsultation} className="bg-white card mb-4 order-list shadow-sm"  >
           <div className="gold-members1 p-4">
             <a href="#"></a>
@@ -49,12 +84,12 @@ function OrderCard() {
                 <h6 className="mb-2">
                   <a href="#"></a>
                   <a href="detail.html" className="text-black">
-                    {order.customerName} {" "}
-                    <span className="badge badge-success">{order.workerType}</span>
+                  Ouvrier: {ouvriers[index] ? `${ouvriers[index].firstName} ${ouvriers[index].lastName}` : 'Loading...'} {/* Display ouvrier name */}{" "}
+                    <span className="badge badge-success"> {ouvriers[index] ? ouvriers[index].categorie : 'Loading...'}</span>
                   </a>
                 </h6>
                 <p className="text-gray mb-1">
-                  <i className="icofont-location-arrow" /> {order.address}
+                  <i className="icofont-location-arrow" /> {client.address}
                 </p>
                 <p className="text-gray mb-3">
                   <i className="icofont-list"  /> ORDER #{order.idConsultation}{" "}
@@ -65,22 +100,15 @@ function OrderCard() {
                 </p>
                 <hr />
                 <div className="float-right">
-                  <a
-                    className="btn2 btn-sm btn-outline-primary"
-                    data-toggle="modal"
-                    data-target="#reclamation-modal"
-                    href="#"
-                  >
-                    <i className="icofont-warning-alt" /> RECLAMATION
-                  </a>{" "}
-                  <a
-                    className="btn btn-sm btn-primary"
-                    data-toggle="modal"
-                    data-target="#review-profile-modal"
-                    href="#"
-                  >
-                    <i className="icofont-comment" /> REVIEW
-                  </a>
+                  
+
+                  
+                <button
+              className="btn btn-sm btn-primary"
+              onClick={() => handleContactClick(ouvriers[index]?.phone || '')}
+            >
+              <i className="icofont-phone" /> CONTACT
+            </button>
                 </div>
                 <p className="mb-0 text-black text-primary pt-2">
                   <span className="text-black font-weight-bold">
@@ -94,6 +122,38 @@ function OrderCard() {
           </div>
         </div>
       ))}
+
+
+{/* Modal */}
+<div
+      className={`modal ${showModal ? 'show' : ''}`}
+      tabIndex="-1"
+      role="dialog"
+      style={{ display: showModal ? 'block' : 'none' }}
+    >
+      <div className="modal-dialog modal-dialog-centered" role="document">
+        <div className="modal-content" style={{ border: '2px solid #ccc', backgroundColor: '#f9f9f9' }}>
+          <div className="modal-header">
+            <h5 className="modal-title">Contact Ouvrier</h5>
+            <button type="button" className="close btn-close"  aria-label="Close" onClick={closeModal}>
+              
+            </button>
+          </div>
+          <div className="modal-body">
+            <p className="mb-0">
+              <strong>Phone Number:</strong> <span className="font-weight-bold" style={{ fontSize: '20px' }}>{selectedOuvrierPhone}</span>
+            </p>
+          </div>
+          <div className="modal-footer">
+            <button type="button" className="btn btn-danger" data-dismiss="modal" onClick={closeModal}>
+              Close
+            </button>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+      
     </>
   )
 }

@@ -28,9 +28,10 @@ export const getRole = () => localStorage.getItem("role") ;
 
 export const getToken = () => localStorage.getItem("token") ;
 
-export const storeUserDetails = (id ,email, firstname, lastname, pays, phone, ville ,cin) => {
+export const storeUserDetails = (id ,address,email, firstname, lastname, pays, phone, ville ,cin) => {
     const userDetails = {
       id,
+      address,
       email,
       firstname,
       lastname,

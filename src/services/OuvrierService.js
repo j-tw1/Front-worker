@@ -13,7 +13,7 @@ export const getOuvrierByEmail = (email) => axios.get(`${GET_OUVRIER_REST_API_BA
 
 
 
-export const getOuvrierById = (id) => axios.get(`${GET_OUVRIER_REST_API_BASE_URL}getOuvrierbyid?id=${id}`);
+export const getOuvrierByIdConsultation = (id) => axios.get(`${GET_OUVRIER_REST_API_BASE_URL}getOuvrierbyid?id=${id}`);
 
 
 
