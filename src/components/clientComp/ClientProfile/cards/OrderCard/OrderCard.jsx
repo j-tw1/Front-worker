@@ -3,6 +3,12 @@ import "./ordercard.css"
 import { getConsultationByIdClient } from '../../../../../services/ConsultationService';
 import { getUserDetails } from '../../../../../services/AuthService';
 import { getOuvrierByIdConsultation } from '../../../../../services/OuvrierService';
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import RatingStars from 'react-rating-stars-component';
+import { addRatingAPICall } from '../../../../../services/RatingService';
+
 
 function OrderCard() {
   const client = getUserDetails();
@@ -12,6 +18,9 @@ function OrderCard() {
   const [ouvriers, setOuvriers] = useState([]); 
   const [selectedOuvrierPhone, setSelectedOuvrierPhone] = useState('');
   const [showModal, setShowModal] = useState(false);
+
+  const [rating, setRating] = useState(1); // Initialize the rating to 1
+  const [showRatingModal, setShowRatingModal] = useState(false);
 
   
 
@@ -53,6 +62,34 @@ function OrderCard() {
     setSelectedOuvrierPhone('');
   };
    
+  const handleRatingChange = (newValue) => {
+    setRating(newValue);
+  };
+
+  const openRatingModal = () => {
+    setShowRatingModal(true);
+  };
+
+  const closeRatingModal = () => {
+    setShowRatingModal(false);
+            
+          
+  };
+
+
+  const saveRating = async () => {
+    // Assuming you have a function createRating in your API service
+    // Replace client.email, ouvrier.email, and rating with the actual values
+    try {
+      await addRatingAPICall( ouvriers[0]?.email, rating);
+      // Optionally, you can handle success or display a success message
+      alert('Rating saved successfully');
+      setShowRatingModal(false);
+    } catch (error) {
+      // Handle any errors, e.g., display an error message
+      console.error('Error saving rating:', error);
+    }
+  };
 
    
 
@@ -103,12 +140,22 @@ function OrderCard() {
                   
 
                   
-                <button
-              className="btn btn-sm btn-primary"
+                <Button variant="success"
               onClick={() => handleContactClick(ouvriers[index]?.phone || '')}
             >
               <i className="icofont-phone" /> CONTACT
-            </button>
+            </Button>
+            
+
+            <div className="float-right ml-2">
+            <Button variant="primary"
+              onClick={openRatingModal}
+            >
+              <i class="icofont-ui-rate-blank" /> RATE  
+              
+            </Button>
+          </div>
+
                 </div>
                 <p className="mb-0 text-black text-primary pt-2">
                   <span className="text-black font-weight-bold">
@@ -153,6 +200,40 @@ function OrderCard() {
         </div>
       </div>
     </div>
+
+
+
+
+
+
+    {/* Rating Modal */}
+    <Modal show={showRatingModal} onHide={closeRatingModal} centered>
+        <Modal.Header closeButton>
+          <Modal.Title>Rate the Ouvrier</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Form>
+            <Form.Group controlId="rating">
+              <Form.Label>Rating:</Form.Label>
+              <RatingStars
+                count={5}
+                onChange={(newValue) => handleRatingChange(newValue)}
+                size={40}
+                value={rating}
+                activeColor="#ffd700"
+              />
+            </Form.Group>
+          </Form>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={closeRatingModal}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={saveRating}>
+            Save Rating
+          </Button>
+        </Modal.Footer>
+      </Modal>
       
     </>
   )
