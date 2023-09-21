@@ -49,6 +49,7 @@ function OuvrierMessages() {
                       key={order.idConsultation}
                       order={order}
                       onOrderConfirmation={removeConfirmedOrder}
+                     
                     />
                   ))}
                   <div className="card mb-4 order-list">
