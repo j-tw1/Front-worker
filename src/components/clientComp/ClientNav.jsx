@@ -64,15 +64,8 @@ function ClientNav() {
                 </a>
                 <div class="dropdown-menu dropdown-menu-right shadow-sm border-0">
                   <a class="dropdown-item" href="/Profile#orders">
-                    <i class="icofont-food-cart"></i> Orders
+                    <i class="icofont-food-cart"></i> Profile
                   </a>
-                  <a class="dropdown-item" href="/Profile#favourites">
-                    <i class="icofont-heart"></i> Favourites
-                  </a>
-                  <a class="dropdown-item" href="/Profile#addresses">
-                    <i class="icofont-location-pin"></i> Addresses
-                  </a>
-
                   <a class="dropdown-item">
                     <i class="icofont-logout" onClick={handlLogout1}></i> Logout
                   </a>
