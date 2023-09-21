@@ -1,6 +1,9 @@
-/* CSS for LocationFilter */
-
 /* Style for custom checkboxes and labels */
+.checkbox-list {
+  display: flex;
+  flex-direction: column;
+}
+
 .custom-control.custom-checkbox {
   margin-bottom: 8px; /* Adjust the margin as needed */
 }

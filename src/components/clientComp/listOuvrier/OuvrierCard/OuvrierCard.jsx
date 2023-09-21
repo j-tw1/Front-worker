@@ -82,7 +82,6 @@ function OuvrierCard({ worker }) {
   const navigator = useNavigate();
 
   function handleImgClick(e) {
-
     savechoosedWorkerEmail(worker.email);
 
     navigator(`/workerhome/`);
@@ -94,9 +93,7 @@ function OuvrierCard({ worker }) {
         <div className="list-card bg-white h-100 rounded overflow-hidden position-relative shadow-sm">
           <div className="list-card-image">
             <div className="star position-absolute">
-              <span className="badge badge-success">
-              
-              </span>
+              <span className="badge badge-success"></span>
             </div>
             <div className="favourite-heart text-danger position-absolute">
               <a href="detail.html">
@@ -107,7 +104,7 @@ function OuvrierCard({ worker }) {
               <span className="badge badge-danger">{worker.categorie}</span>
             </div>
             <a onClick={handleImgClick}>
-              <img src={worker.pp} className="img-fluid item-img" />
+              <img src={worker.pp} className="img-fluid item-img" id="im" />
             </a>
           </div>
           <div className="p-3 position-relative">

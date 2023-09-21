@@ -147,15 +147,24 @@ function App() {
       
         //ouvrier
 
-       
+        
 
       ],},
+
+      {
+        
+        path: "/ContactUs",
+      element:  <ContactUs />,
+        
+      },
         {
         
           path: "/Profile",
         element:  <ClientProfile />,
           
         },
+
+       
   {
           path:"/workerhome",
           element: <Workerhome/>
