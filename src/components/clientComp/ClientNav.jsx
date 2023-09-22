@@ -70,7 +70,7 @@ function ClientNav() {
                   <a class="dropdown-item" href="/Profile#addresses">
                     <i class="icofont-location-pin"></i> Addresses
                   </a>
-                  <a class="dropdown-item" href='/'>
+                  <a class="dropdown-item" >
                     <i class="icofont-logout" onClick={handlLogout1}></i> Logout
                   </a>
                 </div>
