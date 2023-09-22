@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect ,useRef } from 'react';
 import ClientNav from '../ClientNav';
 import OuvrierCard from './OuvrierCard/OuvrierCard';
 import LocationFilter from '.././OuvrierListFilters/LocationFilter';
@@ -7,38 +7,64 @@ function OuvrierList() {
   const [workers, setWorkers] = useState([]);
   const [selectedLocations, setSelectedLocations] = useState([]);
   const [selectedCategories, setSelectedCategories] = useState([]);
+  const abortControllerRef = useRef(null);
 
   useEffect(() => {
+    // Create a new AbortController for each fetch request
+    const abortController = new AbortController();
+    abortControllerRef.current = abortController;
+
     listWorkers();
+
+    // Cleanup function
+    return () => {
+      // Abort the fetch request when the component is unmounted
+      if (abortControllerRef.current) {
+        abortControllerRef.current.abort();
+      }
+    };
   }, [selectedLocations, selectedCategories]);
 
-  function listWorkers() {
-    // Use your actual API path here
-    let apiUrl = 'http://localhost:8081/users/ListOuvrierParams';
+  // Rest of your component code...
 
+
+  async function listWorkers() {
+    let apiUrl = 'http://localhost:8081/users/ListOuvrierParams';
+    
+  
     const locationParams = selectedLocations
       .map((location) => `ville=${location}`)
       .join('&');
     const categoryParams = selectedCategories
       .map((category) => `category=${category}`)
       .join('&');
-
+  
     if (locationParams) {
       apiUrl += `?${locationParams}`;
     }
-
+  
     if (categoryParams) {
       apiUrl += locationParams ? `&${categoryParams}` : `?${categoryParams}`;
     }
+  
+   
+  try {
+    const response = await fetch(apiUrl);
 
-    fetch(apiUrl)
-      .then((response) => response.json())
-      .then((data) => {
-        setWorkers(data);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    setWorkers(data);
+  } catch (error) {
+    if (error.name === 'AbortError') {
+      console.log('Fetch request aborted:', error.message);
+    } else {
+      console.error('Fetch error:', error);
+    }
+  }
+
   }
 
   function handleFilterChange(locations, categories) {

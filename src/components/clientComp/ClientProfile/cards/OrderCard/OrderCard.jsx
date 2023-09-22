@@ -8,6 +8,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import RatingStars from 'react-rating-stars-component';
 import { addRatingAPICall } from '../../../../../services/RatingService';
+import { addReviewAPICall } from '../../../../../services/ReviewService';
 
 
 function OrderCard() {
@@ -15,12 +16,20 @@ function OrderCard() {
   const [orders, setOrders] = useState([]);
   const [idc, setId] = useState([]);
 
+
   const [ouvriers, setOuvriers] = useState([]); 
   const [selectedOuvrierPhone, setSelectedOuvrierPhone] = useState('');
   const [showModal, setShowModal] = useState(false);
 
   const [rating, setRating] = useState(1); // Initialize the rating to 1
   const [showRatingModal, setShowRatingModal] = useState(false);
+
+
+  const [showReviewModal, setShowReviewModal] = useState(false);
+const [comment, setComment] = useState('');
+
+
+const [reviewOrderId, setReviewOrderId] = useState(null);
 
   
 
@@ -91,7 +100,31 @@ function OrderCard() {
     }
   };
 
-   
+  const openReviewModal = (idConsultation) => {
+    setShowReviewModal(true);
+    setReviewOrderId(idConsultation);
+  };
+  
+  const closeReviewModal = () => {
+    setShowReviewModal(false);
+  };
+  
+  const handleCommentChange = (event) => {
+    setComment(event.target.value);
+  };
+  
+  const saveComment = async () => {
+    
+    try {
+      await addReviewAPICall(reviewOrderId, comment);
+      // Optionally, you can handle success or display a success message
+      alert('Comment saved successfully');
+      closeReviewModal();
+    } catch (error) {
+      // Handle any errors, e.g., display an error message
+      console.error('Error saving comment:', error);
+    }
+  };
 
   
 
@@ -130,7 +163,7 @@ function OrderCard() {
                 </p>
                 <p className="text-gray mb-3">
                   <i className="icofont-list"  /> ORDER #{order.idConsultation}{" "}
-                  <i className="icofont-clock-time ml-2" /> {order.orderDate}
+                  <i className="icofont-clock-time ml-2" /> {order.consultationDate}
                 </p>
                 <p className="text-dark">
                   {order.products}
@@ -152,6 +185,11 @@ function OrderCard() {
               onClick={openRatingModal}
             >
               <i class="icofont-ui-rate-blank" /> RATE  
+              
+            </Button>
+
+            <Button variant="warning" onClick={() => openReviewModal(order.idConsultation)}>
+              <i class="icofont-fountain-pen"></i> REVIEW  
               
             </Button>
           </div>
@@ -234,6 +272,41 @@ function OrderCard() {
           </Button>
         </Modal.Footer>
       </Modal>
+
+
+
+
+      <Modal show={showReviewModal} onHide={closeReviewModal} centered>
+  <Modal.Header closeButton>
+    <Modal.Title>Write a Review</Modal.Title>
+  </Modal.Header>
+  <Modal.Body>
+    <Form>
+      <Form.Group controlId="comment">
+        <Form.Label>Comment:</Form.Label>
+        <Form.Control
+          as="textarea"
+          rows={4}
+          value={comment}
+          onChange={handleCommentChange}
+          className="custom-textarea"
+        />
+      </Form.Group>
+    </Form>
+  </Modal.Body>
+  <Modal.Footer>
+    <Button variant="secondary" onClick={closeReviewModal}>
+      Close
+    </Button>
+    <Button variant="primary" onClick={saveComment}>
+      Save Comment
+    </Button>
+  </Modal.Footer>
+</Modal>
+
+          
+
+
       
     </>
   )
