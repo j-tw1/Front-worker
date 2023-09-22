@@ -98,7 +98,7 @@
     
 }
 
-.Myacc button, input, optgroup, select, textarea {
+.Myacc button,.Myacc input,.Myacc optgroup,.Myacc select,.Myacc textarea {
     margin: 0;
     font-family: inherit;
     font-size: inherit;

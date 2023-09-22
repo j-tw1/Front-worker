@@ -57,9 +57,9 @@ const [workerlastname , setLastname] = useState('')
         </head>
         <body
         id='workerprofilbody'
+        className='body22'
           data-home-page="https://website5770203.nicepage.io/Copy-of-new3-1.html?version=3a178f21-486c-4b0a-b74b-972c0cfecada"
           data-home-page-title="Copy of new3 1"
-          className="u-body u-xl-mode"
           data-lang="en"
         >
           <section

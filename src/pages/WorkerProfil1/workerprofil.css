@@ -5,8 +5,9 @@
 /* Add your existing styles here */
 
 /* Style for the input field and dropdown */
-#workerprofilbody {
-  height: 671px;
+
+.body22 {
+  min-height: 900px;
   background-color: #1a1a1a;
 }
 .description-input {
