@@ -104,7 +104,7 @@ function OuvrierCard({ worker }) {
               <span className="badge badge-danger">{worker.categorie}</span>
             </div>
             <a onClick={handleImgClick}>
-              <img src={worker.pp} className="img-fluid item-img" id="im" />
+              <img src={worker.image} className="img-fluid item-img" id="im" />
             </a>
           </div>
           <div className="p-3 position-relative">
