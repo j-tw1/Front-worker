@@ -33,7 +33,6 @@ const LoginComp = () => {
    await loginAPICall(username,password).then((response)=>{
       console.log(response.data);
       const id = response.data.id ;
-      const image = response.data.image ;
       const address = response.data.addresse ;
       const token = 'Bearer ' + response.data.accessToken; 
       const role =  response.data.role ;
@@ -51,7 +50,7 @@ const LoginComp = () => {
 
       saveLoggedInUser(username);
 
-      storeUserDetails(id,image,address,email, firstname, lastname, pays, phone, ville ,cin);
+      storeUserDetails(id,address,email, firstname, lastname, pays, phone, ville ,cin);
 
 
 

@@ -4,6 +4,33 @@ import electrecityImage from "./assets/img/categories/electrecity.png";
 import mecanicImage from "./assets/img/categories/mecanic.png";
 import menuisierImage from "./assets/img/categories/menuisier.png";
 
+ import worker1 from "./assets/img/worker/1.jpg";
+import worker2 from "./assets/img/worker/4.jpg";
+ import worker3 from "./assets/img/worker/10.jpg";
+import worker4 from "./assets/img/worker/11.jpg";
+import worker5 from "./assets/img/worker/12.jpg";
+import worker6 from "./assets/img/worker/13.jpg";
+ import worker7 from "./assets/img/worker/14.jpg";
+import worker8 from "./assets/img/worker/15.jpg";
+import worker9 from "./assets/img/worker/16.jpg";
+import worker10 from "./assets/img/worker/17.jpg";
+ import worker11 from "./assets/img/worker/18.jpg";
+
+
+
+ import client1 from "./assets/img/client/1.jpeg";
+import client2 from "./assets/img/client/2.jpg";
+ import client3 from "./assets/img/client/3.jpg";
+// import client4 from "./assets/img/client/4.jpg";
+import client5 from "./assets/img/client/5.jpg";
+import client6 from "./assets/img/client/6.jpg";
+ import client7 from "./assets/img/client/7.jpg";
+
+
+
+
+
+
 
 
 export const cards = [
@@ -57,59 +84,101 @@ export const cards = [
   },
 ];
 
+export const clientpics = [
+  {
+    id: 1,
+    img: client1 ,
+    desc: "Je suis un plombier",
+    category: "Plombier",
+  },
+  {
+    id: 2,
+    img: client2 ,
+        desc: "Je suis un Mecanicien",
+    category: "Mecanicien",
+  },
+  {
+    id: 3,
+    img: client3,
+    desc: "Je suis un peintre",
+    category: "peintre",
+  },
+  {
+    id: 4,
+    img: client5 ,
+    desc: "Je suis un plombier",
+    category: "Plombier",
+  },
+  {
+    id: 5,
+    img: client6,
+    desc: "Je suis un plombier",
+    category: "Menuisier",
+  },
+  {
+    id: 6,
+    pp: plombierImage,
+    desc: "Je suis un plombier",
+    category: "Plombier",
+  },
+];
+
+
+
+
 export const projects = [
   {
     id: 1,
-    img: "https://images.pexels.com/photos/1462935/pexels-photo-1462935.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    img: worker1 ,
     pp: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1600",
     cat: "Web and Mobile Design",
     username: "Anna Bell",
   },
   {
     id: 2,
-    img: "https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    img: worker2,
     pp: "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1600",
     cat: "Logo Design",
     username: "Morton Green",
   },
   {
     id: 3,
-    img: "https://images.pexels.com/photos/4144923/pexels-photo-4144923.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    img: worker3,
     pp: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=1600",
     cat: "Animated GIFs",
     username: "Emmett Potter",
   },
   {
     id: 4,
-    img: "https://images.pexels.com/photos/4348404/pexels-photo-4348404.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    img: worker4,
     pp: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=1600",
     cat: "Packaging Design",
     username: "Freddie Johnston",
   },
   {
     id: 5,
-    img: "https://images.pexels.com/photos/4458554/pexels-photo-4458554.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    img: worker5,
     pp: "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=1600",
     cat: "Social Media Design",
     username: "Audrey Richards",
   },
   {
     id: 6,
-    img: "https://images.pexels.com/photos/4465831/pexels-photo-4465831.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    img: worker6,
     pp: "https://images.pexels.com/photos/1036627/pexels-photo-1036627.jpeg?auto=compress&cs=tinysrgb&w=1600",
     cat: "Illustration",
     username: "Dalton Hudson",
   },
   {
     id: 7,
-    img: "https://images.pexels.com/photos/6077368/pexels-photo-6077368.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    img: worker7,
     pp: "https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?auto=compress&cs=tinysrgb&w=1600",
     cat: "Book Design",
     username: "Hannah Dougherty",
   },
   {
     id: 8,
-    img: "https://images.pexels.com/photos/4065876/pexels-photo-4065876.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    img: worker8,
     pp: "https://images.pexels.com/photos/1680175/pexels-photo-1680175.jpeg?auto=compress&cs=tinysrgb&w=1600",
     cat: "Digital Marketing",
     username: "Ward Brewer",

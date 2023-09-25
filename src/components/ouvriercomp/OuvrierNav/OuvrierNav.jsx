@@ -1,24 +1,18 @@
 import React from 'react';
 import './ouvriernav.css';
 import { useNavigate } from 'react-router-dom';
-import { getUserDetails, handleLogout , imageAPICALL } from '../../../services/AuthService';
+import { getUserDetails, handleLogout  } from '../../../services/AuthService';
 import { useState } from 'react';
 function OuvrierNav() {
   const navigator = useNavigate();
 
-   const [i , setImage] = useState('');
     const u = getUserDetails() ;
     console.log(u.image);
     
 
-        imageAPICALL(u.id).then((response)=>{
-          
-          setImage(response.data);
-          
-            });
+      
 
     console.log(u);
-    console.log(i);
      
 
   function handlLogout1() {
@@ -31,7 +25,7 @@ function OuvrierNav() {
         <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light osahan-nav shadow-sm">
           <div class="container">
             <a class="navbar-brand" href="/">
-              <img alt="logo" src={getUserDetails.image}/>
+              {/* <img alt="logo" src={getUserDetails.image}/> */}
             </a>
             <button
               class="navbar-toggler"
@@ -73,7 +67,7 @@ function OuvrierNav() {
                   >
                     <img
                       alt="Generic placeholder image"
-                      src={i}
+                      // src={i}
                      class="nav-osahan-pic rounded-pill"
                     />{' '}
                     My Account

@@ -5,6 +5,8 @@ import { ConfirmConsultation } from '../../../services/ConsultationService';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+import { clientpics } from '../../../data';
+
 function Message({ order, onOrderConfirmation }) {
   function handleAccepter() {
     ConfirmConsultation(order.idConsultation);

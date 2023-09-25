@@ -2,13 +2,16 @@ import React, { useState, useEffect ,useRef } from 'react';
 import ClientNav from '../ClientNav';
 import OuvrierCard from './OuvrierCard/OuvrierCard';
 import LocationFilter from '.././OuvrierListFilters/LocationFilter';
+import { projects } from '../../../data';
+
 
 function OuvrierList() {
   const [workers, setWorkers] = useState([]);
   const [selectedLocations, setSelectedLocations] = useState([]);
   const [selectedCategories, setSelectedCategories] = useState([]);
   const abortControllerRef = useRef(null);
-
+  
+  
   useEffect(() => {
     // Create a new AbortController for each fetch request
     const abortController = new AbortController();
@@ -92,7 +95,7 @@ function OuvrierList() {
             <div className="col-md-9">
               <div className="row">
                 {workers.map((worker) => (
-                  <OuvrierCard key={worker.id} worker={worker} />
+                  <OuvrierCard key={worker.id} worker={worker} projectss={projects}/>
                 ))}
               </div>
             </div>
