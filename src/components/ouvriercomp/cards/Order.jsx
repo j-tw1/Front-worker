@@ -4,10 +4,13 @@ import OrderModal from '../OuvrierOrders/OrderModal';
 import { ConfirmConsultation } from '../../../services/ConsultationService';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
 import { clientpics } from '../../../data';
 
 function Message({ order, onOrderConfirmation }) {
+  
+  // Access the client picture based on the order's client ID
+  const clientPic = clientpics[order.idConsultation];
+
   function handleAccepter() {
     ConfirmConsultation(order.idConsultation);
 
@@ -17,7 +20,6 @@ function Message({ order, onOrderConfirmation }) {
     toast.success('Consultation has been confirmed', {
       position: toast.POSITION.TOP_CENTER,
       autoClose: 2000,
-      
     });
   }
 
@@ -30,16 +32,13 @@ function Message({ order, onOrderConfirmation }) {
             <a href="#"></a>
             <div className="media">
               <a href="#">
-                <img
-                  className="mr-4"
-                  src={order.pp}
-                  alt="Generic placeholder image"
-                />
+                {/* Display the client picture */}
+                <img className="mr-4" src={clientPic.img} alt="Client" />
               </a>
               <div className="media-body">
                 <a href="#">
                   <span className="float-right text-success">
-                    {order.consultationDate}{" "}
+                    {order.consultationDate}{' '}
                     <i className="feather-check-circle text-success" />
                   </span>
                 </a>
@@ -50,10 +49,11 @@ function Message({ order, onOrderConfirmation }) {
                   </a>
                 </h6>
                 <p className="text-black-50 mb-1">
-                  <i className="feather-map-pin" /> {order.addresse} , Maroc ,{order.ville}
+                  <i className="feather-map-pin" /> {order.addresse} , Maroc ,
+                  {order.ville}
                 </p>
                 <p className="text-black-50 mb-3">
-                  <i className="feather-list" /> ORDER # {order.idConsultation}{" "}
+                  <i className="feather-list" /> ORDER # {order.idConsultation}{' '}
                   <i className="feather-clock ml-2" /> {order.consultationDate}
                 </p>
                 <p className="text-dark">{order.description}</p>
@@ -79,7 +79,7 @@ function Message({ order, onOrderConfirmation }) {
                   </a>
                 </div>
                 <p className="mb-0 text-dark text-dark pt-2">
-                  <span className="text-dark font-weight-bold"> Total Paid:</span>{" "}
+                  <span className="text-dark font-weight-bold"> Total Paid:</span>{' '}
                   {order.prix} DH
                 </p>
               </div>
