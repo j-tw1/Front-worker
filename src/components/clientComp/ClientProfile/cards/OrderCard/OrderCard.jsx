@@ -9,6 +9,7 @@ import Form from 'react-bootstrap/Form';
 import RatingStars from 'react-rating-stars-component';
 import { addRatingAPICall } from '../../../../../services/RatingService';
 import { addReviewAPICall } from '../../../../../services/ReviewService';
+import { projects } from '../../../../../data';
 
 
 function OrderCard() {
@@ -86,6 +87,7 @@ const [reviewOrderId, setReviewOrderId] = useState(null);
   };
 
 
+
   const saveRating = async () => {
     // Assuming you have a function createRating in your API service
     // Replace client.email, ouvrier.email, and rating with the actual values
@@ -128,6 +130,11 @@ const [reviewOrderId, setReviewOrderId] = useState(null);
 
   
 
+    
+
+
+  
+
   
 
   return (
@@ -140,7 +147,7 @@ const [reviewOrderId, setReviewOrderId] = useState(null);
               <a href="#">
                 <img
                   className="mr-4"
-                  src={order.imageSrc} // Replace with the actual image source
+                  src={projects[order.idConsultation] ? projects[order.idConsultation].img : 'Loading...'} // Replace with the actual image source
                   alt="Generic placeholder image"
                 />
               </a>

@@ -1,12 +1,21 @@
 import './signUpOuvrier.css';
 import React, { useState } from 'react';
-import { registerOuvrierAPICall } from '../../services/AuthService';
+import { imageAPICALL, registerOuvrierAPICall } from '../../services/AuthService';
 
 import logo from '../../assets/img/logo2.png';
 
 import { useNavigate } from 'react-router-dom';
 
+
+
 function SignUpOuvrier() {
+
+
+
+const [i ,setI] = useState('');
+
+
+
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -20,6 +29,13 @@ function SignUpOuvrier() {
     ville: '',
     categorie: '',
   });
+
+  //  imageAPICALL(2).then((response)=>{
+
+  //   setI(response.data);
+  //   console.log(i);
+  
+  // })
 
   const navigator = useNavigate();
 
@@ -40,8 +56,9 @@ function SignUpOuvrier() {
   };
 
   const handleImageUpload = (event) => {
-    const imageFile = event.target.files[0];
-    setFormData({ ...formData, image: imageFile });
+    const imageFile = event.target.files[0] ;
+    console.log(URL.createObjectURL(imageFile));
+    setFormData({ ...formData, image: URL.createObjectURL(imageFile) });
   };
 
   const handleSubmit = (event) => {
@@ -139,6 +156,7 @@ function SignUpOuvrier() {
               onChange={handleInputChange}
               required
             />
+            <img     src={i}  />
           </div>
           <div className="form-group">
             <input

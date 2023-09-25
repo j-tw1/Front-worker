@@ -33,7 +33,7 @@ const LoginComp = () => {
    await loginAPICall(username,password).then((response)=>{
       console.log(response.data);
       const id = response.data.id ;
-      const address = response.data.addresse
+      const address = response.data.addresse ;
       const token = 'Bearer ' + response.data.accessToken; 
       const role =  response.data.role ;
       const email = response.data.email;

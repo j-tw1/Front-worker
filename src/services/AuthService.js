@@ -7,6 +7,9 @@ const GET_USER_API_BASE_URL = "http://localhost:8081/users/"
 
 const ADD_CONSULTAION_BASE_URL = "http://localhost:8081/Consultation/"
 
+
+
+
 export const registerClientAPICall = (registerObj) => axios.post(AUTH_REST_API_BASE_URL + 'register/client', registerObj);
 
 export const registerOuvrierAPICall = (registerObj) => axios.post(AUTH_REST_API_BASE_URL + 'register/ouvrier', registerObj);
@@ -30,6 +33,8 @@ export const getToken = () => localStorage.getItem("token") ;
 
 export const storeUserDetails = (id ,address,email, firstname, lastname, pays, phone, ville ,cin) => {
     const userDetails = {
+
+    
       id,
       address,
       email,
@@ -38,8 +43,11 @@ export const storeUserDetails = (id ,address,email, firstname, lastname, pays, p
       pays,
       phone,
       ville,
-      cin
+      cin,
+    
     };
+
+
     localStorage.setItem('userDetails', JSON.stringify(userDetails));
 }
 

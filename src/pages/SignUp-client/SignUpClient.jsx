@@ -38,8 +38,8 @@ function SignUpClient() {
   };
 
   const handleImageUpload = (event) => {
-    const imageFile = event.target.files[0];
-    setFormData({ ...formData, image: imageFile });
+    const imageFile = event.target.files[0] ;
+    setFormData({ ...formData, image: URL.createObjectURL(imageFile) });
   };
 
   const handleSubmit = (event) => {
