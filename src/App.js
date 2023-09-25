@@ -25,6 +25,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Footer from './components/Footer/Footer';
 import ContactUs from './components/ContactUs/ContactUs';
 import MyAccount from './components/clientComp/MyAccount/MyAccount'
+import Home2 from './components/home2/Home2'
 
 
 //import LoginComp from './pages/LogRegComponent/LoginComp';
@@ -220,6 +221,10 @@ function App() {
       {
         path: "/Signup/ouvrier",
           element: <SignUpOuvrier />,
+      },
+      {
+        path: "/home2",
+          element: <Home2 />,
       },
 
       // {

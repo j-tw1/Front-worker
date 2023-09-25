@@ -10,15 +10,18 @@ function OuvrierList() {
   const abortControllerRef = useRef(null);
 
   useEffect(() => {
+
     // Create a new AbortController for each fetch request
+
     const abortController = new AbortController();
     abortControllerRef.current = abortController;
-
+    
     listWorkers();
-
+    
     // Cleanup function
     return () => {
       // Abort the fetch request when the component is unmounted
+
       if (abortControllerRef.current) {
         abortControllerRef.current.abort();
       }
@@ -27,18 +30,17 @@ function OuvrierList() {
 
   // Rest of your component code...
 
-
   async function listWorkers() {
     let apiUrl = 'http://localhost:8081/users/ListOuvrierParams';
     
-  
+    
     const locationParams = selectedLocations
       .map((location) => `ville=${location}`)
       .join('&');
     const categoryParams = selectedCategories
       .map((category) => `category=${category}`)
       .join('&');
-  
+    
     if (locationParams) {
       apiUrl += `?${locationParams}`;
     }
@@ -46,10 +48,9 @@ function OuvrierList() {
     if (categoryParams) {
       apiUrl += locationParams ? `&${categoryParams}` : `?${categoryParams}`;
     }
-  
-   
-  try {
-    const response = await fetch(apiUrl);
+     
+    try {
+      const response = await fetch(apiUrl);
 
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
@@ -66,7 +67,7 @@ function OuvrierList() {
   }
 
   }
-
+  
   function handleFilterChange(locations, categories) {
     setSelectedLocations(locations);
     setSelectedCategories(categories);

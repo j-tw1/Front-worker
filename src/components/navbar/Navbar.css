@@ -49,7 +49,7 @@
 }
 
 .navbar-area .main-nav .navbar .navbar-nav .nav-item .nav-link.active {
-  color: #fd1616;
+  color: #ff8e01;
 }
 
 .navbar-area .main-nav .navbar .navbar-nav .nav-item .dropdown-menu {
@@ -113,7 +113,7 @@
   font-size: 16px;
   font-weight: 600;
   padding: 5px 20px;
-  background: #fd1616;
+  background: #ff8e01;
   border-radius: 5px;
 }
 
@@ -130,7 +130,7 @@
 }
 
 .navbar-area .main-nav .navbar .other-option .signup-btn:hover {
-  color: #fd1616;
+  color: #ff8e01;
   background: none;
 }
 

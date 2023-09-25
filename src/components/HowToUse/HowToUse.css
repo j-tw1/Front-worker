@@ -37,7 +37,7 @@
   }
   
   .use-text span {
-    color: #fd1616;
+    color: #ff8e01;
     background: #fdc7c7;
     width: 30px;
     height: 30px;
@@ -54,10 +54,10 @@
   
   .use-text i {
     font-size: 50px;
-    color: #fd1616;
+    color: #ff8e01;
     background: #ffffff;
     display: inline-block;
-    border: 3px dashed #fd1616;
+    border: 3px dashed #ff8e01;
     position: relative;
     width: 150px;
     height: 150px;
@@ -83,7 +83,7 @@
   }
   
   .use-text:hover i {
-    background: #fd1616;
+    background: #ff8e01;
     color: #ffffff;
   }
   

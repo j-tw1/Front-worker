@@ -32,7 +32,7 @@
   }
   
   .job-card .job-info h3 a:hover {
-    color: #fd1616;
+    color: #ff8e01;
   }
   
   .job-card .job-info ul {
@@ -52,7 +52,7 @@
   }
   
   .job-card .job-info ul li a {
-    color: #fd1616;
+    color: #ff8e01;
     font-weight: 500;
   }
   
@@ -71,7 +71,7 @@
     display: block;
     padding: 5px 10px;
     border-radius: 10px;
-    color: #fd1616;
+    color: #ff8e01;
     -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
     margin-bottom: 15px;
@@ -95,7 +95,7 @@
   }
   
   .job-card .job-save a i:hover {
-    background: #fd1616;
+    background: #ff8e01;
     color: #ffffff;
   }
   
@@ -117,7 +117,7 @@
   .job-card:hover {
     -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
-    border: 1px dashed #fd1616;
+    border: 1px dashed #ff8e01;
   }
   
   /* Job Section CSS End */
@@ -126,7 +126,7 @@
   
 /* Job Info CSS Start */
 .looking-job {
-    background: #fd1616;
+    background: #ff8e01;
     border-radius: 10px;
     padding: 30px;
     margin-bottom: 30px;
@@ -141,7 +141,7 @@
   
   .looking-job .media i {
     background: #fbd3d3;
-    color: #fd1616;
+    color: #ff8e01;
     width: 55px;
     height: 55px;
     border-radius: 50px;
@@ -244,7 +244,7 @@
   }
   
   .recruiting-card .media .media-body a:hover, .recruiting-card .media .media-body a:hover i {
-    color: #fd1616;
+    color: #ff8e01;
     letter-spacing: 1px;
   }
   
