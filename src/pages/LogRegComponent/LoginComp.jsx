@@ -1,18 +1,22 @@
 import React, { useState } from 'react';
 import './logincomp.css';
-import { getRole, getToken, loginAPICall, saveLoggedInUser, storeRole, storeToken, storeUserDetails } from '../../services/AuthService';
+import {
+  getRole,
+  getToken,
+  loginAPICall,
+  saveLoggedInUser,
+  storeRole,
+  storeToken,
+  storeUserDetails,
+} from '../../services/AuthService';
 import { useNavigate } from 'react-router-dom';
-import logoImage from '../../assets/img/logo2.png'
-
+import logoImage from '../../assets/img/logo2.png';
 
 const LoginComp = () => {
+  const [username, setUsername] = useState('');
 
+  const [password, setPassword] = useState('');
 
-
-  const [username , setUsername] = useState('')
-
-  const [password , setPassword] = useState('')
-  
   const [isSignInActive, setIsSignInActive] = useState(true);
 
   const navigator = useNavigate();
@@ -20,70 +24,69 @@ const LoginComp = () => {
   const handleButtonClick = () => {
     const container = document.getElementById('container10');
     container.classList.toggle('right-panel-active');
+  };
 
+  function handleHomeButtonClick(event) {
+    navigator('/');
   }
-
-  function handleHomeButtonClick(event){
-    navigator('/'); 
-
-  }
-  async function handleloginClick (e) {
+  async function handleloginClick(e) {
     e.preventDefault();
-    
-   await loginAPICall(username,password).then((response)=>{
-      console.log(response.data);
-      const id = response.data.id ;
-      const address = response.data.addresse ;
-      const token = 'Bearer ' + response.data.accessToken; 
-      const role =  response.data.role ;
-      const email = response.data.email;
-      const phone = response.data.phone ;
-      const firstname = response.data.firstname;
-      const lastname = response.data.lastname ;
-      const pays     = response.data.pays ; 
-      const ville = response.data.ville ; 
-      const cin = response.data.cin ; 
-      
-      storeToken(token);
-      
-      storeRole(role);
 
-      saveLoggedInUser(username);
+    await loginAPICall(username, password)
+      .then((response) => {
+        console.log(response.data);
+        const id = response.data.id;
+        const address = response.data.addresse;
+        const token = 'Bearer ' + response.data.accessToken;
+        const role = response.data.role;
+        const email = response.data.email;
+        const phone = response.data.phone;
+        const firstname = response.data.firstname;
+        const lastname = response.data.lastname;
+        const pays = response.data.pays;
+        const ville = response.data.ville;
+        const cin = response.data.cin;
 
-      storeUserDetails(id,address,email, firstname, lastname, pays, phone, ville ,cin);
+        storeToken(token);
 
+        storeRole(role);
 
+        saveLoggedInUser(username);
 
-      const roleY = getRole();
+        storeUserDetails(
+          id,
+          address,
+          email,
+          firstname,
+          lastname,
+          pays,
+          phone,
+          ville,
+          cin
+        );
 
-      if (roleY == 'Ouvrier'){
+        const roleY = getRole();
 
-        navigator('/ouvdash');
-      }
-      if (roleY == 'Client'){
-        navigator('/ouvrierlist')
-      }
-
-      
-  
-      
-      
-    }) .catch(error=> {
-      console.error(error);
-    })
-    
-    
+        if (roleY == 'Ouvrier') {
+          navigator('/ouvdash');
+        }
+        if (roleY == 'Client') {
+          navigator('/ouvrierlist');
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   }
-
 
   return (
     <>
       <div className="sign-ch">
-      <div className="home-button-container">
-        <button className="home-button" onClick={handleHomeButtonClick}>
-        <img src={logoImage} alt="jjj" className="home-logo" />
-        </button>
-      </div>
+        <div className="home-button-container">
+          <button className="home-button" onClick={handleHomeButtonClick}>
+            <img src={logoImage} alt="jjj" className="home-logo" />
+          </button>
+        </div>
         <div className="sign-ch-two pb-70">
           <div className="container"></div>
           <div
@@ -114,19 +117,23 @@ const LoginComp = () => {
                   </a>
                 </div>
                 <span>or use your account</span>
-                <input type="text"
+                <input
+                  type="text"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                  placeholder="Email"
+                />
 
-                        value={username}
-                        onChange={(e) => setUsername(e.target.value)}  
-                        placeholder="Email" />
-
-                <input type="password"
-                       placeholder="Password" 
-                       value={password}
-                          onChange={(e) => setPassword(e.target.value)}
-                       />
+                <input
+                  type="password"
+                  placeholder="Password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
                 <a href="#">Forgot your password?</a>
-                <button className="button11" onClick={handleloginClick}>Sign In</button>
+                <button className="button11" onClick={handleloginClick}>
+                  Sign In
+                </button>
               </form>
             </div>
 
@@ -139,7 +146,7 @@ const LoginComp = () => {
                     X
                   </button>
 
-                  <h1 className="h-ouvrier">Ouvrier</h1>
+                  <h1 className="h-ouvrier">Worker</h1>
 
                   <a href="/Signup/ouvrier">
                     <button className="button-ouvrier">Sign UP</button>
@@ -147,7 +154,7 @@ const LoginComp = () => {
                 </div>
 
                 <div className="overlay-panel2 overlay-right">
-                  <h1>Hello, Friend!</h1>
+                  <h1>Hello</h1>
                   <p>
                     Enter your personal details and start your journey with us
                   </p>

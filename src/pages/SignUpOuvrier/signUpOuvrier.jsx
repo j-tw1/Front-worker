@@ -1,20 +1,16 @@
 import './signUpOuvrier.css';
 import React, { useState } from 'react';
-import { imageAPICALL, registerOuvrierAPICall } from '../../services/AuthService';
+import {
+  imageAPICALL,
+  registerOuvrierAPICall,
+} from '../../services/AuthService';
 
 import logo from '../../assets/img/logo2.png';
 
 import { useNavigate } from 'react-router-dom';
 
-
-
 function SignUpOuvrier() {
-
-
-
-const [i ,setI] = useState('');
-
-
+  const [i, setI] = useState('');
 
   const [formData, setFormData] = useState({
     firstName: '',
@@ -34,7 +30,7 @@ const [i ,setI] = useState('');
 
   //   setI(response.data);
   //   console.log(i);
-  
+
   // })
 
   const navigator = useNavigate();
@@ -43,7 +39,6 @@ const [i ,setI] = useState('');
     navigator('/Signin');
   }
 
- 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setFormData({ ...formData, [name]: value });
@@ -56,7 +51,7 @@ const [i ,setI] = useState('');
   };
 
   const handleImageUpload = (event) => {
-    const imageFile = event.target.files[0] ;
+    const imageFile = event.target.files[0];
     console.log(URL.createObjectURL(imageFile));
     setFormData({ ...formData, image: URL.createObjectURL(imageFile) });
   };
@@ -90,7 +85,7 @@ const [i ,setI] = useState('');
             X
           </button>
         </div>
-        <h2 className="Registration-ouvrier">Inscription Ouvrier</h2>
+        <h2 className="Registration-ouvrier">Worker Registration</h2>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <input
@@ -156,7 +151,7 @@ const [i ,setI] = useState('');
               onChange={handleInputChange}
               required
             />
-            <img     src={i}  />
+            <img src={i} />
           </div>
           <div className="form-group">
             <input
@@ -177,21 +172,17 @@ const [i ,setI] = useState('');
             </select>
 
             <select name="pays" onChange={handleInputChange} required>
-              <option value="">Pays</option>
+              <option value="">Countries</option>
               <option value="Maroc">Maroc</option>
             </select>
             <select name="ville" onChange={handleInputChange} required>
-              <option value="ville">ville</option>
+              <option value="ville">city</option>
               <option value="Casablanca">Casablanca</option>
               <option value="Nador">Nador</option>
               <option value="Rabat">Rabat</option>
             </select>
           </div>
-          <button
-            className="btn-C-ouvrier"
-            type="submit"
-            
-          >
+          <button className="btn-C-ouvrier" type="submit">
             Register
           </button>
         </form>

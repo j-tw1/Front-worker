@@ -38,7 +38,7 @@ function SignUpClient() {
   };
 
   const handleImageUpload = (event) => {
-    const imageFile = event.target.files[0] ;
+    const imageFile = event.target.files[0];
     setFormData({ ...formData, image: URL.createObjectURL(imageFile) });
   };
 
@@ -145,11 +145,11 @@ function SignUpClient() {
           </div>
           <div className="form-group">
             <select name="pays" onChange={handleInputChange} required>
-              <option value="">Pays</option>
+              <option value="">Countries</option>
               <option value="Maroc">Maroc</option>
             </select>
             <select name="ville" onChange={handleInputChange} required>
-              <option value="ville">ville</option>
+              <option value="ville">city</option>
               <option value="Casablanca">Casablanca</option>
               <option value="Nador">Nador</option>
               <option value="Rabat">Rabat</option>
