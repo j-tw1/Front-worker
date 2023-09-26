@@ -44,7 +44,7 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="container">
-        <p>&copy; 2023 Your Company Name</p>
+        <p>&copy; 2023 AL7IRFA</p>
 
         <div className="language-links">
           <a

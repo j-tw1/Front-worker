@@ -222,10 +222,7 @@ function App() {
         path: "/Signup/ouvrier",
           element: <SignUpOuvrier />,
       },
-      {
-        path: "/home2",
-          element: <Home2 />,
-      },
+      
 
       // {
       //   path: "/Workerhome",
