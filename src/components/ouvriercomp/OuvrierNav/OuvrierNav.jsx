@@ -1,9 +1,19 @@
 import React from 'react';
 import './ouvriernav.css';
 import { useNavigate } from 'react-router-dom';
-import { handleLogout } from '../../../services/AuthService';
+import { getUserDetails, handleLogout  } from '../../../services/AuthService';
+import { useState } from 'react';
 function OuvrierNav() {
   const navigator = useNavigate();
+
+    const u = getUserDetails() ;
+    console.log(u.image);
+    
+
+      
+
+    console.log(u);
+     
 
   function handlLogout1() {
     handleLogout();
@@ -15,7 +25,7 @@ function OuvrierNav() {
         <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light osahan-nav shadow-sm">
           <div class="container">
             <a class="navbar-brand" href="/">
-              <img alt="logo" src="assets/img/logo2.png" />
+              {/* <img alt="logo" src={getUserDetails.image}/> */}
             </a>
             <button
               class="navbar-toggler"
@@ -57,8 +67,8 @@ function OuvrierNav() {
                   >
                     <img
                       alt="Generic placeholder image"
-                      src="https://ets-goossens.be/images/photos/chauffagiste-intervention-chaudiere-gaz.jpg"
-                      class="nav-osahan-pic rounded-pill"
+                      // src={i}
+                     class="nav-osahan-pic rounded-pill"
                     />{' '}
                     My Account
                   </a>

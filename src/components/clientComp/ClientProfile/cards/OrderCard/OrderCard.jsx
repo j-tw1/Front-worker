@@ -9,6 +9,7 @@ import Form from 'react-bootstrap/Form';
 import RatingStars from 'react-rating-stars-component';
 import { addRatingAPICall } from '../../../../../services/RatingService';
 import { addReviewAPICall } from '../../../../../services/ReviewService';
+import { projects } from '../../../../../data';
 
 
 function OrderCard() {
@@ -86,6 +87,7 @@ const [reviewOrderId, setReviewOrderId] = useState(null);
   };
 
 
+
   const saveRating = async () => {
     // Assuming you have a function createRating in your API service
     // Replace client.email, ouvrier.email, and rating with the actual values
@@ -128,6 +130,11 @@ const [reviewOrderId, setReviewOrderId] = useState(null);
 
   
 
+    
+
+
+  
+
   
 
   return (
@@ -140,7 +147,7 @@ const [reviewOrderId, setReviewOrderId] = useState(null);
               <a href="#">
                 <img
                   className="mr-4"
-                  src={order.imageSrc} // Replace with the actual image source
+                  src={projects[order.idConsultation] ? projects[order.idConsultation].img : 'Loading...'} // Replace with the actual image source
                   alt="Generic placeholder image"
                 />
               </a>
@@ -154,7 +161,7 @@ const [reviewOrderId, setReviewOrderId] = useState(null);
                 <h6 className="mb-2">
                   <a href="#"></a>
                   <a href="detail.html" className="text-black">
-                  Ouvrier: {ouvriers[index] ? `${ouvriers[index].firstName} ${ouvriers[index].lastName}` : 'Loading...'} {/* Display ouvrier name */}{" "}
+                  worker : {ouvriers[index] ? `${ouvriers[index].firstName} ${ouvriers[index].lastName}` : 'Loading...'} {/* Display ouvrier name */}{" "}
                     <span className="badge badge-success"> {ouvriers[index] ? ouvriers[index].categorie : 'Loading...'}</span>
                   </a>
                 </h6>
@@ -219,7 +226,7 @@ const [reviewOrderId, setReviewOrderId] = useState(null);
       <div className="modal-dialog modal-dialog-centered" role="document">
         <div className="modal-content" style={{ border: '2px solid #ccc', backgroundColor: '#f9f9f9' }}>
           <div className="modal-header">
-            <h5 className="modal-title">Contact Ouvrier</h5>
+            <h5 className="modal-title">Contact worker</h5>
             <button type="button" className="close btn-close"  aria-label="Close" onClick={closeModal}>
               
             </button>

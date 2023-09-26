@@ -1,15 +1,36 @@
-import React from 'react';
+import React, { useState ,useEffect} from 'react';
 import './clientnav.css';
-import { handleLogout } from '../../services/AuthService';
+import { getUserDetails, handleLogout } from '../../services/AuthService';
 import { useNavigate } from 'react-router-dom';
+import { clientpics } from '../../data';
 
 function ClientNav() {
+  const [userId, setUserId] = useState('');
+  const [clientPic, setClientPic] = useState('');
   const navigator = useNavigate();
+
+  useEffect(() => {
+    const userDetails = getUserDetails();
+    setUserId(userDetails.id);
+
+    // Check if a valid clientPic exists in clientpics for the current userId
+    const userClientPic = clientpics[userDetails.id];
+    if (userClientPic) {
+      setClientPic(userClientPic);
+    }
+  }, []);
 
   function handlLogout1() {
     handleLogout();
     navigator('/');
   }
+
+
+
+
+
+
+
   return (
     <>
       <nav class="navbar navbar-expand-lg navbar-light bg-light osahan-nav shadow-sm">
@@ -52,7 +73,7 @@ function ClientNav() {
                 >
                   <img
                     alt="Generic placeholder image"
-                    src="https://ets-goossens.be/images/photos/chauffagiste-intervention-chaudiere-gaz.jpg"
+                    src={clientPic.img}
                     class="nav-osahan-pic rounded-pill"
                   />{' '}
                   My Account
@@ -70,8 +91,8 @@ function ClientNav() {
                   <a class="dropdown-item" href="/Profile#addresses">
                     <i class="icofont-location-pin"></i> Addresses
                   </a>
-                  <a class="dropdown-item" >
-                    <i class="icofont-logout" onClick={handlLogout1}></i> Logout
+                  <a class="dropdown-item" onClick={handlLogout1}>
+                    <i class="icofont-logout" ></i> Logout
                   </a>
                 </div>
               </li>

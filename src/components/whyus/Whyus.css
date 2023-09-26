@@ -23,8 +23,8 @@
   }
   
   .why-choose-text .section-title {
-    margin-bottom: 50px;
-  }
+    margin-bottom: -373px;
+    margin-top: -450px;  }
   
   .why-choose-text .section-title h2 {
     color: #ffffff;
@@ -45,7 +45,7 @@
   .why-choose-text .media i {
     background: #182441;
     font-size: 30px;
-    color: #fd1616;
+    color: #ff8e01;
     width: 60px;
     height: 60px;
     text-align: center;
@@ -79,7 +79,7 @@
   }
   
   .counter-area .counter-text h2 {
-    color: #fd1616;
+    color: #ff8e01;
     font-size: 45px;
     font-weight: 700;
   }

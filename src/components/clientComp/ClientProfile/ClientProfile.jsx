@@ -11,10 +11,13 @@ import { getUserDetails } from '../../../services/AuthService';
 
 import { getOuvrierList } from '../../../services/OuvrierService';
 import ClientNav from '../ClientNav';
+import { clientpics } from '../../../data';
 
 function ClientProfile() {
   const client = getUserDetails();
   const ouvriers = getOuvrierList();
+
+   const clo = clientpics[client.id];
 
   return (
     <>
@@ -38,7 +41,7 @@ function ClientProfile() {
                     <div className="osahan-user-media">
                       <img
                         className="mb-3 rounded-pill shadow-sm mt-1"
-                        src="https://moodoffdp.com/wp-content/uploads/2023/04/Instagram-Girl-DP.jpg"
+                        src={clo.img}
                         alt="gurdeep singh osahan"
                       />
                       <div className="osahan-user-media-body">
