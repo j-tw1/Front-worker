@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { clientpics } from '../../../data';
 
 function Message({ order, onOrderConfirmation }) {
-  
+
   // Access the client picture based on the order's client ID
   const clientPic = clientpics[order.idConsultation];
 
@@ -49,11 +49,11 @@ function Message({ order, onOrderConfirmation }) {
                   </a>
                 </h6>
                 <p className="text-black-50 mb-1">
-                  <i className="feather-map-pin" /> {order.addresse} , Maroc ,
+                  <i className="feather-map-pin" /> {order.addresse}  Maroc ,
                   {order.ville}
                 </p>
                 <p className="text-black-50 mb-3">
-                  <i className="feather-list" /> ORDER # {order.idConsultation}{' '}
+                  <i className="feather-list" /> ORDER # {order.idConsultation} {' '}
                   <i className="feather-clock ml-2" /> {order.consultationDate}
                 </p>
                 <p className="text-dark">{order.description}</p>
@@ -78,10 +78,10 @@ function Message({ order, onOrderConfirmation }) {
                     <i className="feather-edit" /> Details
                   </a>
                 </div>
-                <p className="mb-0 text-dark text-dark pt-2">
+                {/* <p className="mb-0 text-dark text-dark pt-2">
                   <span className="text-dark font-weight-bold"> Total Paid:</span>{' '}
                   {order.prix} DH
-                </p>
+                </p> */}
               </div>
             </div>
           </div>

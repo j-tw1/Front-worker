@@ -1,8 +1,19 @@
 import React from 'react';
 import './myprofile.css';
 import './myprof';
+import { getUserDetails } from '../../../services/AuthService';
+import { projects } from '../../../data';
 
 function MyProfile() {
+
+  const ouv = getUserDetails().id
+
+  const ouvrier = getUserDetails();
+
+  
+
+  const pi = projects[ouv]; 
+
   return (
     <div id="layoutSidenav_content">
       <main className="myprofile">
@@ -21,7 +32,7 @@ function MyProfile() {
                           <input type="file" id="image-file" accept="image/*" />
                           <img
                             id="image-profile"
-                            src="https://pub-static.fotor.com/assets/projects/pages/7252c2b86395453a836cdd57b13b3d39/600w/fotor-7c742084acd7491aae9923279bdc3218.jpg"
+                            src={pi.img}
                             alt="Image"
                           />
                           <label for="image-file" id="edit-image">
@@ -34,11 +45,11 @@ function MyProfile() {
                       <div className="row">
                         <div className="col-md-6">
                           <div className="form-group">
-                            <label>Name</label>
+                            <label>First name</label>
                             <input
                               type="text"
                               className="form-control"
-                              placeholder="Your name"
+                              placeholder={ouvrier.firstname}
                             />
                           </div>
                         </div>
@@ -48,7 +59,8 @@ function MyProfile() {
                             <input
                               type="text"
                               className="form-control"
-                              placeholder="Your last name"
+                              placeholder={ouvrier.lastname}
+                              
                             />
                           </div>
                         </div>
@@ -61,7 +73,7 @@ function MyProfile() {
                             <input
                               type="text"
                               className="form-control"
-                              placeholder="Your telephone number"
+                              placeholder={ouvrier.phone}
                             />
                           </div>
                         </div>
@@ -139,6 +151,7 @@ function MyProfile() {
                             <label>Old email</label>
                             <input
                               className="form-control"
+                              placeholder={ouvrier.email}
                               name="old_email"
                               id="old_email"
                               type="email"
