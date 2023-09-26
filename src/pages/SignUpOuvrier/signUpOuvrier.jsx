@@ -172,11 +172,11 @@ function SignUpOuvrier() {
             </select>
 
             <select name="pays" onChange={handleInputChange} required>
-              <option value="">Countries</option>
+              <option value="">Counries</option>
               <option value="Maroc">Maroc</option>
             </select>
             <select name="ville" onChange={handleInputChange} required>
-              <option value="ville">city</option>
+              <option value="ville">City</option>
               <option value="Casablanca">Casablanca</option>
               <option value="Nador">Nador</option>
               <option value="Rabat">Rabat</option>

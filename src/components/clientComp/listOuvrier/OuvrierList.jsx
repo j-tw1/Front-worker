@@ -36,14 +36,14 @@ function OuvrierList() {
   async function listWorkers() {
     let apiUrl = 'http://localhost:8081/users/ListOuvrierParams';
     
-    
+  
     const locationParams = selectedLocations
       .map((location) => `ville=${location}`)
       .join('&');
     const categoryParams = selectedCategories
       .map((category) => `category=${category}`)
       .join('&');
-    
+  
     if (locationParams) {
       apiUrl += `?${locationParams}`;
     }
@@ -51,9 +51,10 @@ function OuvrierList() {
     if (categoryParams) {
       apiUrl += locationParams ? `&${categoryParams}` : `?${categoryParams}`;
     }
-     
-    try {
-      const response = await fetch(apiUrl);
+  
+   
+  try {
+    const response = await fetch(apiUrl);
 
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);

@@ -52,7 +52,7 @@ function ClientNav() {
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="/ouvrierlist">
-                  <i class="icofont-sale-discount"></i> Workers
+                  <i class="icofont-sale-discount"></i> Wokrers
                 </a>
               </li>
 

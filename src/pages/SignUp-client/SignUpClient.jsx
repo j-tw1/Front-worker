@@ -50,7 +50,7 @@ function SignUpClient() {
     registerClientAPICall(formData)
       .then((response) => {
         console.log(response.data);
-        navigator('/ouvrierlist');
+        navigator('/Signin');
       })
       .catch((error) => {
         console.error(error);
@@ -149,7 +149,7 @@ function SignUpClient() {
               <option value="Maroc">Maroc</option>
             </select>
             <select name="ville" onChange={handleInputChange} required>
-              <option value="ville">city</option>
+              <option value="ville">City</option>
               <option value="Casablanca">Casablanca</option>
               <option value="Nador">Nador</option>
               <option value="Rabat">Rabat</option>
