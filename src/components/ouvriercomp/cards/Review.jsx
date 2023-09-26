@@ -1,11 +1,11 @@
 import React from 'react';
 import './reviews.css';
 import Reviewmodal from '../OuvrierReviews/Reviewmodal';
-import { clientpics, projects } from '../../../data';
+import { clientpics } from '../../../data';
 function Review({ workrev }) {
 
 
-  pic = clientpics[workrev.id] ;
+  const pic = clientpics[workrev.id] ;
 
   return (
     <>

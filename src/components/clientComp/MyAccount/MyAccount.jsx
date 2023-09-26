@@ -1,8 +1,15 @@
 import React from 'react'
 import './myAccount.css'
 import ClientNav from '../ClientNav'
+import { getUserDetails } from '../../../services/AuthService'
+import { clientpics } from '../../../data'
 
 function MyAccount() {
+
+  const client = getUserDetails()
+
+  const pic = clientpics[client.id];
+
   return (
     <>
     <ClientNav/>
@@ -50,7 +57,7 @@ function MyAccount() {
           <div className="tab-pane fade active show" id="account-general">
             <div className="card-body media align-items-center">
               <img
-                src="https://bootdey.com/img/Content/avatar/avatar1.png"
+                src={pic.img}
                 alt=""
                 className="d-block ui-w-80"
               />
@@ -71,19 +78,20 @@ function MyAccount() {
             <hr className="border-light m-0" />
             <div className="card-body">
               <div className="form-group">
-                <label className="form-label">Username</label>
+                <label className="form-label">First Name</label>
                 <input
                   type="text"
                   className="form-control mb-1"
-                  defaultValue="Amine"
+                  placeholder={client.firstname}
                 />
               </div>
               <div className="form-group">
-                <label className="form-label">Name</label>
+                <label className="form-label">Last name</label>
                 <input
                   type="text"
                   className="form-control"
-                  defaultValue="Amine Bouhmidi"
+                  placeholder={client.lastname}
+
                 />
               </div>
               <div className="form-group">
@@ -91,7 +99,7 @@ function MyAccount() {
                 <input
                   type="text"
                   className="form-control mb-1"
-                  defaultValue="amine@gmail.com"
+                  placeholder={client.email}
                 />
                 <div className="alert alert-warning mt-3">
                   Your email is not confirmed. Please check your inbox.
@@ -99,14 +107,7 @@ function MyAccount() {
                   <a href="javascript:void(0)">Resend confirmation</a>
                 </div>
               </div>
-              <div className="form-group">
-                <label className="form-label">Company</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  defaultValue="EMSI"
-                />
-              </div>
+            
             </div>
           </div>
           <div className="tab-pane fade" id="account-change-password">
@@ -132,9 +133,7 @@ function MyAccount() {
                 <textarea
                   className="form-control"
                   rows={5}
-                  defaultValue={
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nunc arcu, dignissim sit amet sollicitudin iaculis, vehicula id urna. Sed luctus urna nunc. Donec fermentum, magna sit amet rutrum pretium, turpis dolor molestie diam, ut lacinia diam risus eleifend sapien. Curabitur ac nibh nulla. Maecenas nec augue placerat, viverra tellus non, pulvinar risus."
-                  }
+                  
                 />
               </div>
               <div className="form-group">
@@ -148,14 +147,14 @@ function MyAccount() {
               <div className="form-group">
                 <label className="form-label">City</label>
                 <select className="custom-select">
-                  <option>Nador</option>
+                  <option>{client.ville}</option>
                   <option selected="">Casablanca</option>
                   <option>Rabat</option>
 
                 </select>
                 <label className="form-label">Country</label>
                 <select className="custom-select">
-                  <option>Morocco</option>
+                  <option>{client.pays}</option>
                   
                 </select>
               </div>
@@ -168,13 +167,9 @@ function MyAccount() {
                 <input
                   type="text"
                   className="form-control"
-                  defaultValue="+0 (123) 456 7891"
-                />
+                    placeholder={client.phone}                />
               </div>
-              <div className="form-group">
-                <label className="form-label">Website</label>
-                <input type="text" className="form-control" defaultValue="" />
-              </div>
+              
             </div>
           </div>
           <div className="tab-pane fade" id="account-social-links">
@@ -184,7 +179,6 @@ function MyAccount() {
                 <input
                   type="text"
                   className="form-control"
-                  defaultValue="https://twitter.com/user"
                 />
               </div>
               <div className="form-group">
@@ -192,7 +186,7 @@ function MyAccount() {
                 <input
                   type="text"
                   className="form-control"
-                  defaultValue="https://www.facebook.com/user"
+                  defaultValue={"https://www.facebook.com/"+client.firstname+client.lastname}
                 />
               </div>
               <div className="form-group">
@@ -208,7 +202,7 @@ function MyAccount() {
                 <input
                   type="text"
                   className="form-control"
-                  defaultValue="https://www.instagram.com/user"
+                  defaultValue={"https://www.instagram.com/"+client.firstname+client.lastname}
                 />
               </div>
             </div>
