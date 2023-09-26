@@ -1,10 +1,17 @@
 import React from 'react';
 import './reviews.css';
 import Reviewmodal from '../OuvrierReviews/Reviewmodal';
+import { clientpics } from '../../../data';
 function Review({ workrev }) {
+
+
+  const pic = clientpics[workrev.id] ;
+
   return (
     <>
       {' '}
+
+    
       <Reviewmodal />
       <div className="card mb-4 order-list">
         <div className="gold-members p-4">
@@ -13,7 +20,7 @@ function Review({ workrev }) {
             <a href="#">
               <img
                 className="mr-4"
-                // src={review.}
+                 src={pic.img}
                 alt="Generic placeholder image"
               />
             </a>
