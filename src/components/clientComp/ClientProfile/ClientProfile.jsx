@@ -18,8 +18,10 @@ function ClientProfile() {
 
   return (
     <>
+    
       <ClientNav />
       <ClientModals />
+      <div className='body33'>
       <section className="profile">
         <div className="container">
           <div className="row profile">
@@ -126,6 +128,7 @@ function ClientProfile() {
           </div>
         </div>
       </section>
+      </div>
     </>
   );
 }

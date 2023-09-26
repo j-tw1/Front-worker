@@ -24,6 +24,7 @@ import OuvrierContent from './components/ouvriercomp/OuvrierContent';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Footer from './components/Footer/Footer';
 import ContactUs from './components/ContactUs/ContactUs';
+import MyAccount from './components/clientComp/MyAccount/MyAccount'
 
 
 //import LoginComp from './pages/LogRegComponent/LoginComp';
@@ -175,6 +176,12 @@ function App() {
         
         path: "/Client",
         element:<AuthenticatedClient><OuvrierList /></AuthenticatedClient>  ,
+        
+      },
+      {
+        
+        path: "/MyAccount",
+        element:<MyAccount/>  ,
         
       },
 

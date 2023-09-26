@@ -1,0 +1,119 @@
+
+.Myacc .ui-w-80 {
+    width : 80px !important;
+    height: auto;
+}
+
+
+
+
+.Myacc .btn-facebook {
+    border-color: rgba(0, 0, 0, 0);
+    background  : #3B5998;
+    color       : #fff;
+}
+
+.Myacc .btn-instagram {
+    border-color: rgba(0, 0, 0, 0);
+    background  : #000;
+    color       : #fff;
+}
+
+.Myacc .card {
+    background-clip: padding-box;
+    box-shadow     : 0 1px 4px rgba(24, 28, 33, 0.012);
+}
+
+.Myacc .row-bordered {
+    overflow: hidden;
+}
+
+
+
+.Myacc .account-settings-multiselect~.select2-container {
+    width: 100% !important;
+}
+
+.Myacc .light-style .account-settings-links .list-group-item {
+    padding     : 0.85rem 1.5rem;
+    border-color: rgba(24, 28, 33, 0.03) !important;
+}
+
+.Myacc .light-style .account-settings-links .list-group-item.active {
+    color: #4e5155 !important;
+}
+
+.Myacc .material-style .account-settings-links .list-group-item {
+    padding     : 0.85rem 1.5rem;
+    border-color: rgba(24, 28, 33, 0.03) !important;
+}
+
+
+.Myacc .light-style .account-settings-links .list-group-item {
+    padding     : 0.85rem 1.5rem;
+    border-color: rgba(24, 28, 33, 0.03) !important;
+}
+
+
+.Myacc .media {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+
+.Myacc .ml-4, .mx-4 {
+    margin-left: 1.5rem!important;
+}
+
+.Myacc .media-body {
+    -ms-flex: 1;
+    flex: 1;
+}
+
+
+.Myacc .account-settings-fileinput {
+    position: absolute;
+    visibility: hidden;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+
+
+
+
+.Myacc .custom-select {
+    display: inline-block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 1.75rem 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    vertical-align: middle;
+    
+}
+
+.Myacc button,.Myacc input,.Myacc optgroup,.Myacc select,.Myacc textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+textarea.form-control {
+    height: auto;
+}
+.Myacc .form-group input, .form-group select {
+    flex: none;
+    box-shadow :none
+
+}
+
+.Myacc .media-body .text-light1 {
+    color: #6b6969;
+}

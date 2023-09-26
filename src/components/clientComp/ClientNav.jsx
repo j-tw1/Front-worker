@@ -14,7 +14,7 @@ function ClientNav() {
     <>
       <nav class="navbar navbar-expand-lg navbar-light bg-light osahan-nav shadow-sm">
         <div class="container">
-          <a class="navbar-brand" href="/">
+          <a class="navbar-brand" href="/ouvrierlist">
             <img alt="logo" src="assets/img/logo2.png" />
           </a>
           <button
@@ -30,19 +30,14 @@ function ClientNav() {
           </button>
           <div class="collapse navbar-cl" id="navbarNavDropdown">
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="Profile#orders">
-                  Orders <span class=""></span>
+            <li class="nav-item active">
+                <a class="nav-link" href="/ouvrierlist">
+                  Home <span class="sr-only">(current)</span>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/Profile#favourites">
-                  <i class=""></i> Favourites
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/Profile#addresses">
-                  <i class=""></i> Addresses
+                <a class="nav-link" href="/ouvrierlist">
+                  <i class="icofont-sale-discount"></i> Ouvriers
                 </a>
               </li>
 
@@ -63,10 +58,19 @@ function ClientNav() {
                   My Account
                 </a>
                 <div class="dropdown-menu dropdown-menu-right shadow-sm border-0">
-                  <a class="dropdown-item" href="/Profile#orders">
-                    <i class="icofont-food-cart"></i> Profile
+                  <a class="dropdown-item" href="/MyAccount">
+                    <i class="icofont-home"></i> My Account
                   </a>
-                  <a class="dropdown-item">
+                  <a class="dropdown-item" href="/Profile#orders">
+                    <i class="icofont-food-cart"></i> Orders
+                  </a>
+                  <a class="dropdown-item" href="/Profile#favourites">
+                    <i class="icofont-heart"></i> Favourites
+                  </a>
+                  <a class="dropdown-item" href="/Profile#addresses">
+                    <i class="icofont-location-pin"></i> Addresses
+                  </a>
+                  <a class="dropdown-item" >
                     <i class="icofont-logout" onClick={handlLogout1}></i> Logout
                   </a>
                 </div>
