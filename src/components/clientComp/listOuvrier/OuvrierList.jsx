@@ -1,4 +1,4 @@
-import React, { useState, useEffect ,useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import ClientNav from '../ClientNav';
 import OuvrierCard from './OuvrierCard/OuvrierCard';
 import LocationFilter from '.././OuvrierListFilters/LocationFilter';
@@ -47,7 +47,7 @@ function OuvrierList() {
     if (locationParams) {
       apiUrl += `?${locationParams}`;
     }
-  
+
     if (categoryParams) {
       apiUrl += locationParams ? `&${categoryParams}` : `?${categoryParams}`;
     }
@@ -55,20 +55,19 @@ function OuvrierList() {
     try {
       const response = await fetch(apiUrl);
 
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
 
-    const data = await response.json();
-    setWorkers(data);
-  } catch (error) {
-    if (error.name === 'AbortError') {
-      console.log('Fetch request aborted:', error.message);
-    } else {
-      console.error('Fetch error:', error);
+      const data = await response.json();
+      setWorkers(data);
+    } catch (error) {
+      if (error.name === 'AbortError') {
+        console.log('Fetch request aborted:', error.message);
+      } else {
+        console.error('Fetch error:', error);
+      }
     }
-  }
-
   }
   
   function handleFilterChange(locations, categories) {
