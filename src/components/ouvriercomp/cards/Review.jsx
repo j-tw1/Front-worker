@@ -1,34 +1,34 @@
-import React from 'react'
-import './reviews.css'
-import Reviewmodal from '../OuvrierReviews/Reviewmodal'
-function Review({review}) {
+import React from 'react';
+import './reviews.css';
+import Reviewmodal from '../OuvrierReviews/Reviewmodal';
+function Review({ workrev }) {
   return (
-    <> <Reviewmodal/>
-    <div className="card mb-4 order-list">
+    <>
+      {' '}
+      <Reviewmodal />
+      <div className="card mb-4 order-list">
         <div className="gold-members p-4">
           <a href="#"></a>
           <div className="media">
             <a href="#">
               <img
                 className="mr-4"
-                src={review.pp}
+                // src={review.}
                 alt="Generic placeholder image"
               />
             </a>
             <div className="media-body">
               <a href="#">
                 <span className="float-right text-success">
-                  Mon, Nov 12, 7:18 PM{" "}
+                  Mon, Nov 12, 7:18 PM{' '}
                   <i className="feather-clock text-success" />
                 </span>
               </a>
-              <h6 className="mb-1">{review.title}</h6>
+              <h6 className="mb-1">{workrev.commentaire}</h6>
               <p className="text-black mb-3">
-                <i className="feather-user" /> by {review.name}
+                <i className="feather-user" /> by {workrev.name}
               </p>
-              <p className="text-black-50">
-                {review.desc}
-              </p>
+              <p className="text-black-50">{workrev.desc}</p>
               <hr />
               <div className="float-right">
                 <a
@@ -44,15 +44,21 @@ function Review({review}) {
                 </a>
               </div>
               <p className="mb-0 text-dark pt-2">
-                <span className="text-dark font-weight-bold"> <b>Rate</b></span>{" "}
-                <span className="bg-warning px-2 py-1 rounded ml-1"> {review.star} </span>
+                <span className="text-dark font-weight-bold">
+                  {' '}
+                  <b>Rate</b>
+                </span>{' '}
+                <span className="bg-warning px-2 py-1 rounded ml-1">
+                  {' '}
+                  {workrev.star}{' '}
+                </span>
               </p>
             </div>
           </div>
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default Review
+export default Review;

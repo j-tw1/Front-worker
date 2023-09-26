@@ -1,6 +1,5 @@
 /*! CSS Used from: https://capp.nicepage.com/af44303e4c6913309d52397e38e073f99f4a2a89/nicepage.css ; media=screen */
 
-
 /* workerprofil.css (or create a new CSS file if needed) */
 /* Add your existing styles here */
 
@@ -21,7 +20,7 @@
 
 .dropdown-select {
   margin-left: 12px;
-  width:30%;
+  width: 30%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
